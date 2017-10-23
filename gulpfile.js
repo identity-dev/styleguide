@@ -14,9 +14,7 @@ var autoprefixer  = require('gulp-autoprefixer'),
     sass          = require('gulp-sass'),
     sourcemaps    = require('gulp-sourcemaps'),
     stylelint     = require('gulp-stylelint'),
-    swig          = require('gulp-swig'),
-    tag_version   = require('gulp-tag-version'),
-    zip           = require('gulp-zip');;
+    swig          = require('gulp-swig');
 
 var config = {
    packages: './node_modules' ,
@@ -154,26 +152,4 @@ gulp.task('temp', function(){
 gulp.task('watch', function() {
   gulp.watch('./src/sass/**/*.scss', ['sass', 'kss-html', 'kss', 'kss-public']);
   gulp.watch('./kss-html/**/*.*', ['kss-html', 'kss', 'kss-public']);
-});
-
-gulp.task('zip', ['zip-temp-dist', 'zip-temp-docs'], function(){
-
-  return gulp.src('temp/zip/**/*')
-    .pipe(zip('styleguide.zip'))
-    .pipe(gulp.dest('./'));
-
-});
-
-gulp.task('zip-temp-docs', function(){
-
-  return gulp.src('docs/**/*')
-    .pipe(gulp.dest('./temp/zip/docs'));
-
-});
-
-gulp.task('zip-temp-dist', function(){
-
-  return gulp.src('dist/**/*')
-    .pipe(gulp.dest('./temp/zip/dist'));
-
 });

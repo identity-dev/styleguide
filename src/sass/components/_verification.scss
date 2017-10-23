@@ -1,0 +1,93 @@
+/*
+
+Verification
+
+Various Verification Components
+
+Styleguide 14.0
+
+*/
+
+/*
+
+Claims Status
+
+Markup:
+<div class="verification-claim" style="height: 50px">
+  <div class="verification-claim-status {{modifier_class}}"></div>
+</div>
+
+.verification-claim-status--verified - Verified Status
+.verification-claim-status--unverified - Unverified Status
+.verification-claim-status--unknown - Unknown Status
+
+Styleguide 14.1
+
+*/
+
+.verification-claims{
+  margin: 0 auto;
+  max-width: 260px;
+}
+
+.verification-claim{
+  position: relative;
+}
+
+.verification-claim--row{
+  border-bottom: 1px solid $gray7;
+  padding-bottom: 10px;
+
+  &:last-child{
+    border-bottom: none;
+  }
+}
+
+.verification-claim-status{
+  color: $gray2;
+
+  &::before{
+    @include icon('streamline');
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 20px;
+  }
+}
+
+.verification-claim-status--inline{
+  padding-bottom: 5px;
+  position: relative;
+
+  &::before{
+    top: 0;
+  }
+
+  &:last-child{
+    padding-bottom: 0;
+  }
+}
+
+.verification-claim-status--verified{
+  &::before{
+    color: $green;
+    content: "\f12f";
+  }
+}
+
+.verification-claim-status--unverified{
+  &::before{
+    color: $red;
+    content: "\f13a";
+  }
+}
+
+.verification-claim-status--unknown{
+  color: $gray3;
+  font-style: italic;
+
+  &::before{
+    color: $gray3;
+    content: "\f12f";
+  }
+}

@@ -1,0 +1,61 @@
+/*
+
+Tables
+
+Different table styling
+
+Styleguide 13.0
+
+*/
+
+/*
+
+Plain old paging
+
+Markup:
+<table class="{{modifier_class}}">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>client_id</td>
+    <td>Issued when you created your application</td>
+  </tr>
+  <tr>
+    <td>redirect_uri</td>
+    <td>URL to redirect back to see below</td>
+  </tr>
+    <tr>
+    <td>client_id</td>
+    <td>Issued when you created your application</td>
+  </tr>
+  <tr>
+    <td>redirect_uri</td>
+    <td>URL to redirect back to see below</td>
+  </tr>
+</table>
+
+.table--bordered                  - Bordered table that's inset
+.table--striped                   - Striped tabled, every other colored
+
+Styleguide 13.1
+
+*/
+
+.table--bordered{
+  border: 1px solid $gray5;
+  background-color: $gray8;
+}
+
+.table--bordered th{
+  border-bottom: 1px solid $gray5;
+}
+
+.table--striped tr:nth-child(2n + 1){
+  background-color: $gray8;
+}
+
+.table--striped tr:first-child{
+  background-color: $white;
+}

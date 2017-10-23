@@ -1,0 +1,233 @@
+// Utility classes
+//
+// Styleguide
+
+.u-f-none{
+  float: none;
+}
+
+.u-f-none--mobile{
+  @media (max-width: 767px){
+    float: none;
+  }
+}
+
+.u-f-left{
+  float: left;
+}
+
+.u-f-right{
+  float: right;
+}
+
+.u-fixed{
+  position: fixed;
+}
+
+.u-absolute{
+  position: absolute;
+}
+
+.u-absolute--mobile{
+  @media (max-width: 767px){
+    position: absolute;
+  }
+}
+
+.u-absolute--desktop{
+  @media (min-width: 768px){
+    position: absolute;
+  }
+}
+
+.u-relative{
+  position: relative;
+}
+
+.u-relative--mobile{
+  @media (max-width: 767px){
+    position: relative;
+  }
+}
+
+.u-relative--desktop{
+  @media (min-width: 768px){
+    position: relative;
+  }
+}
+
+.u-static{
+  position: static;
+}
+
+.u-static--mobile{
+  @media (max-width: 767px){
+    position: static;
+  }
+}
+
+.u-static--desktop{
+  @media (min-width: 768px){
+    position: static;
+  }
+}
+
+.u-bottom{
+  bottom: 0;
+}
+
+.u-left{
+  left: 0;
+}
+
+.u-right{
+  right: 0;
+}
+
+.u-top{
+  top: 0;
+}
+
+.u-pointer{
+  cursor: pointer;
+}
+
+.u-clearfix{
+  overflow: hidden;
+  clear: both;
+}
+
+.u-ta-left{
+  text-align: left;
+}
+
+.u-ta-center{
+  text-align: center;
+}
+
+.u-ta-right{
+  text-align: right;
+}
+
+.u-ta-left--mobile{
+  @media (max-width: 767px){
+    text-align: left;
+  }
+}
+
+.u-ta-center--mobile{
+  @media (max-width: 767px){
+    text-align: center;
+  }
+}
+
+.u-ta-right--mobile{
+  @media (max-width: 767px){
+    text-align: right;
+  }
+}
+
+.u-ta-left--desktop{
+  @media (min-width: 768px){
+    text-align: left;
+  }
+}
+
+.u-ta-center--desktop{
+  @media (min-width: 768px){
+    text-align: center;
+  }
+}
+
+.u-ta-right--desktop{
+  @media (min-width: 768px){
+    text-align: right;
+  }
+}
+
+.u-hidden{
+  display: none !important;
+}
+
+.u-hidden--desktop{
+  @media (min-width: 768px){
+    display: none !important;
+  }
+}
+
+.u-hidden--mobile{
+  @media (max-width: 767px){
+    display: none !important;
+  }
+}
+
+.u-visible{
+  display: block;
+}
+
+.u-visible--desktop{
+  @media (min-width: 768px){
+    display: block;
+  }
+}
+
+.u-visible--mobile{
+  @media (max-width: 767px){
+    display: block;
+  }
+}
+
+.u-fs-italic{
+  font-style: italic;
+}
+
+.u-font-smoothing{
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.u-appearance-none{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.u-no-scroll{
+  overflow: hidden;
+}
+
+.u-disabled{
+  opacity:0.5;
+  pointer-events:none;
+}
+
+.u-display-inline-block{
+  display: inline-block;
+}
+
+.u-display-inline-block--desktop{
+  @media (min-width: 768px){
+    display: inline-block;
+  }
+}
+
+.u-box{
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@for $i from 1 through 8 {
+  .u-max-#{$i * 50} {
+    max-width: ($i * 50px);
+  }
+}
+
+.u-foreground{
+  z-index: $z_index-1--foreground;
+  position: relative;
+}
+
+.u-cursor-pointer{
+  cursor: pointer;
+}

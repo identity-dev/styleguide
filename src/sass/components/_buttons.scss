@@ -1,0 +1,336 @@
+/*
+
+Buttons
+
+Buttons and their variations
+
+Markup:
+<a href="#" class="btn {{modifier_class}}">Button</a>
+
+.btn--large           - Large size
+.btn--small           - Small size
+.btn--xsmall          - Xsmall size
+.btn--secondary       - Secondary button style
+.btn--warn            - Warning button style
+.btn--white           - White button!
+.btn--outline         - Outlined button
+.btn--invisible       - Hardly even a button, but great for alignment
+.btn--block           - 100% width with minimal side padding
+.btn--inline          - Always an inline block button
+.btn--hidden          - A hidden button
+.btn--min             - A minimum width button for all the funky fresh tiny text
+.btn--multiline       - A button that displays as a table-cell to support multiple lines
+.btn--marketing       - Button for marketing style pages
+
+Styleguide 2.0
+
+*/
+
+.btn{
+  border-radius: 2px;
+  @include transition-properties(background-color border-color);
+  @extend .u-font-smoothing;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: 1px solid $teal;
+  background-color: $teal;
+  color: $white;
+  height: 48px;
+  line-height: 46px; // based on a 1px border
+  padding: 0 40px;
+
+  @media (min-width: 768px){
+    display: inline-block;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  &:link,
+  &:focus,
+  &:visited{
+    color: $white;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: $teal-hover;
+    border-color: $teal-hover;
+    color: $white;
+  }
+
+  &:focus{
+    outline: 1px dotted $gray3;
+  }
+}
+
+.btn--large{
+  height: 58px;
+  line-height: 56px;
+  font-size: 20px;
+  padding: 0 45px;
+}
+
+.btn--small{
+  height: 38px;
+  line-height: 36px;
+  font-size: 16px;
+  padding: 0 15px;
+}
+
+.btn--xsmall{
+  height: 26px;
+  line-height: 24px;
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+.btn--secondary{
+  background-color: $gray6;
+  border-color: $gray6;
+  color: $gray1;
+
+  &:link,
+  &:focus,
+  &:visited{
+    color: $gray1;
+  }
+
+  &:hover{
+    background-color: $gray5;
+    border-color: $gray5;
+    color: $gray1;
+  }
+}
+
+.btn--white{
+  background-color: $white;
+  border-color: $white;
+  color: $teal;
+
+  &:link,
+  &:focus,
+  &:visited{
+    color: $teal;
+  }
+
+  &:hover{
+    background-color: $gray9;
+    border-color: $gray9;
+    color: $teal-hover;
+  }
+}
+
+.btn--warn{
+  background-color: $red;
+  border-color: $red;
+  color: $white;
+
+  &:link,
+  &:focus,
+  &:visited{
+    color: $white;
+  }
+
+  &:hover{
+    background-color: $red-hover;
+    border-color: $red-hover;
+  }
+}
+
+.btn--outline{
+  @include transition-properties(background-color);
+  background-color: rgba(255,255,255, 0);
+  border-color: $teal;
+  color: $teal;
+
+  &:link,
+  &:focus,
+  &:visited{
+    color: $teal;
+  }
+
+  &:hover{
+    background-color: $teal;
+    border-color: $teal;
+    color: $white;
+  }
+}
+
+.btn--outline.btn--secondary{
+  border-color: $gray3;
+  color: $gray3;
+
+  &:link,
+  &:focus,
+  &:visited{
+    color: $gray3;
+  }
+
+  &:hover{
+    background-color: $gray3;
+    border-color: $gray3;
+    color: $white;
+  }
+}
+
+.btn--outline.btn--warn{
+  border-color: $red;
+  color: $red;
+
+  &:link,
+  &:focus,
+  &:visited{
+    color: $red;
+  }
+
+
+  &:hover{
+    background-color: $red;
+    border-color: $red;
+    color: $white;
+  }
+}
+
+.btn--outline.btn--white{
+  border-color: $white;
+  color: $white;
+
+  &:link,
+  &:focus,
+  &:visited{
+    color: $white;
+  }
+
+
+  &:hover{
+    background-color: $white;
+    border-color: $white;
+    color: $teal-hover;
+  }
+}
+
+.btn--invisible{
+  border-color: transparent;
+  background-color: transparent;
+  color: $teal;
+
+  &:link,
+  &:focus,
+  &:visited{
+    color: $teal;
+  }
+
+  &:hover{
+    color: $teal-hover;
+    border-color: transparent;
+    background-color: transparent;
+  }
+}
+
+.btn--invisible.btn--secondary{
+  color: $gray3;
+
+  &:link,
+  &:focus,
+  &:visited{
+    color: $gray2;
+  }
+
+  &:hover{
+    color: $gray2;
+  }
+}
+
+.btn--invisible.btn--warn{
+  color: $red;
+
+  &:link,
+  &:focus,
+  &:visited{
+    color: $red;
+  }
+
+  &:hover{
+    color: $red-hover;
+  }
+}
+
+.btn--block{
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.btn--inline{
+  display: inline-block;
+  width: auto;
+}
+
+.btn--hidden{
+  display: none;
+}
+
+.btn--min{
+  min-width: 80px;
+}
+
+.btn--multiline{
+  display: table-cell;
+  line-height: normal;
+  vertical-align: middle;
+}
+
+.btn--marketing{
+  text-transform: uppercase;
+}
+
+[type=button],
+[type=submit],
+button{
+  @extend .btn;
+}
+
+/*
+
+Video play button
+
+Markup:
+<div class="bg-gray0">
+  <a class="video-trigger u-ta-center" href="#">
+    <div class="container container--xxlarge"></div>
+  </a>
+</div>
+
+Styleguide 2.0.1
+
+*/
+
+.video-trigger{
+  display: block;
+  position: relative;
+
+  &::after{
+    @include transition-properties(opacity);
+    background: image-url("pages/marketing/play-button.svg") center center no-repeat;
+    background-size: contain;
+    bottom: 0;
+    content: '';
+    height: 70px;
+    left: 0;
+    margin: auto;
+    opacity: .6;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70px;
+  }
+
+  &:hover::after{
+    opacity: .9;
+  }
+}

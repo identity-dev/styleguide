@@ -1,0 +1,1215 @@
+/*
+
+Kit
+
+The tool kit for ui components
+
+Styleguide 6.0
+
+*/
+
+/*
+
+Close
+
+A simple close icon positioned in the top right of the relative parent
+
+Markup:
+<div style="position: relative; height: 40px;">
+  <span class="close {{modifier_class}}"></span>
+</div>
+
+.close--light            - White icon
+.close--gray             - Gray icon
+
+Styleguide 6.1
+
+*/
+
+.close{
+  position: absolute;
+  color: $gray5;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: $z_index-1--foreground;
+
+  &:before{
+    @include icon("streamline");
+    content: '\f13c';
+    font-size: 15px;
+  }
+
+  &:hover{
+    color: $gray4;
+  }
+}
+
+.close--light::before {
+  color: $white;
+}
+
+.close--gray::before {
+  color: $gray4;
+}
+
+/*
+
+Overlay
+
+An overlay used to simulate a lightbox effect. Needs to be activated with .is_active
+
+Markup:
+<div class="overlay {{modifier_class}}"></div>
+
+.overlay--is_active     - Activated overlay
+.overlay--white         - Overlay will be white when activated
+.overlay--constrained   - Overlay will contained in the relative parent
+.overlay--transparent   - Overlay color is transparent
+
+No Styleguide Reference
+
+*/
+
+.overlay{
+  @include transition-properties(opacity background-color);
+  background-color: rgba(49, 49, 50, 0);
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  overflow-y: auto;
+  padding: 10px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  -webkit-transform:translateZ(0);
+  z-index: $z_index-0--underground;
+
+  & > *{
+    display: none;
+  }
+}
+
+.overlay--is_active{
+  background-color: rgba(49, 49, 50, .85);
+  opacity: 1;
+  z-index: $z_index-7--overlay;
+
+  & > *{
+    display: block;
+  }
+}
+
+.overlay--white.overlay--is_active{
+  background-color: rgba(255, 255, 255, .85);
+}
+
+.overlay--transparent.overlay--is_active{
+  background-color: transparent;
+}
+
+.overlay--constrained{
+  position: absolute;
+}
+
+/*
+
+Modal
+
+A simple, responsive modal. Traditionally used while nested below an overlay
+
+Markup:
+<div class="modal {{modifier_class}}"></div>
+
+.modal--is_active       - Activated modal
+.modal--small           - small width Modal
+.modal--large           - Large width Modal
+.modal--xlarge          - XLarge width Modal
+
+No Styleguide Reference
+
+*/
+
+.modal{
+  position: relative;
+  background-color: $white;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.06);
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 550px;
+  margin: 0 auto;
+  opacity: 0;
+  z-index: $z_index-0--underground;
+  margin-bottom: 90px;
+  border-radius: 2px;
+  @include translate(0, 0);
+  @include transition-properties(opacity);
+}
+
+.overlay--is_active .modal,
+.modal--is_active{
+  opacity: 1;
+  z-index: $z_index-8--modal;
+  @include translate(0, 25px);
+
+  @media (min-width: 768px){
+    @include translate(0, 80px);
+  }
+}
+
+.modal--small{
+  max-width: 520px;
+}
+
+.modal--large{
+  max-width: 650px;
+}
+
+.modal--xlarge{
+  max-width: 750px;
+}
+
+/*
+
+Popover Positions
+
+Various positions for the popovers
+
+Markup:
+<div class="pulse">
+  <div class="popover popover--is_active {{modifier_class}}">
+    The quick brown fox jumped over the lazy dog, so quickly.
+  </div>
+</div>
+
+.popover--below               - Popover aligned above the relative parent
+.popover--left                - Popover aligned to the left of the relative parent
+.popover--above               - Popover aligned above the relative parent
+.popover--right               - Popover aligned to the right of the relative parent
+.popover--right_below         - Popover aligned to the right and bottom of the relative parent
+.popover--left_below          - Popover aligned to the left and bottom of the relative parent
+.popover--align_top           - Popover aligned to the top based on box, not on the tip
+.popover--right--mobile       - Popover aligned to the right and bottom of the relative parent on mobile
+.popover--left--mobile        - Popover aligned to the left and bottom of the relative parent on mobile
+.popover--center--mobile      - Popover aligned to the center and bottom of the relative parent on mobile
+
+Styleguide 6.4.1
+
+*/
+
+.popover_parent{
+  position: relative;
+  display: inline-block;
+}
+
+.popover{
+  position: absolute;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 200px;
+  border: 1px solid $gray4;
+  background-color: $white;
+  opacity: 0;
+  z-index: $z_index-0--underground;
+  @include type--small();
+  // this is a one off per design request,
+  // typically don't set line-height or font size
+  // always use the @include type-- declarations
+  line-height: 16px;
+  border-radius: 2px;
+  @include transition-properties(z-index opacity);
+}
+
+.popover:before,
+.popover:after{
+  position: absolute;
+  content: '';
+}
+
+.popover:before{
+  z-index: $z_index-4--popover_tip;
+}
+
+.popover:after{
+  z-index: $z_index-3--popover;
+}
+
+.popover-content{
+  background-color: #fff;
+  position: relative;
+  padding: 20px;
+  overflow: auto;
+  border-radius: 2px;
+
+  @media (min-width: 768px){
+    padding: 30px;
+  }
+}
+
+.popover-step{
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: $teal-dark;
+  font-weight: 500;
+}
+
+.popover--below{
+  top: 100%;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: 15px;
+}
+
+.popover--below:before,
+.popover--below:after{
+  left: 50%;
+  margin-left: -6px;
+}
+
+.popover--below:before{
+  top: -5px;
+  @include up-triangle($white, 6px);
+
+}
+
+.popover--below:after{
+  top: -6px;
+  @include up-triangle($gray4, 6px);
+}
+
+
+.popover--above{
+  margin-top: 0;
+  left: 50%;
+  margin-left: -100px;
+  bottom: 100%;
+  margin-bottom: 15px;
+}
+
+.popover--above:before,
+.popover--above:after{
+  left: 50%;
+  margin-left: -6px;
+}
+
+.popover--above:before{
+  @include down-triangle($white, 6px);
+  bottom: -5px;
+}
+
+.popover--above:after{
+  @include down-triangle($gray4, 6px);
+  bottom: -6px;
+}
+
+
+.popover--left,
+.popover--right{
+  margin-top: -22px;
+  min-height: 40px;
+}
+
+.popover--align_top{
+  top: 22px;
+}
+
+
+.popover--left{
+  right: 100%;
+  margin-right: 15px;
+}
+
+.popover--left:before{
+  top: 20px;
+  right: -5px;
+  @include left-triangle($white, 6px);
+}
+.popover--left:after{
+  top: 20px;
+  right: -6px;
+  @include left-triangle($gray4, 6px);
+}
+
+
+.popover--right{
+  left: 100%;
+  margin-left: 15px;
+}
+
+.popover--right:before{
+  top: 20px;
+  left: -5px;
+  @include right-triangle($white, 6px);
+}
+
+.popover--right:after{
+  top: 20px;
+  left: -6px;
+  @include right-triangle($gray4, 6px);
+}
+
+.popover--right_below{
+  top: 100%;
+  right: -12px;
+  margin-top: 15px;
+}
+
+.popover--right_below:before{
+  top: -5px;
+  right: 10px;
+  @include up-triangle($white, 6px);
+}
+
+.popover--right_below:after{
+  top: -6px;
+  right: 10px;
+  @include up-triangle($gray4, 6px);
+}
+
+.popover--left_below{
+  top: 100%;
+  left: -12px;
+  margin-top: 15px;
+  margin-right: 0;
+}
+
+.popover--left_below:before{
+  top: -5px;
+  left: 10px;
+  @include up-triangle($white, 6px);
+}
+
+.popover--left_below:after{
+  top: -6px;
+  left: 10px;
+  @include up-triangle($gray4, 6px);
+}
+
+@media (max-width: 767px){
+  .popover--right--mobile{
+    top: 100%;
+    right: -12px;
+    margin: 15px 0 0;
+  }
+
+  .popover--right--mobile:before{
+    top: -5px;
+    right: 10px;
+    @include up-triangle($white, 6px);
+  }
+
+  .popover--right--mobile:after{
+    top: -6px;
+    right: 10px;
+    @include up-triangle($gray4, 6px);
+  }
+
+  .popover--left--mobile{
+    top: 100%;
+    left: -12px;
+    margin: 15px 0 0;
+  }
+
+  .popover--left--mobile:before{
+    top: -5px;
+    left: 10px;
+    @include up-triangle($white, 6px);
+  }
+
+  .popover--left--mobile:after{
+    top: -6px;
+    left: 10px;
+    @include up-triangle($gray4, 6px);
+  }
+
+  .popover--center--mobile{
+    top: 100%;
+    left: 50%;
+    margin: 15px 0 0 -100px;
+  }
+
+  .popover--center--mobile:before,
+  .popover--center--mobile:after{
+    left: 50%;
+    margin-left: -6px;
+  }
+
+  .popover--center--mobile:before{
+    top: -5px;
+    @include up-triangle($white, 6px);
+  }
+
+  .popover--center--mobile:after{
+    top: -6px;
+    @include up-triangle($gray4, 6px);
+  }
+}
+
+/*
+
+Popover styles
+
+A popover, primarily used in onboarding flows
+
+Markup:
+<div class="pulse">
+  <div class="popover popover--below popover--is_active {{modifier_class}}">
+    The quick brown fox jumped over the lazy dog, so quickly.
+  </div>
+</div>
+
+.popover--highlight   - Popover display as a tooltip
+.popover--tooltip     - Popover display as a tooltip
+.popover--tip_gray    - Popover tip is gray, useful with icon_header
+
+Styleguide 6.4.2
+
+*/
+
+
+.popover--highlight{
+  border-color: $teal;
+}
+
+.popover--highlight.popover--below:after{
+  border-bottom-color: $teal;
+}
+
+.popover--highlight.popover--above:after{
+  border-top-color: $teal;
+}
+
+.popover--highlight.popover--left:after{
+  border-left-color: $teal;
+}
+
+.popover--highlight.popover--right:after{
+  border-right-color: $teal;
+}
+
+.popover--highlight.popover--left_below:after{
+  border-bottom-color: $teal;
+}
+
+.popover--highlight.popover--right_below:after{
+  border-bottom-color: $teal;
+}
+
+.popover--tooltip{
+  background-color: $gray9;
+  padding: 8px 10px;
+}
+
+.popover--tooltip.popover--below,
+.popover--tooltip.popover--above{
+  text-align: center;
+}
+
+.popover--tooltip.popover--below:before{
+  border-bottom-color: $gray9;
+}
+
+.popover--tooltip.popover--above:before{
+  border-top-color: $gray9;
+}
+
+.popover--tooltip.popover--left:before{
+  border-left-color: $gray9;
+}
+
+.popover--tooltip.popover--right:before{
+  border-right-color: $gray9;
+}
+
+.popover--tooltip.popover--left_below:before{
+  border-bottom-color: $gray9;
+}
+
+.popover--tooltip.popover--right_below:before{
+  border-bottom-color: $gray9;
+}
+
+.popover--is_active{
+  z-index: $z_index-3--popover;
+  opacity: 1;
+  @include transition-properties(z-index opacity);
+}
+
+.popover--tip_gray:before{
+  border-bottom-color: $gray6;
+}
+
+.popover--tip_gray.popover--above:before{
+  border-bottom-color: none;
+  border-top-color: $gray6;
+}
+
+.popover--tip_gray.popover--left:before{
+  border-left-color: $gray6;
+  border-bottom-color: transparent;
+}
+
+.popover--tip_gray.popover--right:before{
+  border-right-color: $gray6;
+  border-bottom-color: transparent;
+}
+
+/*
+
+Tabs
+
+Simple tab navigation for showing/hiding content
+
+Markup:
+<div class="tabs" id="js-group-1">
+  <div class="tabs-toggle js-toggle-tab tabs-toggle--is_active" data-id="tab-one">
+    Tab One
+  </div>
+  <div class="tabs-toggle js-toggle-tab" data-id="tab-two">
+    Tab Two
+  </div>
+</div>
+<div class="js-group-1">
+  <div class="tabs-content js-tabs-content tabs-content--is_active" id="tab-one">
+    Tab One
+  </div>
+  <div class="tabs-content js-tabs-content" id="tab-two">
+    Tab Two
+  </div>
+</div>
+
+Styleguide 6.5
+
+*/
+
+.tabs{
+  background-color: $gray7;
+  padding: 4px;
+  display: inline-block;
+  border-radius: 20px;
+}
+
+.tabs-toggle{
+  text-align: center;
+  display: inline-block;
+  color: $gray2;
+  height: 32px;
+  width: 180px;
+  line-height: 32px;
+  padding: 0 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.tabs-toggle--is_active{
+  background-color: $teal;
+  color: $white;
+}
+
+.tabs-content{
+  display: none;
+}
+
+.tabs-content--is_active{
+  display: block;
+}
+
+/*
+
+Switch
+
+Markup:
+<div class="tabs tabs--switch bg-gray4">
+  <div class="js-toggle-tab tabs-toggle tabs-toggle--is_active" data-id="false">Hide</div>
+  <div class="js-toggle-tab tabs-toggle" data-id="true">Show</div>
+</div>
+
+Styleguide 6.5.1
+
+*/
+
+.tabs--switch {
+  padding: 1px 2px 2px;
+
+  .tabs-toggle {
+    @include type--xsmall();
+    color: $white;
+    height: 20px;
+    line-height: inherit;
+    padding: 0;
+    width: 32px;
+
+    &:after {
+      content: "\00a0";
+    }
+  }
+
+  .tabs-toggle--is_active {
+    background-color: $white;
+    padding: 0 10px;
+    text-indent: -9999em;
+    width: 0;
+  }
+
+}
+
+/*
+
+Folder tabs
+
+Markup:
+<div class="tabs tabs--folder tabs--folder_buttons" id="js-applications-tabs-id">
+  <div class="js-toggle-tab tabs-toggle--folder_buttons container--small type--small u-display-inline-block u-box u-ta-center js-usage-tab" data-id="js-usage-id">
+    <i class="fa fa-bar-chart"></i><span class="u-hidden--mobile">&nbsp;Usage</span>
+  </div>
+  <div class="js-toggle-tab tabs-toggle--folder_buttons container--small type--small u-display-inline-block u-box u-ta-center" data-id="js-edit-id">
+    <i class="fa fa-pencil"></i><span class="u-hidden--mobile">&nbsp;Edit</span>
+  </div>
+  <div class="js-toggle-tab tabs-toggle--folder_buttons container--small type--small u-display-inline-block u-box u-ta-center" data-id="js-test-id">
+    <i class="fa fa-tachometer"></i><span class="u-hidden--mobile">&nbsp;Test</span>
+  </div>
+</div>
+<div class="js-applications-tabs-id u-hidden tabs-content--folder_buttons container bg-gray8 container--bordered">
+  <div class="tabs-content js-tabs-content js-usage" id="js-usage-id" data-application_id="id">usage content</div>
+  <div class="tabs-content js-tabs-content js-edit" id="js-edit-id">edit content</div>
+  <div class="tabs-content js-tabs-content js-test" id="js-test-id">test content</div>
+</div>
+
+Styleguide 6.5.2
+
+*/
+
+.tabs--folder {
+  background-color: transparent;
+  border-radius: 0;
+  cursor: pointer;
+  display: block;
+  padding: 0;
+}
+
+.tabs--folder_buttons {
+  border-right: 1px solid $gray5;
+  font-size: 0;
+  margin-bottom: -1px;
+
+  & > .tabs-toggle--folder_buttons:first-child {
+    border-left: 1px solid $gray5;
+  }
+
+  & > .tabs-toggle--folder_buttons:last-child {
+    border-right: none;
+  }
+
+  & > .tabs-toggle--folder_buttons.tabs-toggle--is_active {
+    background-color: $gray8;
+    border-color: $gray4;
+    padding-bottom: 11px;
+  }
+
+}
+
+.tabs--folder_buttons_is_active {
+  border-color: $gray4;
+}
+
+.tabs-toggle--folder_buttons {
+  background-color: $gray9;
+  border: 1px solid $gray5;
+  border-left: none;
+  color: $teal;
+  width: 33.334%;
+}
+
+.tabs-content--folder_buttons {
+  border-color: $gray4;
+  border-top: none;
+}
+
+/*
+
+Folder tabs
+
+Markup:
+<div class="grid grid--gutter_small tabs tabs--folder" id="js-industry-tabs">
+  <div class="column-4 column--bottom">
+    <div class="tabs-toggle--folder text-overflow-elipsis js-toggle-tab tabs-toggle--is_active" data-id="js-p2p">
+      Peer to Peer
+    </div>
+  </div>
+  <div class="column-4 column--bottom">
+    <div class="tabs-toggle--folder text-overflow-elipsis js-toggle-tab" data-id="js-on_demand">
+      Car &amp; Ride Sharing
+    </div>
+  </div>
+  <div class="column-4 column--bottom">
+    <div class="tabs-toggle--folder text-overflow-elipsis js-toggle-tab" data-id="js-tenant">
+      Tenant Screening
+    </div>
+  </div>
+</div>
+<div class="js-industry-tabs tabs-content--folder container container--large bg-white type--gray2 u-ta-left">
+  <div class="tabs-content js-tabs-content tabs-content--is_active" id="js-p2p">
+    `Peer to Peer` content
+  </div>
+  <div class="tabs-content js-tabs-content" id="js-on_demand">
+    `Car &amp; Ride Sharing` content
+  </div>
+  <div class="tabs-content js-tabs-content" id="js-tenant">
+    `Tenant Screening` content
+  </div>
+</div>
+
+Styleguide 6.5.3
+
+*/
+
+.tabs-toggle--folder{
+  @include type--semibold();
+  background-color: $teal-dark;
+  color: $white;
+  padding: 10px;
+
+  @media (min-width: 768px){
+    padding: 20px 10px;
+  }
+}
+
+.tabs-toggle--folder.tabs-toggle--is_active{
+  background-color: $white;
+  color: $teal-dark;
+}
+
+/*
+
+Accordion
+
+Simple accordion for toggling content
+
+Markup:
+<div class="accordion {{modifier_class}}">
+  Toggle Accordion 1
+</div>
+
+.accordion--is_active       - Accordion active state
+.accordion--is_last         - Accordion last in the series
+.accordion--with_arrow      - Accordion with arrows
+.accordion--gray            - Accordion with gray icon
+.accordion--with_pencil     - Accordion with a pencil
+.accordion--border-white     - Accordion with a white border
+
+Styleguide 6.6
+
+*/
+
+.accordion{
+  padding: 15px 25px 15px 10px;
+  border-top: 1px solid $gray5;
+  color: $teal;
+  position: relative;
+  cursor: pointer;
+
+  @media (min-width: 768px){
+    padding: 15px 35px 15px 20px;
+  }
+}
+
+.accordion:after{
+  @include icon();
+  content: '\f067';
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  height: 15px;
+  font-size: 15px;
+  margin: auto 0;
+  color: $teal;
+
+  @media (min-width: 768px){
+    right: 20px;
+  }
+}
+
+.accordion--is_active{
+  color: $gray1;
+}
+
+.accordion--is_active:after{
+  content: '\f068';
+}
+
+.accordion--is_last{
+  border-bottom: 1px solid $gray5;
+}
+
+.accordion_content{
+  display: none;
+  @include type--small();
+}
+
+.accordion--with_arrow:after{
+  @include icon('streamline');
+  content: '\f13d';
+}
+
+.accordion--with_arrow.accordion--is_active:after{
+  content: '\f13e';
+}
+
+.accordion--gray{
+  color: $gray1;
+  padding: 10px 10px 10px 10px;
+  border-bottom: 0;
+}
+
+.accordion--gray:after{
+  color: $gray3;
+  padding: 10px 10px 10px 10px;
+  border-bottom: 0;
+}
+
+.accordion--with_pencil:after {
+  content: '\f040';
+  right: 0;
+}
+
+.accordion--with_pencil.accordion--is_active:after{
+  content: none;
+}
+
+.accordion--border-white {
+  border-radius: 4px;
+  border-color: $white;
+
+  &.accordion--is_active{
+    border-radius: 4px;
+    background-color: $gray8;
+
+    &:after{
+      color: $gray2;
+    }
+  }
+}
+
+/*
+
+Pagination Arrows
+
+Back and Next arrows for pagination
+
+Markup:
+<div style="position: relative; height: 100px;">
+  <div class="pagination--back icon_box"></div>
+  <div class="pagination--next icon_box"></div>
+</div>
+
+Styleguide 6.7
+
+*/
+
+.pagination--back,
+.pagination--next{
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+}
+
+.pagination--first,
+.pagination--last{
+  display: none;
+}
+
+.pagination--back{
+  left: 0;
+  z-index: 1;
+
+  @media screen and (min-width: 768px){
+    left: -45px;
+  }
+}
+
+.pagination--back:before{
+  content: "\f053";
+}
+
+.pagination--next{
+  right: 0;
+
+  @media screen and (min-width: 768px){
+    right: -45px;
+  }
+}
+
+.pagination--next:before{
+  content: "\f054";
+}
+
+/*
+
+Pulse
+
+Pulsating Dot
+
+Markup:
+<div class="pulse"></div>
+
+Styleguide 6.8
+
+*/
+
+.pulse {
+  width: 8px;
+  height: 8px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  background-color: $teal;
+  position: absolute;
+
+  &:before,
+  &:after{
+    border: 2px solid $teal;
+    background: transparent;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px;
+    height: 30px;
+    width: 30px;
+    margin-top: -13px;
+    margin-left: -13px;
+    -webkit-animation: pulse 1500ms linear;
+    -moz-animation: pulse 1500ms linear;
+    -ms-animation: pulse 1500ms linear;
+    animation: pulse 1500ms linear;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    content: '';
+  }
+
+  &:after{
+    -webkit-animation: pulse 1500ms linear 250ms;
+    -moz-animation: pulse 1500ms linear 250ms;
+    -ms-animation: pulse 1500ms linear;
+    animation: pulse 1500ms linear 250ms;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+
+  &:hover:before,
+  &:hover:after{
+    content: none;
+  }
+}
+
+
+@-moz-keyframes pulse {
+ 0% {
+    -moz-transform: scale(0);
+    opacity: 0.0;
+ }
+
+ 25% {
+    -moz-transform: scale(0.25);
+    opacity: 0.25;
+ }
+
+ 75% {
+    -moz-transform: scale(0.5);
+    opacity: 0.5;
+ }
+
+ 100% {
+    -moz-transform: scale(1);
+    opacity: 0.0;
+ }
+}
+
+@-webkit-keyframes pulse {
+ 0% {
+    -webkit-transform: scale(0);
+    opacity: 0.0;
+ }
+ 25% {
+    -webkit-transform: scale(0);
+    opacity: 0.1;
+ }
+ 50% {
+    -webkit-transform: scale(0.1);
+    opacity: 0.3;
+ }
+ 75% {
+    -webkit-transform: scale(0.5);
+    opacity: 0.5;
+ }
+ 100% {
+    -webkit-transform: scale(1);
+    opacity: 0.0;
+ }
+}
+
+@-ms-keyframes pulse {
+ 0% {
+    -ms-transform: scale(0);
+    opacity: 0.0;
+ }
+ 25% {
+    -ms-transform: scale(0);
+    opacity: 0.1;
+ }
+ 50% {
+    -ms-transform: scale(0.1);
+    opacity: 0.3;
+ }
+ 75% {
+    -ms-transform: scale(0.5);
+    opacity: 0.5;
+ }
+ 100% {
+    -ms-transform: scale(1);
+    opacity: 0.0;
+ }
+}
+
+@keyframes pulse {
+ 0% {
+    transform: scale(0);
+    opacity: 0.0;
+ }
+
+ 25% {
+    transform: scale(0.25);
+    opacity: 0.25;
+ }
+
+ 75% {
+    transform: scale(0.5);
+    opacity: 0.5;
+ }
+
+ 100% {
+    transform: scale(1);
+    opacity: 0.0;
+ }
+}
+
+/*
+
+Menu
+
+Markup:
+<div class="dash-nav bg-white container--bordered_mobile u-ta-center--mobile">
+  <ul>
+    <li class="js-navigate-link type--teal u-box u-cursor-pointer u-visible u-ta-left--desktop u-ta-center--mobile applications active" data-nav="applications">
+      <i class="sl-gear"></i>
+      Applications
+    </li>
+    <li class="js-navigate-link type--teal u-box u-cursor-pointer u-visible u-ta-left--desktop u-ta-center--mobile roles" data-nav="roles">
+      <i class="sl-one-person"></i>
+      Users
+    </li>
+    <li class="js-navigate-link type--teal u-box u-cursor-pointer u-visible u-ta-left--desktop u-ta-center--mobile logs" data-nav="logs">
+      <i class="sl-form"></i>
+      Audit Trail
+    </li>
+    <li class="js-navigate-link type--teal u-box u-cursor-pointer u-visible u-ta-left--desktop u-ta-center--mobile billing" data-nav="billing">
+      <i class="sl-hand-card"></i>
+      Billing
+    </li>
+  </ul>
+</div>
+
+.dash-nav--links       - dash nav with links
+
+Styleguide 6.9
+
+*/
+
+.dash-nav li {
+  @include responsive-font-size(14px, 16px);
+  height: 45px;
+  padding-left: 14px;
+  padding-top: 5px;
+
+  i {
+    width: 30px;
+
+    &:before {
+      @include responsive-font-size(21px, 26px);
+      position: relative;
+      top: 4px;
+    }
+  }
+
+  @media (min-width: 768px){
+    border: 1px solid $gray5;
+    border-top: none;
+
+    &:first-child {
+      border-top: 1px solid $gray5;
+    }
+
+    &:hover,
+    &:focus,
+    &.active{
+      background-color: $teal;
+      color: $white;
+
+      i{
+        color: $white;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px){
+
+  .dash-nav {
+
+    ul {
+      display: flex;
+    }
+
+    li {
+      height: 60px;
+      padding: 5px 0 0;
+      width: 25%;
+
+      i {
+        display: block;
+        padding-bottom: 10px;
+        width: auto;
+      }
+
+      &:hover,
+      &:focus,
+      &.active{
+        border-bottom: solid 2px $teal;
+      }
+    }
+
+  }
+}
+
+.dash-nav--links li{
+  padding: 0;
+}
+
+.dash-nav--links a{
+  cursor: pointer;
+  display: block;
+  line-height: 45px;
+  padding-left: 14px;
+
+  &:hover,
+  &:focus{
+    color: $white;
+  }
+}

@@ -1,0 +1,76 @@
+/*
+
+Pager
+
+Pagination for variable amounts of paging
+
+Styleguide 12.0
+
+*/
+
+/*
+
+Plain old paging
+
+Markup:
+<div class="pager_4 pager-4--is_active">
+  <div class="pager-child"></div>
+</div>
+<div class="pager_2 pager-1--is_active">
+  <div class="pager-child"></div>
+</div>
+<div class="pager_3 pager-2--is_active">
+  <div class="pager-child"></div>
+</div>
+
+Styleguide 12.1
+
+*/
+$pager-width: 8px;
+$pager-max: 7;
+
+@function make-shadows($count, $width){
+  $val: 0 0 0 0 transparent;
+  @for $i from 1 through $count {
+      $val: #{$val}, (($width * (2 * $i)) - $width) 0 0 0 $gray4;
+  }
+  @return $val;
+}
+
+@mixin make-pager($count, $width : $pager-width) {
+  left: -($width * $count);
+  box-shadow: make-shadows($count, $width);
+}
+
+@mixin active-pager($count, $width : $pager-width) {
+	left: (($width * (2 * $count)) - $width)
+}
+
+.pager-child {
+  width: $pager-width;
+  border-radius: $pager-width;
+  height: $pager-width;
+  background-color: transparent;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.pager-child:before{
+  width: $pager-width;
+  height: $pager-width;
+  position: absolute;
+  border-radius: $pager-width;
+  background-color: $teal-dark;
+  content: '';
+}
+
+@for $i from 1 through $pager-max {
+	.pager_#{$i} .pager-child{
+	  @include make-pager($i);
+	}
+
+  .pager-#{$i}--is_active .pager-child:before {
+    @include active-pager($i);
+  }
+}

@@ -1,0 +1,238 @@
+/*
+
+Containers
+
+Containers are size agnostic. They could be used as full page width elements or nested.
+
+Markup:
+<div class="container {{modifier_class}}">Container</div>
+
+.container--small             - Container with a small padding
+.container--large             - Container with a large padding
+.container--xlarge            - Container with a xlarge padding
+.container--xxlarge           - Container with a xxlarge padding
+.container--staggered         - Container with a different x and y padding
+.container--tight             - Container with no padding
+.container--tight_x           - Container with no horizontal padding
+.container--tight_y           - Container with no vertical padding
+.container--tight_top         - Container with no top padding
+.container--tight_bottom      - Container with no bottom padding
+.container--bordered          - Container with border
+.container--bordered_top      - Container with top border
+.container--bordered_bottom   - Container with bottom border
+
+Styleguide 8.0
+
+*/
+
+.container{
+  @include container();
+}
+
+.container--small{
+  @include container--small();
+}
+
+.container--large{
+  @include container--large();
+}
+
+.container--xlarge{
+  @include container--xlarge();
+}
+
+.container--xxlarge{
+  @include container--xxlarge();
+}
+
+.container--stagger{
+  @include container--stagger();
+}
+
+.container--tight{
+  @include container--tight();
+}
+
+.container--tight_x{
+  @include container--tight_x();
+}
+
+.container--tight_y{
+  @include container--tight_y();
+}
+
+.container--tight_x--mobile {
+  @media (max-width: 767px){
+    @include container--tight_x();
+  }
+}
+
+.container--tight_top{
+  @include container--tight_top();
+}
+
+.container--tight_bottom{
+  @include container--tight_bottom();
+}
+
+.container--bordered{
+  @include container--bordered();
+}
+
+.container--bordered_mobile{
+  @media (max-width: 767px){
+    @include container--bordered();
+  }
+}
+
+.container--bordered_top{
+  @include container--bordered_top();
+}
+
+.container--bordered_bottom{
+  @include container--bordered_bottom();
+}
+
+/*
+
+Wrappers
+
+Use wrappers when you need a content area that is the standard width and centered on the page.
+
+Markup:
+<div class="wrapper {{modifier_class}}">Wrapper</div>
+
+.wrapper--padded      - Top and bottom padding
+.wrapper--small       - Small Wrapper
+.wrapper--xsmall      - Smaller Wrapper
+.wrapper--xxsmall     - Smallerer Wrapper
+
+Styleguide 8.1
+
+*/
+
+.wrapper{
+  @include wrapper();
+}
+
+.wrapper--padded{
+  @include wrapper--padded();
+}
+
+.wrapper--small{
+  @include wrapper--small();
+}
+
+.wrapper--xsmall{
+  @include wrapper--xsmall();
+}
+
+.wrapper--xxsmall{
+  @include wrapper--xxsmall();
+}
+
+/*
+
+Gap
+
+Gaps used for appropriately spacing components
+
+Markup:
+<div class="{{modifier_class}}" style="background-color: #000"></div>
+
+.gap                      - normal sized gap below
+.gap_small                - small sized gap below
+.gap_large                - large sized gap below
+.gap_xlarge               - large sized gap below
+.gap--mobile              - normal sized gap below only on mobile
+.gap_small--mobile        - small sized gap below only on mobile
+.gap_large--mobile        - large sized gap below only on mobile
+.gap_xlarge--mobile       - large sized gap below only on mobile
+.gap--desktop             - normal sized gap below only on desktop
+.gap_small--desktop       - small sized gap below only on desktop
+.gap_large--desktop       - large sized gap below only on desktop
+.gap_xlarge--desktop      - large sized gap below only on desktop
+
+Styleguide 8.2
+
+*/
+
+.gap{
+  @include gap();
+}
+
+.gap_small{
+  @include gap_small();
+}
+
+.gap_large{
+  @include gap_large();
+}
+
+.gap_xlarge{
+  @include gap_xlarge();
+}
+
+.gap--mobile{
+  @include gap--mobile();
+}
+
+.gap_small--mobile{
+  @include gap_small--mobile();
+}
+
+.gap_large--mobile{
+  @include gap_large--mobile();
+}
+
+.gap_xlarge--mobile{
+  @include gap_xlarge--mobile();
+}
+
+.gap--desktop{
+  @include gap--desktop();
+}
+
+.gap_small--desktop{
+  @include gap_small--desktop();
+}
+
+.gap_large--desktop{
+  @include gap_large--desktop();
+}
+
+.gap_xlarge--desktop{
+  @include gap_xlarge--desktop();
+}
+
+/*
+
+Header
+
+Step headers mostly now
+
+<div class="header--step">
+  Step 1
+  <small>Enter your payment whatever</small>
+</div>
+
+Styleguide 8.3
+
+*/
+
+
+.header--step{
+  background-color: $gray1;
+  color: $white;
+  padding: 8px 10px;
+  @include h3();
+
+  @media screen and (min-width: 768px){
+    padding: 12px 20px;
+  }
+}
+
+.header--step small{
+  font-weight: normal;
+  position: relative;
+}

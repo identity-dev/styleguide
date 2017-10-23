@@ -1,0 +1,858 @@
+/*
+
+Form Elements
+
+Markup:
+<form class="form_pretty form_secure" style="margin-top: 20px;">
+  <label class="textfield">
+    <input type="text" />
+    <span class="textfield-label">First Name*</span>
+  </label>
+  <label class="textfield">
+    <input type="text" />
+    <span class="textfield-label">First Name*</span>
+  </label>
+  <label class="textfield">
+    <input type="text" />
+    <span class="textfield-label">First Name*</span>
+  </label>
+  <label class="checkbox">
+    <input type="checkbox" />
+    <span class="checkbox-label">Checkbox</span>
+  </label>
+  <input type="submit" />
+</form>
+
+Styleguide 3.0
+
+*/
+
+.form_pretty label{
+  margin-bottom: 10px;
+}
+
+.form_secure{
+  position: relative;
+}
+
+.form_secure::before,
+.form_secure::after{
+  position: absolute;
+  left: 0;
+  top: -20px;
+}
+
+.form_secure::before{
+  @include icon('streamline');
+  color: $gray1;
+  content:"\f103";
+  font-size:19px;
+  margin-right:7px;
+}
+
+.form_secure::after{
+  @include type--small();
+  color: $gray3;
+  content: attr(data-secure-text);
+  font-weight:500;
+  left: 20px;
+  margin-top: 2px;
+}
+
+/*
+
+Radio
+
+Markup:
+<label class="radio {{modifier_class}}">
+  <input type="radio" name="change1" checked/>
+  <span class="radio-label">Radio</span>
+</label>
+<label class="radio {{modifier_class}}">
+  <input type="radio" name="change1" />
+  <span class="radio-label">Radio</span>
+</label>
+
+.radio--block           - Radio buttons displayed as blocks, for grouping
+
+Styleguide 3.1.1
+
+*/
+
+.radio input[type=radio]{
+  position: absolute;
+  z-index: $z_index-0--underground;
+  opacity: 0;
+}
+
+.radio{
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding: 0 0 10px 30px;
+
+  @media (min-width: 768px){
+    display:inline-block;
+    padding-right: 20px;
+  }
+
+}
+
+.radio-label{
+  display: inline-block;
+  @include type--large();
+
+  &:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    border: 2px solid $gray4;
+    content: '';
+    border-radius: 20px;
+  }
+}
+
+.radio input[type=radio]:focus + .radio-label{
+  &:before{
+    border-color: $teal;
+  }
+}
+
+.radio input[type=radio]:checked + .radio-label{
+  font-weight: 500;
+
+  &:after{
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: $teal;
+    content: '';
+    border-radius: 10px;
+  }
+}
+
+.radio--block{
+  padding: 10px 10px 10px 40px;
+  background-color: #fff;
+  border: 1px solid $gray6;
+  border-top: none;
+  display: block;
+}
+
+.radio--block:hover{
+  background-color: $gray7;
+}
+
+.radio--block:first-child {
+  border-top: 1px solid $gray6;
+}
+
+.radio--block--is_active{
+  background-color: $gray6;
+}
+
+.radio--block:before{
+  top: 50%;
+  margin-top: -10px;
+  left: 10px;
+}
+
+.radio--block .radio-label{
+  padding-top: 0;
+  @include type--normal();
+  @include type--base();
+}
+
+.radio--block .radio-label:before{
+  top: 50%;
+  margin-top: -10px;
+  left: 10px;
+}
+
+.radio--block input[type=radio]:checked + .radio-label:after{
+  top: 50%;
+  margin-top: -5px;
+  left: 15px;
+}
+
+/*
+
+Checkbox
+
+Markup:
+<label class="checkbox {{modifier_class}}">
+  <input type="checkbox" />
+  <span class="checkbox-label">Checkbox</span>
+</label>
+
+.checkbox--inline           - Inline Checkbox
+
+Styleguide 3.1.2
+
+*/
+
+.checkbox{
+  position: relative;
+  display: block;
+  cursor: pointer;
+  @include type--small();
+  padding: 2px 0 0 40px;
+}
+
+.checkbox input[type=checkbox]{
+  position: absolute;
+  z-index: $z_index-0--underground;
+  opacity: 0;
+}
+
+.checkbox .checkbox-label {
+  &:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    border: 1px solid $gray4;
+    border-radius: 2px;
+    background-color: $white;
+    content: '';
+  }
+
+  &:after{
+    @include icon('streamline');
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: $teal-dark;
+    content: '';
+    font-size: 10px;
+    height: 14px;
+    left: 0;
+    line-height: 14px;
+    padding: 2px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 14px;
+  }
+}
+
+.checkbox .checkbox-label.red-checkbox:before{
+  border-color: $red;
+}
+
+.checkbox input[type=checkbox]:checked + .checkbox-label {
+  &:after{
+    content: '\f13f';
+  }
+}
+
+.checkbox input[type=checkbox]:focus + .checkbox-label {
+  &:before{
+    border-color: $teal;
+  }
+}
+
+.checkbox--inline{
+  display: inline-block;
+  padding-right: 20px;
+}
+
+.checkbox .validation{
+  right: auto;
+  left: 24px;
+  top: 2px;
+}
+
+.checkbox .validation--success{
+  display: none;
+}
+
+/*
+
+Input and text areas
+
+Markup:
+<form>
+<label class="textfield {{modifier_class}}">
+  <input type="text" />
+  <span class="textfield-label">First Name*</span>
+</label>
+<br>
+<label class="textfield {{modifier_class}}">
+  <textarea></textarea>
+  <span class="textfield-label">Message*</span>
+</label>
+</form>
+
+.textfield--label_bordered      - Textfield with border for displaying on backgrounds other than white.
+.textfield--small               - Text field with small padding- can be used in conjunction with btn--small
+.textfield--xsmall              - Text field with xsmall padding- can be used in conjunction with btn--xsmall
+
+Styleguide 3.2.1
+
+*/
+
+// space or padding from borders of form element
+$forms-space--vertical:     12px;
+$forms-space--horizontal:   10px;
+
+$forms-space-vertical--small: 8px;
+
+.textfield {
+  position: relative;
+  display: block;
+}
+
+.textfield:before {
+  position: absolute;
+  line-height: inherit;
+}
+
+.textfield input,
+.textfield textarea {
+  border: 1px solid $gray4;
+  border-radius: 2px;
+  padding: $forms-space--vertical $forms-space--horizontal+15px $forms-space--vertical $forms-space--horizontal;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  @include type--large();
+}
+
+.textfield textarea {
+  margin-bottom: -5px;
+}
+
+.textfield input:focus,
+.textfield textarea:focus {
+  outline: none;
+  border-color: $teal;
+}
+
+.textfield input[disabled],
+.textfield textarea[disabled] {
+  background-color: $gray8;
+  color: $gray3;
+}
+
+.textfield input[disabled] + .textfield-label,
+.textfield textarea[disabled] + .textfield-label {
+  background-color: $gray8;
+}
+
+.textfield *:focus ~ .validation{
+  display: none;
+}
+
+.textfield-label{
+  position: absolute;
+  top: -($forms-space--vertical - 7px);
+  left: $forms-space--horizontal;
+  padding: 0 5px; //for the white background
+  background-color: white;
+  color: $gray1;
+  cursor: default;
+  @include font-size(12px);
+  @include transition-properties(top padding font-size opacity);
+}
+
+.textfield-label--is_inactive{
+  @include type--large();
+  color: $gray4;
+  cursor: text;
+  top: $forms-space--vertical;
+}
+
+.textfield-label--side {
+  display: inline-block;
+  padding: $forms-space--vertical+2px 0;
+}
+
+.textfield--label_bordered .textfield-label{
+  border-top: 1px solid $gray4;
+}
+
+.textfield--label_bordered  .textfield-label.textfield-label--is_inactive{
+  border-top: none;
+}
+
+.textfield--label_bordered  .textfield-label:before,
+.textfield--label_bordered  .textfield-label:after{
+  position: absolute;
+  display: block;
+  height: 5px;
+  top: 0;
+  content: '';
+}
+
+.textfield--label_bordered .textfield-label--is_inactive:before,
+.textfield--label_bordered .textfield-label--is_inactive:after{
+  content: none;
+}
+
+.textfield--label_bordered  .textfield-label:before{
+  border-left: 1px solid $gray4;
+  left: 0;
+}
+
+.textfield--label_bordered  .textfield-label:after{
+  border-right: 1px solid $gray4;
+  right: 0;
+}
+
+.textfield--label_bordered input:focus + .textfield-label,
+.textfield--label_bordered textarea:focus + .textfield-label{
+  top: -($forms-space--vertical - 7px);
+  left: $forms-space--horizontal;
+  border-top-color: $teal;
+
+  &:before{
+    border-left-color: $teal;
+  }
+
+  &:after{
+    border-right-color: $teal;
+  }
+}
+
+
+.textfield--small {
+  .textfield-label {
+    top: -($forms-space--vertical - 7px);
+    @include type--xsmall();
+  }
+  .textfield-label--is_inactive {
+    top: $forms-space-vertical--small;
+    @include type--base();
+  }
+  .validation{
+    top: $forms-space--vertical - 2px;
+  }
+}
+
+.textfield--small input,
+.textfield--small textarea {
+  padding: $forms-space-vertical--small $forms-space--horizontal+15px $forms-space-vertical--small $forms-space--horizontal;
+  @include type--normal();
+  @include type--base();
+}
+
+.textfield--xsmall {
+  .textfield-label {
+    top: -8px;
+    left: 5px;
+    @include type--xsmall();
+  }
+  .textfield-label--is_inactive {
+    top: 3px;
+    @include type--base();
+  }
+  .validation{
+    top: 5px;
+  }
+}
+
+.textfield--xsmall input,
+.textfield--xsmall textarea {
+  padding: 3px 10px;
+  @include type--normal();
+  @include type--base();
+}
+
+/*
+
+Select
+the width of the selectmenu depends on the width of the original select element
+
+Markup:
+<form>
+  <label class="dropdown {{modifier_class}}">
+    <select name="speed" id="speed">
+      <option disabled="disabled" selected="selected">Select</option>
+      <option>Work It</option>
+      <option>Harder</option>
+      <option>Better</option>
+      <option>Faster</option>
+      <option>Stronger</option>
+      <option>More Than</option>
+      <option>Hour</option>
+      <option>Our</option>
+      <option>Never</option>
+      <option>Ever</option>
+      <option>After</option>
+      <option>Work is</option>
+      <option>Over</option>
+    </select>
+  </label>
+</form>
+
+.dropdown--small            - dropdown with small padding-- can be used in conjunction with .btn--small
+.dropdown--xsmall           - dropdown with xsmall padding-- can be used in conjunction with .btn--xsmall
+.error                      - dropdown with error
+
+Styleguide 3.3
+
+*/
+
+.dropdown{
+  background-color: $white;
+  display: block;
+  position: relative;
+}
+
+.dropdown:after{
+  content: '';
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid $gray3;
+  height: 0;
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  width: 0;
+}
+
+.dropdown select{
+  background-color: transparent;
+  border: 1px solid $gray4;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: $gray1;
+  display: block;
+  padding: 13px 30px 13px 10px;
+  position: relative;
+  width: 100%;
+  z-index: $z_index-1;
+
+  &:focus{
+    outline: none;
+    border-color: $teal;
+  }
+}
+
+.dropdown--small select{
+  padding: 8px 10px;
+}
+
+.dropdown--small:after{
+  bottom: 15px;
+}
+
+.dropdown--xsmall select{
+  padding: 3px 10px;
+}
+
+.dropdown--xsmall:after{
+  bottom: 10px;
+}
+
+.dropdown .validation{
+  right: $forms-space--horizontal + 15px;
+}
+
+.dropdown .validation--success{
+  display: none;
+}
+
+.validation_placement,
+.dropdown-label {
+  color: $gray3;
+  padding-bottom: 5px;
+  display: inline-block;
+  position: relative;
+}
+
+.validation_placement .validation,
+.dropdown-label .validation{
+  top: 0;
+  right: -20px;
+}
+
+.dropdown.error select{
+  border-color: $red;
+}
+
+.dropdown select[disabled] {
+  background-color: $gray8;
+  color: $gray3;
+}
+
+/*
+
+Validations
+
+Validation popovers
+
+Markup:
+<label class="textfield">
+  <input type="text" />
+  <div class="textfield-label">Validaton</div>
+  <div class="validation {{modifier_class}}">
+    <div class="validation-label">This is required</div>
+  </div>
+</label>
+
+.validation--error        - Error form element icon
+.validation--success      - Valid form element icon
+
+
+Styleguide 3.4
+
+*/
+
+.validation{
+  position: absolute;
+  right: $forms-space--horizontal;
+  top: $forms-space--vertical + 2px;
+}
+
+.validation:before{
+  @include icon('streamline');
+  border-radius: 10px;
+  background-color: $white;
+}
+
+.validation-label{
+  position: absolute;
+  z-index: $z_index-4--error;
+  top: -3px;
+  right: 20px;
+  padding: 3px 8px;
+  background-color: $red;
+  color: $white;
+  white-space: nowrap;
+  display: none !important;
+  font-style: italic;
+  font-weight: 500;
+  @include type--small();
+  border-radius: 2px;
+
+  @media (min-width: 768px){
+    left: 20px;
+    right: auto;
+  }
+}
+
+.validation-label:before{
+  @include left-triangle($red, 5px);
+  position: absolute;
+  right: -5px;
+  top: 50%;
+  margin-top: -5px;
+  content: '';
+
+  @media (min-width: 768px){
+    @include right-triangle($red, 5px);
+    right: auto;
+    left: -5px;
+  }
+}
+
+.validation--error {
+  z-index: $z_index-3--tooltip;
+}
+
+.validation--error:before{
+  color: $red;
+  content: '\f142';
+}
+
+.validation--error:hover .validation-label{
+  display: block !important;
+}
+
+
+.validation--success:before{
+  color: $green;
+  content: '\f12f';
+}
+
+/*
+
+Validation Positions
+
+Positioning of validations
+
+Markup:
+<label class="textfield">
+  <input type="text" />
+  <div class="textfield-label">Validaton</div>
+  <div class="validation validation--error {{modifier_class}}">
+    <div class="validation-label">This is required</div>
+  </div>
+</label>
+
+.validation_hidden        - Hide validation icon
+.validation_right         - Validation label to the right
+.validation_left          - Validation label to the left
+
+Styleguide 3.4.1
+
+*/
+
+
+
+.validation_hidden.validation,
+.validation_hidden .validation{
+  display: none;
+}
+
+.validation_right .validation-label{
+  left: 20px;
+  right: auto;
+}
+
+.validation_right .validation-label:before{
+  @include right-triangle($red, 5px);
+  right: auto;
+  left: -5px;
+}
+
+.validation_left .validation-label{
+  right: 20px;
+  left: auto;
+}
+
+.validation_left .validation-label:before{
+  @include left-triangle($red, 5px);
+  left: auto;
+  right: -5px;
+}
+
+/*
+
+Error Class
+
+Styling inputs that have errors
+
+Styleguide 3.4.2
+
+*/
+
+.error.checkbox .checkbox-label:before{
+  border-color: $red;
+}
+
+.error.textfield input,
+.error.textfield textarea {
+  border-color: $red;
+   &:focus {
+    border-color: $red;
+  }
+}
+
+.error.textfield--label_bordered .textfield-label,
+.error.textfield--label_bordered .textfield-label,
+.error.textfield--label_bordered input:focus + .textfield-label,
+.error.textfield--label_bordered textarea:focus + .textfield-label{
+  border-top-color: $red;
+
+  &:before{
+    border-left-color: $red;
+  }
+
+  &:after{
+    border-right-color: $red;
+  }
+}
+
+.error.dropdown .ui-selectmenu-button {
+  border: 1px solid $red;
+}
+
+/*
+
+Show/Hide Password Widget
+
+A tiny widget to show or hide passwords. The <code>.widget-toggle_password</code>
+will trigger <code>password:show</code> or <code>password:hide</code>, and
+<code>.js-password_toggle</code> on any password field listens to these events
+to show/hide passwords. Simply call <code>Identity.toggleShowPassword()</code>
+on any page to make this widget available.
+
+Markup:
+<label class="textfield textfield--label_bordered">
+  <input type="password" autocomplete="off" id="password" class="js-password_toggle" />
+  <span class="textfield-label">Password</span>
+</label>
+<span class="widget-toggle_password" data-hidden="Reveal Yourself!" data-showing="Hide Me!"></span>
+
+Styleguide 3.4.3
+
+*/
+.widget-toggle_password {
+  cursor: pointer;
+  background-color: transparent;
+}
+.widget-toggle_password:before {
+  @include icon('streamline');
+  margin-right: 5px;
+  position: relative;
+}
+
+/* Show appropriate icons and copy */
+.widget-toggle_password:before {
+  content: '\f10d'; //fa-eye
+  top: 3px;
+}
+.widget-toggle_password:after {
+  content: attr(data-hidden);
+}
+.widget-toggle_password.showing:before {
+  content: '\f132'; //fa-eye-slash
+  top: 1px;
+}
+.widget-toggle_password.showing:after {
+  content: attr(data-showing);
+}
+
+/*
+
+Widget input and button
+
+A textfield and a button
+
+Markup:
+<div class="widget-input_and_button">
+  <label class="textfield">
+    <input type="text" />
+    <div class="textfield-label">Your Email</div>
+  </label>
+  <span class="btn">Verify</span>
+</div>
+
+Styleguide 3.4.4
+
+*/
+
+.widget-input_and_button{
+  position: relative;
+}
+
+.widget-input_and_button .textfield{
+  @media (max-width: 767px){
+    margin-bottom: 10px;
+  }
+}
+
+.widget-input_and_button .btn{
+  @media (min-width: 768px){
+    padding: 0 20px;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    border-radius: 1px;
+    height: 46px;
+    line-height: 42px;
+  }
+}
+
+.widget-input_and_button .validation{
+  @media (min-width: 768px){
+    right: -20px;
+  }
+}

@@ -1,0 +1,52 @@
+/*
+
+Formatter
+
+Formatting stuff from the database to display how we need them to
+
+Styleguide 11.0
+
+*/
+
+/*
+
+Social Network names
+
+Markup:
+<span class="format-googleplus"></span>
+<span class="format-linkedin"></span>
+<span class="format-youtube"></span>
+<span class="format-github"></span>
+<span class="format-facebook"></span>
+
+Styleguide 11.1
+
+*/
+
+.format-twitter:after{
+	content: "Twitter";
+}
+
+.format-facebook:after{
+	content: "Facebook";
+}
+
+.format-linkedin:after{
+	content: "LinkedIn";
+}
+
+.format-googleplus:after{
+	content: "Google+";
+}
+
+.format-youtube:after{
+	content: "YouTube";
+}
+
+.format-github:after{
+	content: "GitHub";
+}
+
+.format-vimeo:after{
+	content: "Vimeo";
+}

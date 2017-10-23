@@ -1,0 +1,248 @@
+@mixin icon($font-family: "FontAwesome") {
+  display: inline-block;
+  font-family: #{$font-family};
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin font-size($font-size){
+  font-size: $font-size;
+  line-height: $font-size + 4;
+}
+
+@mixin responsive-font-size($mobile, $desktop){
+  @include font-size($mobile);
+
+  @media (min-width: 768px){
+    @include font-size($desktop);
+  }
+}
+
+/*
+
+Mixins for quickly setting font family, weight and style
+
+base:         Proxima Nova
+secondary:    Proxima Nova
+n:            normal style
+i:            italic style
+1:            100 weight
+4:            400 weight
+5:            500 weight
+7:            700 weight
+
+*/
+
+@mixin base-font-n1(){
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 100;
+}
+
+@mixin base-font-n4(){
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin base-font-i4(){
+  font-family: $base-font;
+  font-style: italic;
+  font-weight: 400;
+}
+
+@mixin base-font-n5(){
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@mixin base-font-n7(){
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@mixin secondary-n1(){
+  font-family: $secondary-font;
+  font-style: normal;
+  font-weight: 100;
+}
+
+/*
+
+Typesetting sizes
+
+*/
+
+@mixin type--xsmall(){
+  @include font-size($base-font-size - 4px);
+}
+
+@mixin type--small(){
+  @include font-size($base-font-size - 2px);
+}
+
+@mixin type--base(){
+  @include font-size($base-font-size);
+}
+
+@mixin type--large(){
+  @include font-size($base-font-size + 2px);
+}
+
+/*
+
+Type setting headers
+
+*/
+
+@mixin h1(){
+  @include base-font-n4();
+  @include responsive-font-size(30px, 50px);
+}
+
+@mixin h2(){
+  @include base-font-n7();
+  @include responsive-font-size(20px, 25px);
+}
+
+@mixin h2--secondary(){
+  @include base-font-n4();
+  @include responsive-font-size(25px, 40px);
+}
+
+@mixin h3(){
+  @include base-font-n7();
+  @include responsive-font-size(18px, 20px);
+}
+
+@mixin h3--secondary(){
+  @include secondary-n1();
+  @include responsive-font-size(20px, 30px);
+}
+
+@mixin h4(){
+  @include base-font-n4();
+  @include responsive-font-size(16px, 19px);
+}
+
+@mixin h4--secondary(){
+  @include secondary-n1();
+  @include type--large();
+}
+
+@mixin h5(){
+  @include base-font-n4();
+  @include type--semibold();
+}
+
+@mixin h6(){
+  @include base-font-n4();
+  @include font-size(24px);
+}
+
+@mixin subtitle(){
+  @include responsive-font-size(14px , 16px);
+  color: $gray2;
+}
+
+/*
+
+Typesetting modifierds
+
+*/
+
+@mixin type--tight(){
+  margin-bottom: 0;
+}
+
+/*
+
+Typesetting colors
+
+*/
+
+@mixin type--white(){
+  color: $white;
+}
+
+@mixin type--gray1(){
+  color: $gray1;
+}
+
+@mixin type--gray2(){
+  color: $gray2;
+}
+
+@mixin type--gray3(){
+  color: $gray3;
+}
+
+@mixin type--gray4(){
+  color: $gray4;
+}
+
+@mixin type--gray5(){
+  color: $gray5;
+}
+
+@mixin type--teal(){
+  color: $teal;
+}
+
+@mixin type--teal-dark(){
+  color: $teal-dark;
+}
+
+@mixin type--green(){
+  color: $green;
+}
+
+@mixin type--red(){
+  color: $red;
+}
+
+@mixin type--yellow(){
+  color: $yellow;
+}
+
+
+/*
+
+Typesetting weights
+
+*/
+
+@mixin type--semibold(){
+  font-weight: 500;
+}
+
+@mixin type--normal(){
+  font-weight: 400;
+}
+
+@mixin type--light(){
+  font-weight: 100;
+}
+
+/*
+
+Type faces
+
+*/
+
+@mixin type--primary(){
+  font-family: $base-font;
+}
+
+@mixin type--secondary(){
+  font-family: $secondary-font;
+}
+
+@mixin type--mono(){
+  font-family: $monospace;
+}

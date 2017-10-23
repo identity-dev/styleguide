@@ -1,0 +1,182 @@
+
+@mixin container{
+  padding: 10px;
+
+  @media (min-width: 768px){
+    padding: 20px;
+  }
+}
+
+@mixin container--small{
+  padding: 10px;
+}
+
+@mixin container--large{
+  padding: 20px 10px;
+
+  @media (min-width: 768px){
+    padding: 40px;
+  }
+}
+
+@mixin container--xlarge{
+  padding: 30px 20px;
+
+  @media (min-width: 768px){
+    padding: 60px;
+  }
+}
+
+@mixin container--xxlarge{
+  padding: 40px 20px;
+
+  @media (min-width: 768px){
+    padding: 80px;
+  }
+}
+
+@mixin container--stagger{
+  padding: 20px 10px;
+
+  @media (min-width: 768px){
+    padding: 40px 20px;
+  }
+}
+
+@mixin container--tight{
+  padding: 0;
+}
+
+@mixin container--tight_x{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@mixin container--tight_y{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@mixin container--tight_top{
+  padding-top: 0;
+}
+
+@mixin container--tight_bottom{
+  padding-bottom: 0;
+}
+
+@mixin container--bordered{
+  border: 1px solid $gray5;
+  border-radius: 1px;
+}
+
+@mixin container--bordered_top{
+  border-top: 1px solid $gray5;
+}
+
+@mixin container--bordered_bottom{
+  border-bottom: 1px solid $gray5;
+}
+
+
+@mixin wrapper{
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@mixin wrapper--padded{
+  padding: 20px 0;
+
+  @media (min-width: 768px){
+    padding: 40px 0;
+  }
+}
+
+@mixin wrapper--small{
+  max-width: 800px;
+}
+
+@mixin wrapper--xsmall{
+  max-width: 640px;
+}
+
+@mixin wrapper--xxsmall{
+  max-width: 450px;
+}
+
+
+@mixin gap{
+  padding-bottom: 10px;
+
+  @media (min-width: 768px){
+    padding-bottom: 20px;
+  }
+}
+
+@mixin gap_small{
+  padding-bottom: 10px;
+}
+
+@mixin gap_large{
+  padding-bottom: 20px;
+
+  @media (min-width: 768px){
+    padding-bottom: 40px;
+  }
+}
+
+@mixin gap_xlarge{
+  padding-bottom: 30px;
+
+  @media (min-width: 768px){
+    padding-bottom: 60px;
+  }
+}
+
+@mixin gap--mobile{
+  @media (max-width: 767px){
+    padding-bottom: 20px;
+  }
+}
+
+@mixin gap_small--mobile{
+  @media (max-width: 767px){
+    padding-bottom: 10px;
+  }
+}
+
+@mixin gap_large--mobile{
+  @media (max-width: 767px){
+    padding-bottom: 40px;
+  }
+}
+
+@mixin gap_xlarge--mobile{
+  @media (max-width: 767px){
+    padding-bottom: 60px;
+  }
+}
+
+@mixin gap--desktop{
+  @media (min-width: 768px){
+    padding-bottom: 20px;
+  }
+}
+
+@mixin gap_small--desktop{
+  @media (min-width: 768px){
+    padding-bottom: 10px;
+  }
+}
+
+@mixin gap_large--desktop{
+  @media (min-width: 768px){
+    padding-bottom: 40px;
+  }
+}
+
+@mixin gap_xlarge--desktop{
+  @media (min-width: 768px){
+    padding-bottom: 60px;
+  }
+}

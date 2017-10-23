@@ -1,0 +1,115 @@
+/*
+
+Layout Styles
+
+*/
+
+.portal{
+  background-color: $gray8;
+}
+
+.portal__header{
+  height: 25px;
+  line-height: 25px;
+  padding: 10px 20px;
+  background-color: $gray4;
+  z-index: $z_index-0;
+}
+
+.portal__navigation{
+  position: relative;
+}
+
+.portal__content{
+  padding: 50px 10px 10px;
+
+  @media (min-width: 768px){
+    padding: 90px 20px 30px;
+    padding-left: 290px;
+  }
+}
+
+/*
+
+Sidebar Styles
+
+*/
+
+.portal__logo{
+  margin: 0 auto;
+  max-width: 170px;
+  padding: 35px 10px;
+  text-align: center;
+
+  a{
+    position: static;
+  }
+}
+
+.portal__sidebar{
+  background-color: $white;
+  left: 0;
+  padding: 0;
+  top: 0;
+  z-index: $z_index-1--foreground;
+
+  @media (max-width: 767px){
+    position: relative;
+    right: 0;
+  }
+
+  @media (min-width: 768px){
+    width: 230px;
+    position: fixed;
+    padding-bottom: 40px;
+    bottom: 0;
+    border-right: 1px solid $gray5;
+
+    overflow-y: auto;
+  }
+}
+
+.portal__nav-item{
+  border-top: 1px solid $gray4;
+  display: block;
+  line-height: 40px;
+  padding: 10px 10px 10px 20px;
+  text-transform: uppercase;
+
+  i:before{
+    color: $teal;
+    margin-right: 14px;
+  }
+
+  &:link,
+  &:visited{
+    color: $gray1;
+  }
+
+  &:hover,
+  &:focus,
+  &:active{
+    background-color: $teal;
+    color: $white;
+
+    i:before{
+      color: $white;
+    }
+  }
+
+  &:last-child{
+    border-bottom: 1px solid $gray4;
+  }
+}
+
+.portal__nav-item--is_active{
+  &:link,
+  &:visited,
+  &:hover,
+  &:focus,
+  &:active{
+    background-color: $teal;
+    color: $white;
+    cursor: default;
+  }
+}

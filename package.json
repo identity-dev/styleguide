@@ -1,5 +1,5 @@
 {
-  "name": "identity-styleguide",
+  "name": "identity-dev-styleguide",
   "author": "Tyler Childs",
   "contributors": [
     "Tyler Childs <tylerwchilds@gmail.com>"
@@ -55,8 +55,8 @@
     "start": "yarn install && gulp",
     "push:tag": "git push --tags origin HEAD:master",
     "release": "yarn install && gulp compile",
-    "release:patch": "npm run release && npm version patch && npm run push:tag",
-    "release:minor": "npm run release && npm version minor && npm run push:tag",
-    "release:major": "npm run release && npm version major && npm run push:tag"
+    "release:patch": "npm run release && npm version patch && npm run push:tag && npm publish",
+    "release:minor": "npm run release && npm version minor && npm run push:tag && npm publish",
+    "release:major": "npm run release && npm version major && npm run push:tag && npm publish"
   }
 }

@@ -126,6 +126,78 @@
           </section>
       </article>
       <article class="pattern">
+          <h2 class="kss-title" id="6-3">
+            <span class="kss-ref badge pull-right">6-3</span> Modal
+          </h2>
+          <div class="subtitle pattern-description"><p>A simple, responsive modal. Traditionally used while nested below an overlay.
+Note: the first button will not work by nature of how KSS is used to generate a selector.
+It&#39;s only a problem with this documentation</p>
+</div>
+          <section class="example">
+            <div class="example-demo">
+              <div class="kss-example"><div class="overlay" id="js-modal-[modifier class]">
+  <div class="modal [modifier class]">Modal is opened</div>
+  <span class="close js-close-modal" data-id="js-modal-[modifier class]"></span>
+</div>
+<a href="javascript:;" class="btn js-show-modal" data-id="js-modal-[modifier class]">
+Demo Modal
+</a>
+<div class="modal"></div></div>
+                <hr />
+                <h4 class="u-clearfix">Activated modal <span class="u-f-right"><code>.modal--is_active</code></span></h4>
+                <div class="kss-example"><div class="overlay" id="js-modal-modal--is_active">
+  <div class="modal modal--is_active">Modal is opened</div>
+  <span class="close js-close-modal" data-id="js-modal-modal--is_active"></span>
+</div>
+<a href="javascript:;" class="btn js-show-modal" data-id="js-modal-modal--is_active">
+Demo Modal
+</a>
+<div class="modal"></div></div>
+                <hr />
+                <h4 class="u-clearfix">small width Modal <span class="u-f-right"><code>.modal--small</code></span></h4>
+                <div class="kss-example"><div class="overlay" id="js-modal-modal--small">
+  <div class="modal modal--small">Modal is opened</div>
+  <span class="close js-close-modal" data-id="js-modal-modal--small"></span>
+</div>
+<a href="javascript:;" class="btn js-show-modal" data-id="js-modal-modal--small">
+Demo Modal
+</a>
+<div class="modal"></div></div>
+                <hr />
+                <h4 class="u-clearfix">Large width Modal <span class="u-f-right"><code>.modal--large</code></span></h4>
+                <div class="kss-example"><div class="overlay" id="js-modal-modal--large">
+  <div class="modal modal--large">Modal is opened</div>
+  <span class="close js-close-modal" data-id="js-modal-modal--large"></span>
+</div>
+<a href="javascript:;" class="btn js-show-modal" data-id="js-modal-modal--large">
+Demo Modal
+</a>
+<div class="modal"></div></div>
+                <hr />
+                <h4 class="u-clearfix">XLarge width Modal <span class="u-f-right"><code>.modal--xlarge</code></span></h4>
+                <div class="kss-example"><div class="overlay" id="js-modal-modal--xlarge">
+  <div class="modal modal--xlarge">Modal is opened</div>
+  <span class="close js-close-modal" data-id="js-modal-modal--xlarge"></span>
+</div>
+<a href="javascript:;" class="btn js-show-modal" data-id="js-modal-modal--xlarge">
+Demo Modal
+</a>
+<div class="modal"></div></div>
+            </div>
+            <div class="example-code">
+<pre class="prettyprint no-copy">&lt;div class=&quot;overlay&quot; id=&quot;js-modal-[modifier class]&quot;&gt;
+  &lt;div class=&quot;modal [modifier class]&quot;&gt;Modal is opened&lt;/div&gt;
+  &lt;span class=&quot;close js-close-modal&quot; data-id=&quot;js-modal-[modifier class]&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;a href=&quot;javascript:;&quot; class=&quot;btn js-show-modal&quot; data-id=&quot;js-modal-[modifier class]&quot;&gt;
+Demo Modal
+&lt;/a&gt;
+&lt;div class=&quot;modal&quot;&gt;&lt;/div&gt;</pre>
+            </div>
+            <div class="example-toggle"></div>
+          </section>
+      </article>
+      <article class="pattern">
           <h3 class="kss-title" id="6-4-1">
             <span class="kss-ref badge pull-right">6-4-1</span> Popover Positions
           </h3>
@@ -133,85 +205,85 @@
 </div>
           <section class="example">
             <div class="example-demo">
-              <div class="kss-example"><div class="pulse">
-  <div class="popover popover--is_active [modifier class]">
+              <div class="kss-example"><div class="pulse js-hover-popover" data-id="js-hover-popover-[modifier class]">
+  <div class="popover [modifier class]" id="js-hover-popover-[modifier class]">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div></div>
                 <hr />
                 <h4 class="u-clearfix">Popover aligned above the relative parent <span class="u-f-right"><code>.popover--below</code></span></h4>
-                <div class="kss-example"><div class="pulse">
-  <div class="popover popover--is_active popover--below">
+                <div class="kss-example"><div class="pulse js-hover-popover" data-id="js-hover-popover-popover--below">
+  <div class="popover popover--below" id="js-hover-popover-popover--below">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div></div>
                 <hr />
                 <h4 class="u-clearfix">Popover aligned to the left of the relative parent <span class="u-f-right"><code>.popover--left</code></span></h4>
-                <div class="kss-example"><div class="pulse">
-  <div class="popover popover--is_active popover--left">
+                <div class="kss-example"><div class="pulse js-hover-popover" data-id="js-hover-popover-popover--left">
+  <div class="popover popover--left" id="js-hover-popover-popover--left">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div></div>
                 <hr />
                 <h4 class="u-clearfix">Popover aligned above the relative parent <span class="u-f-right"><code>.popover--above</code></span></h4>
-                <div class="kss-example"><div class="pulse">
-  <div class="popover popover--is_active popover--above">
+                <div class="kss-example"><div class="pulse js-hover-popover" data-id="js-hover-popover-popover--above">
+  <div class="popover popover--above" id="js-hover-popover-popover--above">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div></div>
                 <hr />
                 <h4 class="u-clearfix">Popover aligned to the right of the relative parent <span class="u-f-right"><code>.popover--right</code></span></h4>
-                <div class="kss-example"><div class="pulse">
-  <div class="popover popover--is_active popover--right">
+                <div class="kss-example"><div class="pulse js-hover-popover" data-id="js-hover-popover-popover--right">
+  <div class="popover popover--right" id="js-hover-popover-popover--right">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div></div>
                 <hr />
                 <h4 class="u-clearfix">Popover aligned to the right and bottom of the relative parent <span class="u-f-right"><code>.popover--right_below</code></span></h4>
-                <div class="kss-example"><div class="pulse">
-  <div class="popover popover--is_active popover--right_below">
+                <div class="kss-example"><div class="pulse js-hover-popover" data-id="js-hover-popover-popover--right_below">
+  <div class="popover popover--right_below" id="js-hover-popover-popover--right_below">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div></div>
                 <hr />
                 <h4 class="u-clearfix">Popover aligned to the left and bottom of the relative parent <span class="u-f-right"><code>.popover--left_below</code></span></h4>
-                <div class="kss-example"><div class="pulse">
-  <div class="popover popover--is_active popover--left_below">
+                <div class="kss-example"><div class="pulse js-hover-popover" data-id="js-hover-popover-popover--left_below">
+  <div class="popover popover--left_below" id="js-hover-popover-popover--left_below">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div></div>
                 <hr />
                 <h4 class="u-clearfix">Popover aligned to the top based on box, not on the tip <span class="u-f-right"><code>.popover--align_top</code></span></h4>
-                <div class="kss-example"><div class="pulse">
-  <div class="popover popover--is_active popover--align_top">
+                <div class="kss-example"><div class="pulse js-hover-popover" data-id="js-hover-popover-popover--align_top">
+  <div class="popover popover--align_top" id="js-hover-popover-popover--align_top">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div></div>
                 <hr />
                 <h4 class="u-clearfix">Popover aligned to the right and bottom of the relative parent on mobile <span class="u-f-right"><code>.popover--right--mobile</code></span></h4>
-                <div class="kss-example"><div class="pulse">
-  <div class="popover popover--is_active popover--right--mobile">
+                <div class="kss-example"><div class="pulse js-hover-popover" data-id="js-hover-popover-popover--right--mobile">
+  <div class="popover popover--right--mobile" id="js-hover-popover-popover--right--mobile">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div></div>
                 <hr />
                 <h4 class="u-clearfix">Popover aligned to the left and bottom of the relative parent on mobile <span class="u-f-right"><code>.popover--left--mobile</code></span></h4>
-                <div class="kss-example"><div class="pulse">
-  <div class="popover popover--is_active popover--left--mobile">
+                <div class="kss-example"><div class="pulse js-hover-popover" data-id="js-hover-popover-popover--left--mobile">
+  <div class="popover popover--left--mobile" id="js-hover-popover-popover--left--mobile">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div></div>
                 <hr />
                 <h4 class="u-clearfix">Popover aligned to the center and bottom of the relative parent on mobile <span class="u-f-right"><code>.popover--center--mobile</code></span></h4>
-                <div class="kss-example"><div class="pulse">
-  <div class="popover popover--is_active popover--center--mobile">
+                <div class="kss-example"><div class="pulse js-hover-popover" data-id="js-hover-popover-popover--center--mobile">
+  <div class="popover popover--center--mobile" id="js-hover-popover-popover--center--mobile">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div></div>
             </div>
             <div class="example-code">
-<pre class="prettyprint no-copy">&lt;div class=&quot;pulse&quot;&gt;
-  &lt;div class=&quot;popover popover--is_active [modifier class]&quot;&gt;
+<pre class="prettyprint no-copy">&lt;div class=&quot;pulse js-hover-popover&quot; data-id=&quot;js-hover-popover-[modifier class]&quot;&gt;
+  &lt;div class=&quot;popover [modifier class]&quot; id=&quot;js-hover-popover-[modifier class]&quot;&gt;
     The quick brown fox jumped over the lazy dog, so quickly.
   &lt;/div&gt;
 &lt;/div&gt;</pre>

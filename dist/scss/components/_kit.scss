@@ -60,7 +60,13 @@ Overlay
 An overlay used to simulate a lightbox effect. Needs to be activated with .is_active
 
 Markup:
-<div class="overlay {{modifier_class}}"></div>
+<div class="overlay {{modifier_class}}">
+  <div class="modal">Modal is opened</div>
+  <span class="close"></span>
+</div>
+<a href="javascript:;" class="js-show-modal" data-id="js-modal-create-company">
+Demo Overlay
+</a>
 
 .overlay--is_active     - Activated overlay
 .overlay--white         - Overlay will be white when activated
@@ -116,17 +122,26 @@ No Styleguide Reference
 
 Modal
 
-A simple, responsive modal. Traditionally used while nested below an overlay
+A simple, responsive modal. Traditionally used while nested below an overlay.
+Note: the first button will not work by nature of how KSS is used to generate a selector.
+It's only a problem with this documentation
 
 Markup:
-<div class="modal {{modifier_class}}"></div>
+<div class="overlay" id="js-modal-{{modifier_class}}">
+  <div class="modal {{modifier_class}}">Modal is opened</div>
+  <span class="close js-close-modal" data-id="js-modal-{{modifier_class}}"></span>
+</div>
+<a href="javascript:;" class="btn js-show-modal" data-id="js-modal-{{modifier_class}}">
+Demo Modal
+</a>
+<div class="modal"></div>
 
 .modal--is_active       - Activated modal
 .modal--small           - small width Modal
 .modal--large           - Large width Modal
 .modal--xlarge          - XLarge width Modal
 
-No Styleguide Reference
+Styleguide 6.3
 
 */
 
@@ -176,8 +191,8 @@ Popover Positions
 Various positions for the popovers
 
 Markup:
-<div class="pulse">
-  <div class="popover popover--is_active {{modifier_class}}">
+<div class="pulse js-hover-popover" data-id="js-hover-popover-{{modifier_class}}">
+  <div class="popover {{modifier_class}}" id="js-hover-popover-{{modifier_class}}">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div>

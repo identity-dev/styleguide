@@ -2,6 +2,20 @@
 
   var Identity = window.Identity || {};
 
+  function matchesSelector(dom_element, selector) {
+    var matchesSelector = dom_element.matches || dom_element.matchesSelector || dom_element.webkitMatchesSelector || dom_element.mozMatchesSelector || dom_element.msMatchesSelector || dom_element.oMatchesSelector;
+    return matchesSelector.call(dom_element, selector);
+  }
+
+  function delegate(type, selector, handler){
+    window.addEventListener(type, function(event){
+      if(matchesSelector(event.target, selector)){
+        handler.call(event.target, event);
+        event.stopPropagation();
+      }
+    })
+  }
+
   /*
 
   Kit show modal
@@ -22,21 +36,21 @@
     if( ! settings.can_scroll) $('body').addClass('u-no-scroll');
     if( ! settings.can_dismiss) $( settings.modal ).addClass('js-no_dismiss');
 
-    $(document).trigger( "modal-opened", { $elem: $(settings.modal) } );
+    document.dispatchEvent(new CustomEvent("modal-opened", { detail: { $elem: $(settings.modal) } }));
   };
 
   // event for showing modal
-  $( document ).on('click', '.js-show-modal', function(){
-      var modal = '#'+ $(this).data('id');
-      var dismiss = $(this).data('dismiss');
-      var scroll = $(this).data('scroll');
+  delegate('click', '.js-show-modal', function(event){
+    var modal = '#'+ this.getAttribute('data-id');
+    var dismiss = this.getAttribute('data-dismiss');
+    var scroll = this.getAttribute('data-scroll');
 
-      Identity.show_modal({
-        modal: modal,
-        can_dismiss: dismiss,
-        can_scroll: scroll
-      });
-  });
+    Identity.show_modal({
+      modal: modal,
+      can_dismiss: dismiss,
+      can_scroll: scroll
+    });
+  })
 
   /*
 
@@ -55,27 +69,27 @@
 
     $('body').removeClass('u-no-scroll');
 
-    $(document).trigger( "modal-closed", { $elem: $(settings.modal) } );
+    document.dispatchEvent(new CustomEvent("modal-closed", { detail: { $elem: $(settings.modal) } }));
   };
 
   // event for closing modal
-  $( document ).on('click', '.js-close-modal', function(){
-      var modal = '#'+ $(this).data('id');
+  delegate('click', '.js-close-modal', function(event){
+    var modal = '#'+ this.getAttribute('data-id');
 
-      Identity.close_modal({modal: modal});
-  });
+    Identity.close_modal({modal: modal});
+  })
 
   // event for closing modal on overlay click
-  $( document ).on('click', '.overlay', function(event){
-      if($(event.target).is('.modal, .js-no_dismiss') || $(event.target).parents('.modal').length > 0){
-        event.stopPropagation();
-        return true;
-      }
+  delegate('click', '.overlay', function(event){
+    if($(event.target).is('.modal, .js-no_dismiss') || $(event.target).parents('.modal').length > 0){
+      event.stopPropagation();
+      return true;
+    }
 
-      var modal = '#'+ $(this).attr('id');
+    var modal = '#'+ this.getAttribute('data-id');
 
-      Identity.close_modal({modal: modal});
-  });
+    Identity.close_modal({modal: modal});
+  })
 
   /*
 
@@ -83,9 +97,9 @@
 
   */
   $( document ).on('click', '.js-toggle-tab', function(){
-      var tab = $(this).data('id');
+      var tab = this.getAttribute('data-id');
       var $tabs = $(this).parents('.tabs');
-      var group = $tabs.attr('id');
+      var group = $tabs.getAttribute('id');
 
       $tabs.find('.js-toggle-tab').removeClass('tabs-toggle--is_active');
       $('.'+ group).find('.js-tabs-content').removeClass('tabs-content--is_active');
@@ -93,7 +107,7 @@
       $(this).addClass('tabs-toggle--is_active');
       $('#'+ tab).addClass('tabs-content--is_active');
 
-      $(document).trigger( "tab-toggled", { $elem: $('#'+ tab) } );
+      document.dispatchEvent(new CustomEvent("tab-toggled", { detail: { $elem: $('#'+ tab) } }));
   });
 
   /*
@@ -101,14 +115,15 @@
   Kit toggle accordion
 
   */
-  $( document ).on('click', '.js-toggle-accordion', function(){
-      var accordion = $(this).data('id');
 
-      $(this).toggleClass('accordion--is_active');
-      $('#'+ accordion).slideToggle(200);
+  delegate('click', '.js-toggle-accordion', function(event){
+    var accordion = this.getAttribute('data-id');
 
-      $(document).trigger( "accordion-toggled", { $elem: $('#'+ accordion) } );
-  });
+    $(this).toggleClass('accordion--is_active');
+    $('#'+ accordion).slideToggle(200);
+
+    document.dispatchEvent(new CustomEvent("accordion-toggled", { detail: { $elem: $('#'+ accordion) } }));
+  })
 
   /*
 
@@ -126,7 +141,7 @@
     $(settings.popover).addClass('popover--is_active');
     $('body').addClass('js-popover--is_active');
 
-    $(document).trigger( "popover-shown", { $elem: $(settings.popover) } );
+    document.dispatchEvent(new CustomEvent("popover-shown", { detail: { $elem: $(settings.popover) } }));
   };
 
   /*
@@ -146,7 +161,7 @@
     $('body').removeClass('js-popover--is_active');
     $(".popover_child--is_active").removeClass("popover_child--is_active");
 
-    $(document).trigger( "popover-hidden", { $elem: $(settings.popover) } );
+    document.dispatchEvent(new CustomEvent("popover-hidden", { detail: { $elem: $(settings.popover) } }));
   };
 
   /*
@@ -154,18 +169,20 @@
   Kit hover popover
 
   */
-  $( document )
-    .on('mouseenter', '.js-hover-popover', function(event){
-      var popover = '#'+ $(this).data('id');
+  delegate('mouseenter', '.js-hover-popover', function(event){
+    debugger;
+    var popover = '#'+ this.getAttribute('data-id');
 
-      $(event.currentTarget).addClass("popover_child--is_active");
+    $(event.currentTarget).addClass("popover_child--is_active");
 
-      Identity.show_popover({popover: popover});
+    Identity.show_popover({popover: popover});
+  });
 
-  }).on('mouseleave', '.js-hover-popover', function(){
-      var popover = '#'+ $(this).data('id');
+  delegate('mouseleave', '.js-hover-popover', function(event){
+    debugger;
+    var popover = '#'+ this.getAttribute('data-id');
 
-      Identity.hide_popover({popover: popover});
+    Identity.hide_popover({popover: popover});
   });
 
   /*
@@ -173,22 +190,22 @@
   Kit click popover (and "hover" for mobile)
 
   */
-  $( document ).on('click', '.js-click-popover, .js-hover-popover', function(event){
-    var popover = '#'+ $(this).data('id');
+  delegate('click', '.js-click-popover, .js-hover-popover', function(event){
+    var popover = '#'+ this.getAttribute('data-id');
 
     $(event.currentTarget).addClass("popover_child--is_active");
 
     Identity.show_popover({popover: popover});
   });
 
-  $( document ).on('click', '.js-popover--is_active', function(event){
+  delegate('click', '.js-popover--is_active', function(event){
     if($(event.target).is('.popover') || $(event.target).parents('.popover').length > 0){
       event.stopPropagation();
       return true;
     }
 
     $('.popover--is_active').each(function(){
-      Identity.hide_popover({popover: '#'+ $(this).attr('id')});
+      Identity.hide_popover({popover: '#'+ this.getAttribute('id')});
     });
 
   });

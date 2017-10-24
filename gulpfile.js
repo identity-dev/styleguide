@@ -26,7 +26,7 @@ var args = {
 };
 
 gulp.task('compile', ['clean'], function(){
-  runSequence('sass', 'minify', 'kss-html', 'kss', 'kss-public');
+  runSequence('sass', 'js', 'minify', 'kss-html', 'kss', 'kss-public');
 });
 
 // Clean build
@@ -98,6 +98,9 @@ gulp.task('kss-public', ['kss'], function(){
   gulp.src('./dist/css/styleguide.css')
     .pipe(gulp.dest('./docs/public/css'));
 
+  gulp.src('./dist/js/styleguide.js')
+    .pipe(gulp.dest('./docs/public/js'));
+
   gulp.src('./kss-html/sass/kss.scss')
     .pipe(sourcemaps.init())
       .pipe(sass({
@@ -130,6 +133,14 @@ gulp.task('sass', function() {
     .pipe(sourcemaps.write())
     .pipe(autoprefixer())
     .pipe(gulp.dest('./dist/css'));
+});
+
+gulp.task('js', function(){
+  return gulp.src([
+      './src/js/kit.js'
+    ])
+    .pipe(concat('styleguide.js'))
+    .pipe(gulp.dest('./dist/js'));
 });
 
 gulp.task('minify', ['sass'], function() {

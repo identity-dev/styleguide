@@ -1,0 +1,13 @@
+.sass-cache/
+node_modules/
+npm-debug.log
+.DS_Store
+temp/
+kss-html/
+docs/
+.*
+gulpfile.js
+index.html
+package.json
+README.md
+yarn.lock

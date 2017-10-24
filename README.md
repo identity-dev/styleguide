@@ -16,6 +16,6 @@ The deployment process for the styleguide has been super streamlined. Just run o
 
 ```
 npm run release:patch  // 0.0.1
-npm run release:patch  // 0.1.0
-npm run release:patch  // 1.0.0
+npm run release:minor  // 0.1.0
+npm run release:major  // 1.0.0
 ```

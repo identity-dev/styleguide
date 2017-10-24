@@ -8,6 +8,4 @@ docs/
 .*
 gulpfile.js
 index.html
-package.json
-README.md
 yarn.lock

@@ -191,7 +191,7 @@ Popover Positions
 Various positions for the popovers
 
 Markup:
-<div class="pulse js-hover-popover" data-id="js-hover-popover-{{modifier_class}}">
+<div class="pulse js-click-popover" data-id="js-hover-popover-{{modifier_class}}">
   <div class="popover {{modifier_class}}" id="js-hover-popover-{{modifier_class}}">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
@@ -468,8 +468,8 @@ Popover styles
 A popover, primarily used in onboarding flows
 
 Markup:
-<div class="pulse">
-  <div class="popover popover--below popover--is_active {{modifier_class}}">
+<div class="pulse js-click-popover" data-id="js-hover-popover-{{modifier_class}}">
+  <div class="popover popover--below {{modifier_class}}" id="js-hover-popover-{{modifier_class}}">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div>

@@ -18,12 +18,7 @@
   </head>
   <body class="language-markup portal">
 
-      <header class="portal__header">
-
-</header>
-
-
-      
+    
 
 
 <aside class="portal__sidebar">
@@ -87,50 +82,55 @@
     </a>
 </aside>
 
+<header class="portal__header">
+
+</header>
+
 <div class="portal__content">
+  <div id="notifications"></div>
+  <div class="container">
 
-
-      <article class="pattern">
-          <h2 id="7">Type</h2>
-          <div class="subtitle pattern-description"><p>Typographic modules</p>
+        <article class="pattern">
+            <h2 id="7">Type</h2>
+            <div class="subtitle pattern-description"><p>Typographic modules</p>
 </div>
-          <section class="example">
-            <div class="example-demo">
-              <div class="kss-example"><div class="type [modifier class]">
+            <section class="example">
+              <div class="example-demo">
+                <div class="kss-example"><div class="type [modifier class]">
   <h2>Heading</h2>
   <p class="subtitle">Subtitle</p>
 </div></div>
-                <hr />
-                <h4 class="u-clearfix">Type setting for hero modules <span class="u-f-right"><code>.type--hero</code></span></h4>
-                <div class="kss-example"><div class="type type--hero">
+                  <hr />
+                  <h4 class="u-clearfix">Type setting for hero modules <span class="u-f-right"><code>.type--hero</code></span></h4>
+                  <div class="kss-example"><div class="type type--hero">
   <h2>Heading</h2>
   <p class="subtitle">Subtitle</p>
 </div></div>
-                <hr />
-                <h4 class="u-clearfix">Type setting for descriptions <span class="u-f-right"><code>.type--description</code></span></h4>
-                <div class="kss-example"><div class="type type--description">
+                  <hr />
+                  <h4 class="u-clearfix">Type setting for descriptions <span class="u-f-right"><code>.type--description</code></span></h4>
+                  <div class="kss-example"><div class="type type--description">
   <h2>Heading</h2>
   <p class="subtitle">Subtitle</p>
 </div></div>
-            </div>
-            <div class="example-code">
+              </div>
+              <div class="example-code">
 <pre class="prettyprint no-copy">&lt;div class=&quot;type [modifier class]&quot;&gt;
   &lt;h2&gt;Heading&lt;/h2&gt;
   &lt;p class=&quot;subtitle&quot;&gt;Subtitle&lt;/p&gt;
 &lt;/div&gt;</pre>
-            </div>
-            <div class="example-toggle"></div>
-          </section>
-      </article>
-      <article class="pattern">
-          <h2 class="kss-title" id="7-2">
-            <span class="kss-ref badge pull-right">7-2</span> Quote
-          </h2>
-          <div class="subtitle pattern-description"><p>Quote Modules</p>
+              </div>
+              <div class="example-toggle"></div>
+            </section>
+        </article>
+        <article class="pattern">
+            <h2 class="kss-title" id="7-2">
+              <span class="kss-ref badge pull-right">7-2</span> Quote
+            </h2>
+            <div class="subtitle pattern-description"><p>Quote Modules</p>
 </div>
-          <section class="example">
-            <div class="example-demo">
-              <div class="kss-example"><div class="type type--quote">
+            <section class="example">
+              <div class="example-demo">
+                <div class="kss-example"><div class="type type--quote">
   <p class="type--quote-body">
     Quote Body
   </p>
@@ -138,8 +138,8 @@
     -Quote Attribute
   </p>
 </div></div>
-            </div>
-            <div class="example-code">
+              </div>
+              <div class="example-code">
 <pre class="prettyprint no-copy">&lt;div class=&quot;type type--quote&quot;&gt;
   &lt;p class=&quot;type--quote-body&quot;&gt;
     Quote Body
@@ -148,47 +148,46 @@
     -Quote Attribute
   &lt;/p&gt;
 &lt;/div&gt;</pre>
-            </div>
-            <div class="example-toggle"></div>
-          </section>
-      </article>
-      <article class="pattern">
-          <h2 class="kss-title" id="7-3">
-            <span class="kss-ref badge pull-right">7-3</span> Spacer
-          </h2>
-          <div class="subtitle pattern-description"><p>Circle spacers to separate type</p>
+              </div>
+              <div class="example-toggle"></div>
+            </section>
+        </article>
+        <article class="pattern">
+            <h2 class="kss-title" id="7-3">
+              <span class="kss-ref badge pull-right">7-3</span> Spacer
+            </h2>
+            <div class="subtitle pattern-description"><p>Circle spacers to separate type</p>
 </div>
-          <section class="example">
-            <div class="example-demo">
-              <div class="kss-example"><span class="type_spacer [modifier class]">The circle is the spacer</span></div>
-                <hr />
-                <h4 class="u-clearfix">Spacer to the left <span class="u-f-right"><code>.type_spacer--before</code></span></h4>
-                <div class="kss-example"><span class="type_spacer type_spacer--before">The circle is the spacer</span></div>
-                <hr />
-                <h4 class="u-clearfix">Spacer to the right <span class="u-f-right"><code>.type_spacer--after</code></span></h4>
-                <div class="kss-example"><span class="type_spacer type_spacer--after">The circle is the spacer</span></div>
-                <hr />
-                <h4 class="u-clearfix">White type spacer <span class="u-f-right"><code>.type_spacer--white</code></span></h4>
-                <div class="kss-example"><span class="type_spacer type_spacer--white">The circle is the spacer</span></div>
-                <hr />
-                <h4 class="u-clearfix">Teal type spacer <span class="u-f-right"><code>.type_spacer--teal</code></span></h4>
-                <div class="kss-example"><span class="type_spacer type_spacer--teal">The circle is the spacer</span></div>
-                <hr />
-                <h4 class="u-clearfix">gray3 type spacer <span class="u-f-right"><code>.type_spacer--gray3</code></span></h4>
-                <div class="kss-example"><span class="type_spacer type_spacer--gray3">The circle is the spacer</span></div>
-            </div>
-            <div class="example-code">
+            <section class="example">
+              <div class="example-demo">
+                <div class="kss-example"><span class="type_spacer [modifier class]">The circle is the spacer</span></div>
+                  <hr />
+                  <h4 class="u-clearfix">Spacer to the left <span class="u-f-right"><code>.type_spacer--before</code></span></h4>
+                  <div class="kss-example"><span class="type_spacer type_spacer--before">The circle is the spacer</span></div>
+                  <hr />
+                  <h4 class="u-clearfix">Spacer to the right <span class="u-f-right"><code>.type_spacer--after</code></span></h4>
+                  <div class="kss-example"><span class="type_spacer type_spacer--after">The circle is the spacer</span></div>
+                  <hr />
+                  <h4 class="u-clearfix">White type spacer <span class="u-f-right"><code>.type_spacer--white</code></span></h4>
+                  <div class="kss-example"><span class="type_spacer type_spacer--white">The circle is the spacer</span></div>
+                  <hr />
+                  <h4 class="u-clearfix">Teal type spacer <span class="u-f-right"><code>.type_spacer--teal</code></span></h4>
+                  <div class="kss-example"><span class="type_spacer type_spacer--teal">The circle is the spacer</span></div>
+                  <hr />
+                  <h4 class="u-clearfix">gray3 type spacer <span class="u-f-right"><code>.type_spacer--gray3</code></span></h4>
+                  <div class="kss-example"><span class="type_spacer type_spacer--gray3">The circle is the spacer</span></div>
+              </div>
+              <div class="example-code">
 <pre class="prettyprint no-copy">&lt;span class=&quot;type_spacer [modifier class]&quot;&gt;The circle is the spacer&lt;/span&gt;</pre>
-            </div>
-            <div class="example-toggle"></div>
-          </section>
-      </article>
+              </div>
+              <div class="example-toggle"></div>
+            </section>
+        </article>
+  </div>
 </div>
 
 
 
-
-      
 
     
   <script src="./public/js/kss.js"></script>

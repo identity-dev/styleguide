@@ -137,7 +137,9 @@ gulp.task('sass', function() {
 
 gulp.task('js', function(){
   return gulp.src([
-      './src/js/kit.js'
+      './src/js/kit.js',
+      './src/js/forms.js',
+      './src/js/notifications.js'
     ])
     .pipe(concat('styleguide.js'))
     .pipe(gulp.dest('./dist/js'));

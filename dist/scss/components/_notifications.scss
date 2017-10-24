@@ -17,6 +17,19 @@ Styleguide 5.0
 
 */
 
+#notifications{
+  margin-top: 1px;
+  position: fixed;
+  width: 100%;
+  z-index: $z_index-4;
+
+  @media screen and (min-width: 768px){
+    left: 230px;
+    right: 0;
+    width: auto;
+  }
+}
+
 .notification{
   padding: 13px 10px;
   position: relative;

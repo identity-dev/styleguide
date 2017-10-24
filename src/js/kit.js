@@ -1,4 +1,4 @@
-(function(){
+$(function(){
 
   var Identity = window.Identity || {};
 
@@ -15,7 +15,7 @@
       can_scroll: false
     };
 
-    Object.assign(settings, options);
+    $.extend(settings, options);
     $( settings.modal ).addClass('overlay--is_active');
 
     // based on properties handle settings
@@ -49,7 +49,7 @@
       modal: '.overlay'
     };
 
-    Object.assign(settings, options);
+    $.extend(settings, options);
 
     $(settings.modal).removeClass('overlay--is_active');
 
@@ -121,7 +121,7 @@
       popover: null
     };
 
-    Object.assign(settings, options);
+    $.extend(settings, options);
 
     $(settings.popover).addClass('popover--is_active');
     $('body').addClass('js-popover--is_active');
@@ -140,7 +140,7 @@
       popover: null
     };
 
-    Object.assign(settings, options);
+    $.extend(settings, options);
 
     $(settings.popover).removeClass('popover--is_active');
     $('body').removeClass('js-popover--is_active');
@@ -194,4 +194,4 @@
   });
 
   window.Identity = Identity;
-})();
+});

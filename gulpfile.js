@@ -26,7 +26,7 @@ var args = {
 };
 
 gulp.task('compile', ['clean'], function(){
-  runSequence('sass', 'js', 'minify', 'kss-html', 'kss', 'kss-public');
+  runSequence('fonts', 'sass', 'js', 'minify', 'kss-html', 'kss', 'kss-public');
 });
 
 // Clean build
@@ -98,6 +98,9 @@ gulp.task('kss-public', ['kss'], function(){
   gulp.src('./dist/css/styleguide.css')
     .pipe(gulp.dest('./docs/public/css'));
 
+  gulp.src(['./dist/fonts/**/*.*'])
+    .pipe(gulp.dest('./docs/public/fonts'));
+
   gulp.src('./dist/js/styleguide.js')
     .pipe(gulp.dest('./docs/public/js'));
 
@@ -133,6 +136,17 @@ gulp.task('sass', function() {
     .pipe(sourcemaps.write())
     .pipe(autoprefixer())
     .pipe(gulp.dest('./dist/css'));
+});
+
+gulp.task('fonts', function(){
+  gulp.src([config.packages +'/identity-dev-streamline/dist/css/_streamline.scss'])
+    .pipe(gulp.dest('./src/sass/support'));
+
+  gulp.src([config.packages +'/identity-dev-streamline/dist/fonts/**/*.*'])
+    .pipe(gulp.dest('./src/fonts'));
+
+  return gulp.src(['./src/fonts/**/*.*'])
+    .pipe(gulp.dest('./dist/fonts'));
 });
 
 gulp.task('js', function(){

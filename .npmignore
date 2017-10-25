@@ -9,3 +9,4 @@ docs/
 gulpfile.js
 index.html
 yarn.lock
+.npmignore

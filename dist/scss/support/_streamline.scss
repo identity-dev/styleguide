@@ -1,0 +1,193 @@
+//
+// Icon Font: streamline
+//
+
+@font-face {
+  font-family: "streamline";
+  src: url("#{$font-path}/streamline.eot");
+  src: url("#{$font-path}/streamline.eot?#iefix") format("embedded-opentype"),
+       url("#{$font-path}/streamline.woff") format("woff"),
+       url("#{$font-path}/streamline.ttf") format("truetype"),
+       url("#{$font-path}/streamline.svg#streamline") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "streamline";
+    src: url("#{$font-path}/streamline.svg#streamline") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.sl-add-circle:before,
+.sl-arrow-console:before,
+.sl-back-id:before,
+.sl-bank-building:before,
+.sl-bar-graph:before,
+.sl-birthday-cake:before,
+.sl-calendar:before,
+.sl-camera:before,
+.sl-caret-down:before,
+.sl-caret-up:before,
+.sl-chains:before,
+.sl-check:before,
+.sl-check-circle:before,
+.sl-check-square:before,
+.sl-circle-network:before,
+.sl-circle-smartphone:before,
+.sl-dial:before,
+.sl-envelope:before,
+.sl-exclamation-circle:before,
+.sl-exclamation-mark:before,
+.sl-eye-dash:before,
+.sl-eye-opened:before,
+.sl-form:before,
+.sl-front-id:before,
+.sl-gear:before,
+.sl-hand-card:before,
+.sl-house:before,
+.sl-i-circle:before,
+.sl-lock-closed:before,
+.sl-lock-renew:before,
+.sl-lowercase-i:before,
+.sl-magnify-glass:before,
+.sl-one-circle:before,
+.sl-one-person:before,
+.sl-pen-paper:before,
+.sl-pencil:before,
+.sl-phone-handle:before,
+.sl-play-button:before,
+.sl-question-circle:before,
+.sl-rectangle-smartphone:before,
+.sl-rectangles-rotating:before,
+.sl-refresh-arrow:before,
+.sl-shield-smartphone:before,
+.sl-three-circle:before,
+.sl-three-people:before,
+.sl-trashcan:before,
+.sl-two-circle:before,
+.sl-two-smartphone:before,
+.sl-up-arrow:before,
+.sl-x:before,
+.sl-x-circle:before {
+  display: inline-block;
+  font-family: "streamline";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.sl-add-circle:before { content: "\f12c"; }
+.sl-arrow-console:before { content: "\f12d"; }
+.sl-back-id:before { content: "\f12e"; }
+.sl-bank-building:before { content: "\f149"; }
+.sl-bar-graph:before { content: "\f10f"; }
+.sl-birthday-cake:before { content: "\f11c"; }
+.sl-calendar:before { content: "\f141"; }
+.sl-camera:before { content: "\f101"; }
+.sl-caret-down:before { content: "\f13d"; }
+.sl-caret-up:before { content: "\f13e"; }
+.sl-chains:before { content: "\f110"; }
+.sl-check:before { content: "\f13f"; }
+.sl-check-circle:before { content: "\f12f"; }
+.sl-check-square:before { content: "\f130"; }
+.sl-circle-network:before { content: "\f112"; }
+.sl-circle-smartphone:before { content: "\f140"; }
+.sl-dial:before { content: "\f111"; }
+.sl-envelope:before { content: "\f10c"; }
+.sl-exclamation-circle:before { content: "\f142"; }
+.sl-exclamation-mark:before { content: "\f126"; }
+.sl-eye-dash:before { content: "\f132"; }
+.sl-eye-opened:before { content: "\f10d"; }
+.sl-form:before { content: "\f133"; }
+.sl-front-id:before { content: "\f13b"; }
+.sl-gear:before { content: "\f123"; }
+.sl-hand-card:before { content: "\f134"; }
+.sl-house:before { content: "\f114"; }
+.sl-i-circle:before { content: "\f144"; }
+.sl-lock-closed:before { content: "\f103"; }
+.sl-lock-renew:before { content: "\f145"; }
+.sl-lowercase-i:before { content: "\f120"; }
+.sl-magnify-glass:before { content: "\f113"; }
+.sl-one-circle:before { content: "\f127"; }
+.sl-one-person:before { content: "\f124"; }
+.sl-pen-paper:before { content: "\f135"; }
+.sl-pencil:before { content: "\f109"; }
+.sl-phone-handle:before { content: "\f11e"; }
+.sl-play-button:before { content: "\f146"; }
+.sl-question-circle:before { content: "\f129"; }
+.sl-rectangle-smartphone:before { content: "\f136"; }
+.sl-rectangles-rotating:before { content: "\f137"; }
+.sl-refresh-arrow:before { content: "\f148"; }
+.sl-shield-smartphone:before { content: "\f138"; }
+.sl-three-circle:before { content: "\f12a"; }
+.sl-three-people:before { content: "\f125"; }
+.sl-trashcan:before { content: "\f100"; }
+.sl-two-circle:before { content: "\f12b"; }
+.sl-two-smartphone:before { content: "\f139"; }
+.sl-up-arrow:before { content: "\f147"; }
+.sl-x:before { content: "\f13c"; }
+.sl-x-circle:before { content: "\f13a"; }
+
+$font-streamline-add-circle: "\f12c";
+$font-streamline-arrow-console: "\f12d";
+$font-streamline-back-id: "\f12e";
+$font-streamline-bank-building: "\f149";
+$font-streamline-bar-graph: "\f10f";
+$font-streamline-birthday-cake: "\f11c";
+$font-streamline-calendar: "\f141";
+$font-streamline-camera: "\f101";
+$font-streamline-caret-down: "\f13d";
+$font-streamline-caret-up: "\f13e";
+$font-streamline-chains: "\f110";
+$font-streamline-check: "\f13f";
+$font-streamline-check-circle: "\f12f";
+$font-streamline-check-square: "\f130";
+$font-streamline-circle-network: "\f112";
+$font-streamline-circle-smartphone: "\f140";
+$font-streamline-dial: "\f111";
+$font-streamline-envelope: "\f10c";
+$font-streamline-exclamation-circle: "\f142";
+$font-streamline-exclamation-mark: "\f126";
+$font-streamline-eye-dash: "\f132";
+$font-streamline-eye-opened: "\f10d";
+$font-streamline-form: "\f133";
+$font-streamline-front-id: "\f13b";
+$font-streamline-gear: "\f123";
+$font-streamline-hand-card: "\f134";
+$font-streamline-house: "\f114";
+$font-streamline-i-circle: "\f144";
+$font-streamline-lock-closed: "\f103";
+$font-streamline-lock-renew: "\f145";
+$font-streamline-lowercase-i: "\f120";
+$font-streamline-magnify-glass: "\f113";
+$font-streamline-one-circle: "\f127";
+$font-streamline-one-person: "\f124";
+$font-streamline-pen-paper: "\f135";
+$font-streamline-pencil: "\f109";
+$font-streamline-phone-handle: "\f11e";
+$font-streamline-play-button: "\f146";
+$font-streamline-question-circle: "\f129";
+$font-streamline-rectangle-smartphone: "\f136";
+$font-streamline-rectangles-rotating: "\f137";
+$font-streamline-refresh-arrow: "\f148";
+$font-streamline-shield-smartphone: "\f138";
+$font-streamline-three-circle: "\f12a";
+$font-streamline-three-people: "\f125";
+$font-streamline-trashcan: "\f100";
+$font-streamline-two-circle: "\f12b";
+$font-streamline-two-smartphone: "\f139";
+$font-streamline-up-arrow: "\f147";
+$font-streamline-x: "\f13c";
+$font-streamline-x-circle: "\f13a";

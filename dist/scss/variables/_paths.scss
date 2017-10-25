@@ -2,10 +2,4 @@
 //
 // Styleguide
 
-$global-font-path: "./" !default;
-
-$fa-font-path:    $global-font-path !default;
-$fc-font-path:    $global-font-path !default;
-$font-path:       $global-font-path !default;
-
-$asset-path: "./" !default;
+$font-path: "../fonts" !default;

@@ -1,0 +1,43 @@
+@font-face{
+    font-family: "Proxima";
+    src: url("#{$font-path}/proxima-nova.eot?#iefix");
+    src: url("#{$font-path}/proxima-nova.svg") format("svg"),
+         url("#{$font-path}/proxima-nova.eot?#iefix") format("eot"),
+         url("#{$font-path}/proxima-nova.woff") format("woff"),
+         url("#{$font-path}/proxima-nova.ttf") format("truetype");
+    font-weight: normal;
+    font-style: none;
+}
+
+@font-face{
+    font-family: "Proxima";
+    src: url("#{$font-path}/proxima-nova-bold.eot?#iefix");
+    src: url("#{$font-path}/proxima-nova-bold.svg") format("svg"),
+         url("#{$font-path}/proxima-nova-bold.eot?#iefix") format("eot"),
+         url("#{$font-path}/proxima-nova-bold.woff") format("woff"),
+         url("#{$font-path}/proxima-nova-bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: none;
+}
+
+@font-face{
+    font-family: "Proxima";
+    src: url("#{$font-path}/proxima-nova-semibold.eot?#iefix");
+    src: url("#{$font-path}/proxima-nova-semibold.svg") format("svg"),
+         url("#{$font-path}/proxima-nova-semibold.eot?#iefix") format("eot"),
+         url("#{$font-path}/proxima-nova-semibold.woff") format("woff"),
+         url("#{$font-path}/proxima-nova-semibold.ttf") format("truetype");
+    font-weight: 500;
+    font-style: none;
+}
+
+@font-face{
+    font-family: "Proxima";
+    src: url("#{$font-path}/proxima-nova-light.eot?#iefix");
+    src: url("#{$font-path}/proxima-nova-light.svg") format("svg"),
+         url("#{$font-path}/proxima-nova-light.eot?#iefix") format("eot"),
+         url("#{$font-path}/proxima-nova-light.woff") format("woff"),
+         url("#{$font-path}/proxima-nova-light.ttf") format("truetype");
+    font-weight: 200;
+    font-style: none;
+}

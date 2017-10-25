@@ -1372,6 +1372,10 @@ http-signature@~1.2.0:
     jsprim "^1.2.2"
     sshpk "^1.7.0"
 
+identity-dev-streamline@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/identity-dev-streamline/-/identity-dev-streamline-1.0.8.tgz#79cb78e373d660512a9b0c9a0c604c73a97ffd8a"
+
 ignore@^3.3.3:
   version "3.3.6"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.6.tgz#b6f3196b38ed92f0c86e52f6f79b7fc4c8266c8d"

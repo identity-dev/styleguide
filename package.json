@@ -11,7 +11,9 @@
     "type": "git",
     "url": "git://github.com/identity-dev/styleguide.git"
   },
-  "dependencies": {},
+  "dependencies": {
+    "identity-dev-streamline": "^1.0.8"
+  },
   "stylelint": {
     "rules": {
       "block-no-empty": null,

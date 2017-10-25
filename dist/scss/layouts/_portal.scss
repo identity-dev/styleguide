@@ -9,11 +9,15 @@ Layout Styles
 }
 
 .portal__header{
+  background-color: $gray4;
   height: 25px;
+  left: 0;
   line-height: 25px;
   padding: 10px 20px;
-  background-color: $gray4;
-  z-index: $z_index-0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: $z_index-1;
 }
 
 .portal__navigation{
@@ -21,7 +25,8 @@ Layout Styles
 }
 
 .portal__content{
-  margin-left: 231px;
+
+  margin: 45px 0 0 231px;
 }
 
 /*
@@ -46,7 +51,7 @@ Sidebar Styles
   left: 0;
   padding: 0;
   top: 0;
-  z-index: $z_index-1--foreground;
+  z-index: $z_index-2;
 
   @media (max-width: 767px){
     position: relative;

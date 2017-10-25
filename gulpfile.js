@@ -162,7 +162,7 @@ gulp.task('temp', function(){
 
 // Watch Files For Changes
 gulp.task('watch', function() {
-  gulp.watch('./src/js/**/*.js', ['js', 'kss-public']);
-  gulp.watch('./src/sass/**/*.scss', ['sass', 'kss-html', 'kss', 'kss-public']);
+  gulp.watch('./src/js/**/*.js', ['js', 'kss-public', 'minify']);
+  gulp.watch('./src/sass/**/*.scss', ['sass', 'kss-html', 'kss', 'kss-public', 'minify']);
   gulp.watch('./kss-html/**/*.*', ['kss-html', 'kss', 'kss-public']);
 });

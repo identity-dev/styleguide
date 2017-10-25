@@ -315,13 +315,13 @@ $(function(){
       if( $(window).width() < 768 )
         $el.css({'top': 0});
       else
-        $el.css({'top': 0});
+        $el.css({'top': header_height});
 
     } else if ($(this).scrollTop() <= header_height){
       if( $(window).width() < 768 )
         $el.css({'position': 'absolute'});
 
-      $el.css({'top': header_height - $(this).scrollTop()});
+      $el.css({'top': header_height});
     }
   });
 

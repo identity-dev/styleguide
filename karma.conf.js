@@ -19,7 +19,6 @@ module.exports = function(config) {
       'kss-html/js/**/*.js',
       'src/js/**/*.js',
       'test/**/*.test.js',
-      'test/**/*.test.js',
       'test/fixtures/**/*.html'
     ],
 

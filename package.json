@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "identity-dev-streamline": "^1.0.8",
-    "karma-html2js-preprocessor": "^1.1.0"
+    "jasmine-jquery": "^2.1.1"
   },
   "stylelint": {
     "rules": {
@@ -65,6 +65,7 @@
     "karma": "^1.7.1",
     "karma-chrome-launcher": "^2.2.0",
     "karma-fixture": "^0.2.6",
+    "karma-html2js-preprocessor": "^1.1.0",
     "karma-jasmine": "^1.1.0",
     "kss": "2.4.0",
     "run-sequence": "^2.2.0"

@@ -1,5 +1,4 @@
-$(function(){
-
+(function(){
   var Identity = window.Identity || {};
 
   /*
@@ -194,7 +193,7 @@ $(function(){
   });
 
   window.Identity = Identity;
-});
+})();
 
 $(function(){
 

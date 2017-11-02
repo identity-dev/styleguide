@@ -12,7 +12,8 @@
     "url": "git://github.com/identity-dev/styleguide.git"
   },
   "dependencies": {
-    "identity-dev-streamline": "^1.0.8"
+    "identity-dev-streamline": "^1.0.8",
+    "karma-html2js-preprocessor": "^1.1.0"
   },
   "stylelint": {
     "rules": {
@@ -38,6 +39,8 @@
   },
   "scripts": {
     "start": "yarn install && gulp",
+    "test": "karma start --browsers ChromeHeadless karma.conf.js",
+    "test:once": "karma start --single-run --browsers ChromeHeadless karma.conf.js",
     "push:tag": "git push --tags origin HEAD:master",
     "release": "yarn install && gulp compile",
     "release:patch": "npm run release && npm version patch && npm run push:tag && npm publish",
@@ -58,6 +61,11 @@
     "gulp-sourcemaps": "^2.6.1",
     "gulp-stylelint": "^5.0.0",
     "gulp-swig": "^0.8.0",
+    "jasmine-core": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-fixture": "^0.2.6",
+    "karma-jasmine": "^1.1.0",
     "kss": "2.4.0",
     "run-sequence": "^2.2.0"
   }

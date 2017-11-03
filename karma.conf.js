@@ -20,7 +20,13 @@ module.exports = function(config) {
       'src/js/**/*.js',
       'test/**/*.test.js',
       'test/fixtures/**/*.html',
-      'dist/css/styleguide.css'
+      'dist/css/styleguide.css',
+      {
+        pattern: 'dist/**/*.*',
+        watched: true,
+        included: false,
+        served: true
+      }
     ],
 
 

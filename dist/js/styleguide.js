@@ -104,7 +104,7 @@
       var accordion = $(this).data('id');
 
       $(this).toggleClass('accordion--is_active');
-      $('#'+ accordion).slideToggle(200);
+      $('#'+ accordion).stop().slideToggle(200);
 
       $(document).trigger( "accordion-toggled", { $elem: $('#'+ accordion) } );
   });

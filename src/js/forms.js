@@ -1,10 +1,12 @@
-$(function(){
+(function(){
 
   var Identity = window.Identity || {};
 
   Identity.forms = {};
-
+  var initialized = false;
   Identity.forms.toggleShowPassword = function(){
+    if(initialized) return;
+
     var togglePasswordShow = function(show) {
       if (show) {
         $('.js-password_toggle').trigger('password:show');
@@ -27,8 +29,10 @@ $(function(){
     $(document).on('password:hide', '.js-password_toggle', function() {
       $(this).attr('type', 'password');
     });
+
+    initialized = true;
   };
 
 
   window.Identity = Identity;
-});
+})();

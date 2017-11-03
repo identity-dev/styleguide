@@ -19,7 +19,7 @@ module.exports = function(config) {
       'kss-html/js/**/*.js',
       'src/js/**/*.js',
       'test/**/*.test.js',
-      'test/fixtures/**/*.html',
+      'test/**/*.html',
       'dist/css/styleguide.css',
       {
         pattern: 'dist/**/*.*',

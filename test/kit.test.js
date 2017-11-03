@@ -19,17 +19,17 @@ describe('Kit', () => {
     describe('Show', () => {
       describe('with HTML API', () => {
         it('should have an overlay with an overlay class', () => {
-          expect([...UI.overlay.classList].includes('overlay--is_active')).toBe(false)
+          expect(hasClass(UI.overlay, 'overlay--is_active')).toBe(false)
           UI.show.click()
-          expect([...UI.overlay.classList].includes('overlay--is_active')).toBe(true)
+          expect(hasClass(UI.overlay, 'overlay--is_active')).toBe(true)
         })
       })
 
       describe('with JS API', () => {
         it('should have an overlay with an overlay class', () => {
-          expect([...UI.overlay.classList].includes('overlay--is_active')).toBe(false)
+          expect(hasClass(UI.overlay, 'overlay--is_active')).toBe(false)
           window.Identity.show_modal($('#UI.overlay.dataset.id'))
-          expect([...UI.overlay.classList].includes('overlay--is_active')).toBe(true)
+          expect(hasClass(UI.overlay, 'overlay--is_active')).toBe(true)
         })
       })
     }) // Show
@@ -41,17 +41,17 @@ describe('Kit', () => {
 
       describe('with HTML API', () => {
         it('should have an overlay with an overlay class', () => {
-          expect([...UI.overlay.classList].includes('overlay--is_active')).toBe(true)
+          expect(hasClass(UI.overlay, 'overlay--is_active')).toBe(true)
           UI.hide.click()
-          expect([...UI.overlay.classList].includes('overlay--is_active')).toBe(false)
+          expect(hasClass(UI.overlay, 'overlay--is_active')).toBe(false)
         })
       })
 
       describe('with JS API', () => {
         it('should have an overlay with an overlay class', () => {
-          expect([...UI.overlay.classList].includes('overlay--is_active')).toBe(true)
+          expect(hasClass(UI.overlay, 'overlay--is_active')).toBe(true)
           window.Identity.close_modal($('#UI.overlay.dataset.id'))
-          expect([...UI.overlay.classList].includes('overlay--is_active')).toBe(false)
+          expect(hasClass(UI.overlay, 'overlay--is_active')).toBe(false)
         })
       })
     }) // Close
@@ -61,14 +61,14 @@ describe('Kit', () => {
     beforeEach(() => {
       fixture.load('kit/tab-toggle.html')
       UI = {
-        tabs: [
-          document.getElementById('tab-one'),
-          document.getElementById('tab-two')
-        ],
-        content: [
-          document.getElementById('content-one'),
-          document.getElementById('content-two')
-        ]
+        tabs: {
+          first: document.getElementById('tab-one'),
+          second: document.getElementById('tab-two')
+        },
+        content: {
+          first: document.getElementById('content-one'),
+          second: document.getElementById('content-two')
+        }
       }
     })
 
@@ -79,18 +79,104 @@ describe('Kit', () => {
 
     describe('Toggle', () => {
       describe('with HTML API', () => {
-        it('should have toggle classes on/off', () => {
-          expect([...UI.tabs[0].classList].includes('tabs-toggle--is_active')).toBe(true)
-          expect([...UI.tabs[1].classList].includes('tabs-toggle--is_active')).toBe(false)
-          expect([...UI.content[0].classList].includes('tabs-content--is_active')).toBe(true)
-          expect([...UI.content[1].classList].includes('tabs-content--is_active')).toBe(false)
-          UI.tabs[1].click()
-          expect([...UI.tabs[0].classList].includes('tabs-toggle--is_active')).toBe(false)
-          expect([...UI.tabs[1].classList].includes('tabs-toggle--is_active')).toBe(true)
-          expect([...UI.content[0].classList].includes('tabs-content--is_active')).toBe(false)
-          expect([...UI.content[1].classList].includes('tabs-content--is_active')).toBe(true)
+        it('should toggle classes on/off', () => {
+          expect(hasClass(UI.tabs.first, 'tabs-toggle--is_active')).toBe(true)
+          expect(hasClass(UI.tabs.second, 'tabs-toggle--is_active')).toBe(false)
+          expect(hasClass(UI.tabs.first, 'tabs-toggle--is_active')).toBe(true)
+          expect(hasClass(UI.tabs.second, 'tabs-toggle--is_active')).toBe(false)
+          UI.tabs.second.click()
+          expect(hasClass(UI.tabs.first, 'tabs-toggle--is_active')).toBe(false)
+          expect(hasClass(UI.tabs.second, 'tabs-toggle--is_active')).toBe(true)
+          expect(hasClass(UI.tabs.first, 'tabs-toggle--is_active')).toBe(false)
+          expect(hasClass(UI.tabs.second, 'tabs-toggle--is_active')).toBe(true)
         })
       })
     })
   }) // Tab Toggle
+
+  describe('Accordion', () => {
+    beforeEach(() => {
+      fixture.load('kit/accordion.html')
+      UI = {
+        toggle: document.getElementById('toggle'),
+        content: document.getElementById('content')
+      }
+    })
+
+    afterEach(() => {
+      fixture.cleanup()
+      UI = {}
+    })
+
+    describe('Toggle', () => {
+      describe('with HTML API', () => {
+        it('should toggle classes on/off', () => {
+          expect(hasClass(UI.toggle, 'accordion--is_active')).toBe(false)
+          expect(isHidden(UI.content)).toBe(true)
+          UI.toggle.click()
+          expect(hasClass(UI.toggle, 'accordion--is_active')).toBe(true)
+          UI.toggle.click()
+          expect(hasClass(UI.toggle, 'accordion--is_active')).toBe(false)
+        })
+      })
+    })
+  }) // Accordion
+
+  describe('Popover', () => {
+    beforeEach(() => {
+      fixture.load('kit/popover.html')
+      UI = {
+
+      }
+    })
+
+    afterEach(() => {
+      fixture.cleanup()
+      UI = {}
+    })
+
+    describe('Show', () => {
+      describe('with HTML API', () => {
+        it('should have active class', () => {
+
+        })
+      })
+
+      describe('with JS API', () => {
+        it('should have active class', () => {
+
+        })
+      })
+    })
+
+    describe('Hide', () => {
+      describe('with HTML API', () => {
+        it('should have not active class', () => {
+
+        })
+      })
+
+      describe('with JS API', () => {
+        it('should have not active class', () => {
+
+        })
+      })
+    })
+
+    describe('Hover', () => {
+      describe('with HTML API', () => {
+        it('should have add/remove active class', () => {
+
+        })
+      })
+    })
+
+    describe('Click', () => {
+      describe('with HTML API', () => {
+        it('should have add/remove active class', () => {
+
+        })
+      })
+    })
+  }) // Popover
 }) // Kit

@@ -115,6 +115,7 @@ describe('Kit', () => {
           expect(isHidden(UI.content)).toBe(true)
           UI.toggle.click()
           expect(hasClass(UI.toggle, 'accordion--is_active')).toBe(true)
+          expect(isVisible(UI.content)).toBe(true)
           UI.toggle.click()
           expect(hasClass(UI.toggle, 'accordion--is_active')).toBe(false)
         })

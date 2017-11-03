@@ -39,8 +39,8 @@
   },
   "scripts": {
     "start": "yarn install && gulp",
-    "test": "karma start --single-run --browsers ChromeHeadless karma.conf.js",
-    "test:watch": "karma start --browsers ChromeHeadless karma.conf.js",
+    "test": "karma start --single-run --browsers Chrome karma.conf.js",
+    "test:watch": "karma start --browsers Chrome karma.conf.js",
     "push:tag": "git push --tags origin HEAD:master",
     "release": "yarn install && gulp compile",
     "release:patch": "npm run release && npm version patch && npm run push:tag && npm publish",

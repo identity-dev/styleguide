@@ -18,7 +18,7 @@ describe('Kit', () => {
 
     describe('Show', () => {
       describe('with HTML API', () => {
-        it('should have an overlay with an overlay class', () => {
+        it('should add the active class', () => {
           expect(hasClass(UI.overlay, 'overlay--is_active')).toBe(false)
           UI.show.click()
           expect(hasClass(UI.overlay, 'overlay--is_active')).toBe(true)
@@ -26,7 +26,7 @@ describe('Kit', () => {
       })
 
       describe('with JS API', () => {
-        it('should have an overlay with an overlay class', () => {
+        it('should add the active class', () => {
           expect(hasClass(UI.overlay, 'overlay--is_active')).toBe(false)
           window.Identity.show_modal($('#UI.overlay.dataset.id'))
           expect(hasClass(UI.overlay, 'overlay--is_active')).toBe(true)
@@ -40,7 +40,7 @@ describe('Kit', () => {
       })
 
       describe('with HTML API', () => {
-        it('should have an overlay with an overlay class', () => {
+        it('should remove the active class', () => {
           expect(hasClass(UI.overlay, 'overlay--is_active')).toBe(true)
           UI.hide.click()
           expect(hasClass(UI.overlay, 'overlay--is_active')).toBe(false)
@@ -48,7 +48,7 @@ describe('Kit', () => {
       })
 
       describe('with JS API', () => {
-        it('should have an overlay with an overlay class', () => {
+        it('should remove the active class', () => {
           expect(hasClass(UI.overlay, 'overlay--is_active')).toBe(true)
           window.Identity.close_modal($('#UI.overlay.dataset.id'))
           expect(hasClass(UI.overlay, 'overlay--is_active')).toBe(false)
@@ -131,7 +131,14 @@ describe('Kit', () => {
     beforeEach(() => {
       fixture.load('kit/popover.html')
       UI = {
-
+        triggers: {
+          hover: document.getElementById('hover'),
+          click: document.getElementById('click')
+        },
+        popovers: {
+          hover: document.getElementById('hover-popover'),
+          click: document.getElementById('click-popover')
+        }
       }
     })
 
@@ -142,44 +149,80 @@ describe('Kit', () => {
 
     describe('Show', () => {
       describe('with HTML API', () => {
-        it('should have active class', () => {
+        describe('Mouse Enter', () => {
+          afterEach(() => {
+            window.Identity.hide_popover({popover: UI.popovers.hover})
+          })
 
-        })
+          it('should add the active class', () => {
+            expect(hasClass(UI.popovers.hover, 'popover--is_active')).toBe(false)
+            $(UI.triggers.hover).trigger('mouseenter')
+            expect(hasClass(UI.popovers.hover, 'popover--is_active')).toBe(true)
+          })
+        }) // Mouse Enter
+
+        describe('Click', () => {
+          afterEach(() => {
+            window.Identity.hide_popover({popover: UI.popovers.click})
+          })
+
+          it('should add the active class', () => {
+            expect(hasClass(UI.popovers.click, 'popover--is_active')).toBe(false)
+            UI.triggers.click.click()
+            expect(hasClass(UI.popovers.click, 'popover--is_active')).toBe(true)
+          })
+        }) // Click
       })
 
       describe('with JS API', () => {
-        it('should have active class', () => {
+        afterEach(() => {
+          window.Identity.hide_popover({popover: UI.popovers.click})
+        })
 
+        it('should add the active class', () => {
+          expect(hasClass(UI.popovers.click, 'popover--is_active')).toBe(false)
+          window.Identity.show_popover({popover: UI.popovers.click})
+          expect(hasClass(UI.popovers.click, 'popover--is_active')).toBe(true)
         })
       })
     })
 
     describe('Hide', () => {
       describe('with HTML API', () => {
-        it('should have not active class', () => {
+        describe('Mouse Leave', () => {
+          beforeEach(() => {
+            window.Identity.show_popover({popover: UI.popovers.hover})
+          })
 
-        })
+          it('should remove the active class', () => {
+            expect(hasClass(UI.popovers.hover, 'popover--is_active')).toBe(true)
+            $(UI.triggers.hover).trigger('mouseleave')
+            expect(hasClass(UI.popovers.hover, 'popover--is_active')).toBe(false)
+          })
+        }) // Mouse Leave
+
+        describe('Click', () => {
+          beforeEach(() => {
+            window.Identity.show_popover({popover: UI.popovers.click})
+          })
+
+          it('should remove the active class', () => {
+            expect(hasClass(UI.popovers.click, 'popover--is_active')).toBe(true)
+            UI.triggers.click.click()
+            expect(hasClass(UI.popovers.click, 'popover--is_active')).toBe(false)
+          })
+        }) // Click
       })
 
       describe('with JS API', () => {
-        it('should have not active class', () => {
-
+        beforeEach(() => {
+          window.Identity.show_popover({popover: UI.popovers.click})
         })
-      })
-    })
 
-    describe('Hover', () => {
-      describe('with HTML API', () => {
-        it('should have add/remove active class', () => {
-
-        })
-      })
-    })
-
-    describe('Click', () => {
-      describe('with HTML API', () => {
-        it('should have add/remove active class', () => {
-
+        it('should remove the active class', () => {
+          expect(hasClass(UI.popovers.click, 'popover--is_active')).toBe(true)
+          window.Identity.hide_popover({popover: UI.popovers.click})
+          expect(hasClass(UI.popovers.click, 'popover--is_active')).toBe(false)
         })
       })
     })

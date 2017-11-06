@@ -234,7 +234,7 @@
   window.Identity = Identity;
 })();
 
-$(function(){
+(function(){
 
   var Identity = window.Identity || {};
 
@@ -300,7 +300,7 @@ $(function(){
 
   Identity.removeNotification = function(el){
     var $notification = el.parents('.notification');
-    $notification.slideUp(100, function(){
+    $notification.stop().slideUp(100, function(){
       $notification.remove();
     });
   }
@@ -338,4 +338,4 @@ $(function(){
   });
 
   window.Identity = Identity;
-});
+})();

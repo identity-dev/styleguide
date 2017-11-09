@@ -3,7 +3,7 @@
 describe('Notifications', () => {
   beforeEach(() => {
     fixture.load('forms/notifications.html')
-    Identity.forms.toggleShowPassword()
+
     UI = {
       jar: document.getElementById('notifications'),
       bottle: document.getElementById('bottle')

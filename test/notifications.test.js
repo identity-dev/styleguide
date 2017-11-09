@@ -61,7 +61,6 @@ describe('Notifications', () => {
       this.close.click()
       setTimeout(() =>{
         expect(UI.jar.hasChildNodes()).toBe(false)
-        console.log(this.close)
         done()
       }, 101)
 

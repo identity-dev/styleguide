@@ -1,8 +1,7 @@
+window.Identity = window.Identity || {};
+
 (function(){
-
-  var Identity = window.Identity || {};
-
-  Identity.showNotification = function(event, options) {
+  window.Identity.showNotification = function(event, options) {
 
     var $message,
         settings = {},
@@ -62,44 +61,51 @@
     }
   }
 
-  Identity.removeNotification = function(el){
+  window.Identity.removeNotification = function(el){
     var $notification = el.parents('.notification');
     $notification.stop().slideUp(100, function(){
       $notification.remove();
     });
   }
 
-// ***** global event listeners ***** //
+  window.Identity.initNotification = function(){
+    // ***** global event listeners ***** //
 
-  // stick messages to top on scroll
-  $(window).scroll(function(e){
-    var header_height = $("header").innerHeight(),
-                  $el = $('#notifications');
+    // stick messages to top on scroll
+    $(window).scroll(function(e){
+      var header_height = $("header").innerHeight(),
+                    $el = $('#notifications');
 
-    if ($(this).scrollTop() > header_height){
-      $el.css({'position': 'fixed'});
+      if ($(this).scrollTop() > header_height){
+        $el.css({'position': 'fixed'});
 
-      if( $(window).width() < 768 )
-        $el.css({'top': 0});
-      else
+        if( $(window).width() < 768 )
+          $el.css({'top': 0});
+        else
+          $el.css({'top': header_height});
+
+      } else if ($(this).scrollTop() <= header_height){
+        if( $(window).width() < 768 )
+          $el.css({'position': 'absolute'});
+
         $el.css({'top': header_height});
+      }
+    });
 
-    } else if ($(this).scrollTop() <= header_height){
-      if( $(window).width() < 768 )
-        $el.css({'position': 'absolute'});
+    $(document).on("window:message", function(event, options){
+      window.Identity.showNotification(event, options);
+    });
 
-      $el.css({'top': header_height});
-    }
-  });
+    // when the dismiss button is clicked on the notice, hide it
+    $(document).on('click', '.notification-dismiss', onNotificationDismiss = function(){
+      window.Identity.removeNotification($(this));
+    });
 
-  $(document).on("window:message", function(event, options){
-    Identity.showNotification(event, options);
-  });
+    // only ever bind once
+    window.Identity.initNotification = function(){}
+  }
 
-  // when the dismiss button is clicked on the notice, hide it
-  $(document).on('click', '.notification-dismiss', function(){
-    Identity.removeNotification($(this));
-  });
-
-  window.Identity = Identity;
-})();
+  $(function(){
+    window.Identity.initNotification()
+  })
+})()

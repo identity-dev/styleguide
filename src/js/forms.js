@@ -1,11 +1,8 @@
 (function(){
+  window.Identity = window.Identity || {};
+  window.Identity.forms = window.Identity.forms || {};
 
-  var Identity = window.Identity || {};
-
-  Identity.forms = {};
-  var initialized = false;
-  Identity.forms.toggleShowPassword = function(){
-    if(initialized) return;
+  window.Identity.forms.toggleShowPassword = function(){
 
     var togglePasswordShow = function(show) {
       if (show) {
@@ -30,9 +27,7 @@
       $(this).attr('type', 'password');
     });
 
-    initialized = true;
+    // null function to avoid duplicates
+    window.Identity.forms.toggleShowPassword = function(){}
   };
-
-
-  window.Identity = Identity;
-})();
+})()

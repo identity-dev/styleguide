@@ -1,6 +1,8 @@
 'use strict'
 
 describe('Kit', () => {
+  window.Identity.initKit()
+
   describe('Modal', () => {
     beforeEach(() => {
       fixture.load('kit/modal.html')

@@ -4,7 +4,8 @@ describe('Forms', () => {
   describe('Password', () => {
     beforeEach(() => {
       fixture.load('forms/password.html')
-      Identity.forms.toggleShowPassword()
+      window.Identity.forms.toggleShowPassword()
+
       UI = {
         toggle: document.getElementById('toggle'),
         field: document.getElementById('password')

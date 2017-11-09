@@ -1,6 +1,8 @@
 'use strict'
 
 describe('Notifications', () => {
+  window.Identity.initNotification()
+
   beforeEach(() => {
     fixture.load('forms/notifications.html')
 
@@ -56,7 +58,7 @@ describe('Notifications', () => {
       this.close = document.querySelectorAll('.notification-dismiss')[0]
     })
 
-    it('should have the default message', (done) => {
+    it('should remove the message', (done) => {
       expect(UI.jar.hasChildNodes()).toBe(true)
       this.close.click()
       setTimeout(() =>{

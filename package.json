@@ -12,8 +12,7 @@
     "url": "git://github.com/identity-dev/styleguide.git"
   },
   "dependencies": {
-    "identity-dev-streamline": "^1.0.8",
-    "jasmine-jquery": "^2.1.1"
+    "identity-dev-streamline": "^1.0.8"
   },
   "stylelint": {
     "rules": {
@@ -62,8 +61,10 @@
     "gulp-stylelint": "^5.0.0",
     "gulp-swig": "^0.8.0",
     "jasmine-core": "^2.8.0",
+    "jasmine-jquery": "^2.1.1",
     "karma": "^1.7.1",
     "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.1",
     "karma-fixture": "^0.2.6",
     "karma-html2js-preprocessor": "^1.1.0",
     "karma-jasmine": "^1.1.0",

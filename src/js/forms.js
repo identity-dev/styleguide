@@ -1,10 +1,9 @@
-$(function(){
+(function(){
+  window.Identity = window.Identity || {};
+  window.Identity.forms = window.Identity.forms || {};
 
-  var Identity = window.Identity || {};
+  window.Identity.forms.toggleShowPassword = function(){
 
-  Identity.forms = {};
-
-  Identity.forms.toggleShowPassword = function(){
     var togglePasswordShow = function(show) {
       if (show) {
         $('.js-password_toggle').trigger('password:show');
@@ -27,8 +26,8 @@ $(function(){
     $(document).on('password:hide', '.js-password_toggle', function() {
       $(this).attr('type', 'password');
     });
+
+    // null function to avoid duplicates
+    window.Identity.forms.toggleShowPassword = function(){}
   };
-
-
-  window.Identity = Identity;
-});
+})()

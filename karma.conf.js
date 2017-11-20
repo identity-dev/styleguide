@@ -16,6 +16,9 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'testSetup.js',
+      'node_modules/moment/moment.js',
+      'node_modules/jquery/dist/jquery.js',
+      'node_modules/daterangepicker/daterangepicker.js',
       'kss-html/js/**/*.js',
       'src/js/**/*.js',
       'test/**/*.test.js',

@@ -1,7 +1,7 @@
-(function(){
-  window.Identity = window.Identity || {};
-  window.Identity.forms = window.Identity.forms || {};
+window.Identity = window.Identity || {};
+window.Identity.forms = window.Identity.forms || {};
 
+(function(){
   window.Identity.forms.toggleShowPassword = function(){
 
     var togglePasswordShow = function(show) {

@@ -47,6 +47,7 @@
     "release:major": "npm run release && npm version major && npm run push:tag && npm publish"
   },
   "devDependencies": {
+    "daterangepicker": "^2.1.25",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-clean": "^0.3.2",

@@ -1,0 +1,122 @@
+/*
+
+  Style overrides for the daterangepicker plugin
+
+*/
+.daterangepicker th{
+  cursor: default;
+
+  &.prev.available,
+  &.next.available{
+    background-color: $gray5;
+    color: $gray1;
+    cursor: pointer;
+
+    &:hover{
+      background-color: $gray4;
+    }
+  }
+}
+
+.daterangepicker th,
+.daterangepicker td{
+  border-radius: 0 !important;
+  box-sizing: border-box;
+  padding: 3px;
+
+  &.in-range{
+    background-color: $teal;
+    color: $white;
+  }
+
+  &.available:hover,
+  &.active,
+  &.active:hover{
+    background-color: $teal-dark;
+    color: $white;
+  }
+}
+
+.daterangepicker{
+  display: none;
+  border: 1px solid $gray5;
+  border-radius: 2px;
+  margin-top: -44px;
+  padding: 10px 0 10px 10px;
+
+  &:before{
+    border-bottom-color: $gray5;
+  }
+}
+
+.daterangepicker .input-mini{
+  border-radius: 2px;
+  box-sizing: border-box;
+  height: 38px;
+  line-height: 38px;
+  margin-bottom: 10px;
+  padding: 3px 10px;
+
+  &.active,
+  &:focus{
+    outline: none;
+    border-color: $teal;
+  }
+}
+
+.range_inputs{
+  // white space hack +1
+  font-size: 0;
+
+  .btn{
+    width: 49%;
+  }
+
+  .btn--secondary{
+    margin-left: 2%;
+  }
+}
+
+.calendar.left{
+  margin: 0 10px 0 0 !important;
+}
+
+.calendar.right{
+  margin: 0 10px 0 0 !important;
+}
+
+.daterangepicker_input{
+  padding: 0 !important;
+}
+
+.calendar-table{
+  padding: 0 !important;
+  margin-bottom: 10px;
+}
+
+.ranges{
+  margin: 0 10px 0 0;
+}
+
+.ranges li{
+  background-color: $gray9;
+  border-color: $gray6;
+  color: $teal;
+
+  &:hover{
+    background-color: $teal;
+    border-color: $teal;
+  }
+
+  &.active{
+    background-color: $teal-dark;
+    border-color: $teal-dark;
+    cursor: default;
+  }
+
+  @media (max-width: 767px){
+    &[data-range-key="Custom Range"]{
+      display: none;
+    }
+  }
+}

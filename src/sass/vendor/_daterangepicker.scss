@@ -9,7 +9,6 @@
   display: none;
   border: 1px solid $gray5;
   border-radius: 2px;
-  margin-top: -44px;
   padding: 10px 0 10px 10px;
 
   &:before{
@@ -55,24 +54,28 @@
   border: none;
   border-radius: 0 !important;
   box-sizing: border-box;
+  color: $gray1;
   margin: 0;
   padding: 4px;
 
   &.in-range{
-    background-color: $teal;
-    color: $white;
+    background-color: #c7e8e9;
+    color: $gray1;
   }
 
   &.available:hover,
-  &.active,
   &.active:hover{
-    background-color: $teal-dark;
+    background-color: $teal-hover;
+    color: $white;
+  }
+  &.active{
+    background-color: $teal;
     color: $white;
   }
 }
 
 .daterangepicker .input-mini{
-  border-radius: 2px;
+  border-radius: 2px !important;
   box-sizing: border-box;
   height: 38px;
   line-height: 38px;
@@ -123,6 +126,7 @@
 .ranges li{
   background-color: $gray9;
   border-color: $gray6;
+  border-radius: 2px;
   color: $teal;
 
   &:hover{
@@ -131,8 +135,8 @@
   }
 
   &.active{
-    background-color: $teal-dark;
-    border-color: $teal-dark;
+    background-color: $teal-hover;
+    border-color: $teal-hover;
     cursor: default;
   }
 

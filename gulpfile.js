@@ -123,14 +123,13 @@ gulp.task('kss-public', ['kss'], function(){
 });
 
 gulp.task('sass', function() {
+  gulp.src([config.packages +'/daterangepicker/daterangepicker.css'])
+    .pipe(gulp.dest('./src/sass/support'));
+
   gulp.src('./src/sass/**/*.*')
     .pipe(gulp.dest('./dist/scss'));
 
-  return gulp.src([
-      config.packages +'/daterangepicker/daterangepicker.css',
-      './src/sass/styleguide.scss'
-    ])
-    .pipe(concat('styleguide.css'))
+  return gulp.src('./src/sass/styleguide.scss')
     .pipe(sourcemaps.init())
       .pipe(sass().on('error', sass.logError))
     .pipe(sourcemaps.write())

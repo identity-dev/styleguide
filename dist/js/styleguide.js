@@ -2001,14 +2001,6 @@ window.Identity.datePicker = window.Identity.datePicker || {};
     });
   }
 
-  window.Identity.datePicker.start = function(){
-    return $('.textfield--date-picker input').val().split('-')[0].trim()
-  }
-
-  window.Identity.datePicker.end = function(){
-    return $('.textfield--date-picker input').val().split('-')[1].trim()
-  }
-
   $(function(){
     window.Identity.datePicker.init()
   })

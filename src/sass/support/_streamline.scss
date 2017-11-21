@@ -32,6 +32,8 @@
 .sl-calendar:before,
 .sl-camera:before,
 .sl-caret-down:before,
+.sl-caret-left:before,
+.sl-caret-right:before,
 .sl-caret-up:before,
 .sl-chains:before,
 .sl-check:before,
@@ -97,6 +99,8 @@
 .sl-calendar:before { content: "\f141"; }
 .sl-camera:before { content: "\f101"; }
 .sl-caret-down:before { content: "\f13d"; }
+.sl-caret-left:before { content: "\f14a"; }
+.sl-caret-right:before { content: "\f14b"; }
 .sl-caret-up:before { content: "\f13e"; }
 .sl-chains:before { content: "\f110"; }
 .sl-check:before { content: "\f13f"; }
@@ -149,6 +153,8 @@ $font-streamline-birthday-cake: "\f11c";
 $font-streamline-calendar: "\f141";
 $font-streamline-camera: "\f101";
 $font-streamline-caret-down: "\f13d";
+$font-streamline-caret-left: "\f14a";
+$font-streamline-caret-right: "\f14b";
 $font-streamline-caret-up: "\f13e";
 $font-streamline-chains: "\f110";
 $font-streamline-check: "\f13f";

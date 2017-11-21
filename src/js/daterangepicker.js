@@ -3,8 +3,14 @@ window.Identity.datePicker = window.Identity.datePicker || {};
 
 (function(){
 
+  window.Identity.datePicker.set = function(start, end){
+    $('.textfield--date-picker input').val(start.format('MM/DD/YYYY') + ' - ' + end.format('MM/DD/YYYY'))
+  }
+
   window.Identity.datePicker.init = function(){
     $('.textfield--date-picker input').daterangepicker({
+        startDate: moment().subtract(29, 'days'),
+        endDate: moment(),
         autoUpdateInput: false,
         buttonClasses: "btn btn--small btn--inline",
         cancelClass: "btn--secondary",
@@ -16,10 +22,8 @@ window.Identity.datePicker = window.Identity.datePicker || {};
            'This Month': [moment().startOf('month'), moment().endOf('month')],
            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
         }
-    }, function(start, end){
-      $('.textfield--date-picker input').val(start.format('MM/DD/YYYY') + ' - ' + end.format('MM/DD/YYYY'))
-    });
-  }
+      }, window.Identity.datePicker.set)
+    }
 
   $(function(){
     window.Identity.datePicker.init()

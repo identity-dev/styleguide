@@ -3,26 +3,60 @@
   Style overrides for the daterangepicker plugin
 
 */
+
+
+.daterangepicker{
+  display: none;
+  border: 1px solid $gray5;
+  border-radius: 2px;
+  margin-top: -44px;
+  padding: 10px 0 10px 10px;
+
+  &:before{
+    border-bottom-color: $gray5;
+  }
+}
+
+.daterangepicker tr:last-child th{
+  border-bottom: 1px solid $gray5;
+}
+
+.daterangepicker tr:first-child td{
+  border-top: 2px solid $white;
+}
+
 .daterangepicker th{
+  background-color: $white;
   cursor: default;
 
   &.prev.available,
   &.next.available{
-    background-color: $gray5;
-    color: $gray1;
+    color: $teal;
     cursor: pointer;
 
     &:hover{
-      background-color: $gray4;
+      background-color: $teal;
     }
+  }
+
+  &.prev:before{
+    @include icon('streamline');
+    content: "\f14a";
+  }
+
+  &.next:before{
+    @include icon('streamline');
+    content: "\f14b";
   }
 }
 
 .daterangepicker th,
 .daterangepicker td{
+  border: none;
   border-radius: 0 !important;
   box-sizing: border-box;
-  padding: 3px;
+  margin: 0;
+  padding: 4px;
 
   &.in-range{
     background-color: $teal;
@@ -34,18 +68,6 @@
   &.active:hover{
     background-color: $teal-dark;
     color: $white;
-  }
-}
-
-.daterangepicker{
-  display: none;
-  border: 1px solid $gray5;
-  border-radius: 2px;
-  margin-top: -44px;
-  padding: 10px 0 10px 10px;
-
-  &:before{
-    border-bottom-color: $gray5;
   }
 }
 
@@ -119,4 +141,8 @@
       display: none;
     }
   }
+}
+
+.daterangepicker .fa{
+  display: none;
 }

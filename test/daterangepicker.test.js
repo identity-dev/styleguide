@@ -16,12 +16,22 @@ describe('Date Range Picker', () => {
 
   describe('Show', () => {
     describe('initialization', () => {
-      it('should have a start date set', () => {
-        expect(UI.picker.value.split('-')[0].trim()).toEqual(moment().subtract(29, 'days').format('MM/DD/YYYY'))
+      it('should be empty', () => {
+        expect(UI.picker.value).toBe('')
       })
 
-      it('should have an end date set', () => {
-        expect(UI.picker.value.split('-')[1].trim()).toEqual(moment().format('MM/DD/YYYY'))
+      it('should have methods', () => {
+        expect($(UI.picker).data('daterangepicker').setStartDate).not.toBe(undefined)
+        expect($(UI.picker).data('daterangepicker').setEndDate).not.toBe(undefined)
+      })
+
+      it('should have defaults preloaded', () => {
+        expect($(UI.picker).data('daterangepicker').startDate._d).not.toBe(undefined)
+        expect($(UI.picker).data('daterangepicker').endDate._d).not.toBe(undefined)
+      })
+
+      it('sanity check that tests actually assert', () => {
+        expect($(UI.picker).data('daterangepicker').startDate.foobar).toBe(undefined)
       })
     })
   }) // Show

@@ -4,12 +4,8 @@ window.Identity.datePicker = window.Identity.datePicker || {};
 (function(){
 
   window.Identity.datePicker.init = function(){
-    var start = moment().subtract(29, 'days');
-    var end = moment();
-
     $('.textfield--date-picker input').daterangepicker({
-        startDate: start,
-        endDate: end,
+        autoUpdateInput: false,
         buttonClasses: "btn btn--small btn--inline",
         cancelClass: "btn--secondary",
         ranges: {
@@ -20,6 +16,8 @@ window.Identity.datePicker = window.Identity.datePicker || {};
            'This Month': [moment().startOf('month'), moment().endOf('month')],
            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
         }
+    }, function(start, end){
+      $('.textfield--date-picker input').val(start.format('MM/DD/YYYY') + ' - ' + end.format('MM/DD/YYYY'))
     });
   }
 

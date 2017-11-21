@@ -64,6 +64,7 @@
 .sl-phone-handle:before,
 .sl-play-button:before,
 .sl-question-circle:before,
+.sl-receipt:before,
 .sl-rectangle-smartphone:before,
 .sl-rectangles-rotating:before,
 .sl-refresh-arrow:before,
@@ -131,6 +132,7 @@
 .sl-phone-handle:before { content: "\f11e"; }
 .sl-play-button:before { content: "\f146"; }
 .sl-question-circle:before { content: "\f129"; }
+.sl-receipt:before { content: "\f14c"; }
 .sl-rectangle-smartphone:before { content: "\f136"; }
 .sl-rectangles-rotating:before { content: "\f137"; }
 .sl-refresh-arrow:before { content: "\f148"; }
@@ -185,6 +187,7 @@ $font-streamline-pencil: "\f109";
 $font-streamline-phone-handle: "\f11e";
 $font-streamline-play-button: "\f146";
 $font-streamline-question-circle: "\f129";
+$font-streamline-receipt: "\f14c";
 $font-streamline-rectangle-smartphone: "\f136";
 $font-streamline-rectangles-rotating: "\f137";
 $font-streamline-refresh-arrow: "\f148";

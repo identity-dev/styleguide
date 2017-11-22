@@ -832,7 +832,7 @@ Styleguide 6.5.4
 .folder-tab--is-active{
   background-color: $white;
   border-bottom: none;
-  cursor: none;
+  cursor: default;
 
   &:link,
   &:visited,

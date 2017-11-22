@@ -796,6 +796,55 @@ Styleguide 6.5.3
 
 /*
 
+Simple Folder Tab
+
+Simplified Folder navigation
+
+Markup:
+<div>
+  <a href="javascript:;" class="folder-tab {{modifier_class}}">Oauth Verifications</a>
+</div>
+
+.folder-tab--is-active          - Active Class
+
+Styleguide 6.5.4
+
+*/
+
+.folder-tab{
+  border: 1px solid $gray5;
+  box-sizing: border-box;
+  background-color: $gray8;
+  display: inline-block;
+  height: 38px;
+  line-height: 38px;
+  margin-right: 10px;
+  padding: 0 5px;
+  position: relative;
+  z-index: $z_index-1--foreground;
+  top: 11px;
+
+  @media (min-width: 768px){
+    padding: 0 10px;
+  }
+}
+
+.folder-tab--is-active{
+  background-color: $white;
+  border-bottom: none;
+  cursor: none;
+
+  &:link,
+  &:visited,
+  &:hover,
+  &:focus,
+  &:active {
+    color: $gray1;
+  }
+}
+
+/*
+
 Accordion
 
 Simple accordion for toggling content

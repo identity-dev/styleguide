@@ -113,7 +113,8 @@ gulp.task('kss-public', ['kss'], function(){
     .pipe(gulp.dest('./docs/public/css'));
 
   return gulp.src([
-      './kss-html/js/jquery-2.2.4.min.js',
+      config.packages +'/moment/moment.js',
+      config.packages +'/jquery/dist/jquery.js',
       './kss-html/js/run_prettify.js',
       './kss-html/js/kss.js'
     ])
@@ -122,15 +123,13 @@ gulp.task('kss-public', ['kss'], function(){
 });
 
 gulp.task('sass', function() {
+  gulp.src([config.packages +'/daterangepicker/daterangepicker.css'])
+    .pipe(gulp.dest('./src/sass/support'));
+
   gulp.src('./src/sass/**/*.*')
     .pipe(gulp.dest('./dist/scss'));
 
   return gulp.src('./src/sass/styleguide.scss')
-    .pipe(stylelint({
-      reporters: [
-        {formatter: 'string', console: true}
-      ]
-    }))
     .pipe(sourcemaps.init())
       .pipe(sass().on('error', sass.logError))
     .pipe(sourcemaps.write())
@@ -151,9 +150,11 @@ gulp.task('fonts', function(){
 
 gulp.task('js', function(){
   return gulp.src([
+      config.packages +'/daterangepicker/daterangepicker.js',
       './src/js/kit.js',
       './src/js/forms.js',
-      './src/js/notifications.js'
+      './src/js/notifications.js',
+      './src/js/daterangepicker.js'
     ])
     .pipe(concat('styleguide.js'))
     .pipe(gulp.dest('./dist/js'));

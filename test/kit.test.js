@@ -112,18 +112,12 @@ describe('Kit', () => {
 
     describe('Toggle', () => {
       describe('with HTML API', () => {
-        it('should toggle classes on/off', (done) => {
+        it('should toggle classes on/off', () => {
           expect(hasClass(UI.toggle, 'accordion--is_active')).toBe(false)
-          expect(isHidden(UI.content)).toBe(true)
           UI.toggle.click()
           expect(hasClass(UI.toggle, 'accordion--is_active')).toBe(true)
-          expect(isVisible(UI.content)).toBe(true)
           UI.toggle.click()
           expect(hasClass(UI.toggle, 'accordion--is_active')).toBe(false)
-          setTimeout(() => {
-            expect(isHidden(UI.content)).toBe(true)
-            done();
-          }, 201);
         })
       })
     })

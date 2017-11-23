@@ -64,7 +64,7 @@ describe('Notifications', () => {
       setTimeout(() =>{
         expect(UI.jar.hasChildNodes()).toBe(false)
         done()
-      }, 101)
+      }, 500)
 
     })
   }) // Show

@@ -12,7 +12,7 @@
     "url": "git://github.com/identity-dev/styleguide.git"
   },
   "dependencies": {
-    "identity-dev-streamline": "^1.0.8"
+    "identity-dev-streamline": "^1.0.10"
   },
   "stylelint": {
     "rules": {
@@ -47,6 +47,7 @@
     "release:major": "npm run release && npm version major && npm run push:tag && npm publish"
   },
   "devDependencies": {
+    "daterangepicker": "^2.1.25",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-clean": "^0.3.2",
@@ -70,5 +71,9 @@
     "karma-jasmine": "^1.1.0",
     "kss": "2.4.0",
     "run-sequence": "^2.2.0"
+  },
+  "peerDependencies": {
+    "jquery": "2.1.4",
+    "moment": "2.19.2"
   }
 }

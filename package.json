@@ -71,5 +71,9 @@
     "karma-jasmine": "^1.1.0",
     "kss": "2.4.0",
     "run-sequence": "^2.2.0"
+  },
+  "peerDependencies": {
+    "jquery": "2.1.4",
+    "moment": "2.19.2"
   }
 }

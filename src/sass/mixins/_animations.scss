@@ -7,6 +7,7 @@
   -moz-transform: $transform;
   -ms-transform: $transform;
   -o-transform: $transform;
+  transform: $transform;
 }
 
 @mixin translate($translate-x: $default-translate-x, $translate-y: $default-translate-y, $perspective: false) {
@@ -21,18 +22,21 @@
   -webkit-transition-property: $properties;
   -moz-transition-property: $properties;
   -o-transition-property: $properties;
+  transition-property: $properties;
 }
 
 @mixin transition-duration($duration) {
   -webkit-transition-duration: $duration;
   -moz-transition-duration: $duration;
   -o-transition-duration: $duration;
+  transition-duration: $duration;
 }
 
 @mixin transition-delay($delay) {
   -webkit-transition-delay: $delay;
   -moz-transition-delay: $delay;
   -o-transition-delay: $delay;
+  transition-delay: $delay;
 }
 
 @mixin transition-properties($properties: all){

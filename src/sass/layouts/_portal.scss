@@ -1,8 +1,15 @@
+$nav-width: 230px;
+
 /*
 
 Layout Styles
 
 */
+
+body{
+  @include transition-properties();
+  right: 0;
+}
 
 .portal{
   background-color: $gray8;
@@ -18,15 +25,33 @@ Layout Styles
   right: 0;
   top: 0;
   z-index: $z_index-1;
+
+  @media (max-width: 859px){
+    display: none;
+  }
 }
 
 .portal__navigation{
-  position: relative;
+  @include transition-properties();
+  background-color: $white;
+  bottom: 0;
+  overflow-y: auto;
+  position: fixed;
+  right: -1*$nav-width;
+  top: 0;
+  width: $nav-width;
+
+  @media (min-width: 860px){
+    position: static;
+  }
 }
 
 .portal__content{
+  margin: 20px 10px;
 
-  margin: 45px 0 0 231px;
+  @media (min-width: 860px){
+    margin: 45px 0 0 $nav-width+1;
+  }
 }
 
 /*
@@ -36,10 +61,15 @@ Sidebar Styles
 */
 
 .portal__logo{
-  margin: 0 auto;
   max-width: 170px;
-  padding: 35px 10px;
-  text-align: center;
+  padding: 10px 20px;
+
+  @media (min-width: 860px){
+    margin: 0 auto;
+    max-width: 170px;
+    padding: 35px 10px;
+    text-align: center;
+  }
 
   a{
     position: static;
@@ -53,13 +83,12 @@ Sidebar Styles
   top: 0;
   z-index: $z_index-2;
 
-  @media (max-width: 767px){
-    position: relative;
+  @media (max-width: 859px){
     right: 0;
   }
 
-  @media (min-width: 768px){
-    width: 230px;
+  @media (min-width: 860px){
+    width: $nav-width;
     position: fixed;
     padding-bottom: 40px;
     bottom: 0;
@@ -111,5 +140,72 @@ Sidebar Styles
     background-color: $teal;
     color: $white;
     cursor: default;
+  }
+}
+
+/*
+
+Mobile Styles
+
+*/
+
+.mobile-nav-active{
+  right: $nav-width;
+  overflow-y: hidden;
+
+  @media (min-width: 860px) {
+    right: 0;
+  }
+
+  &:before{
+    background-color: rgba(49, 49, 50, .85);
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: $z_index-4--overlay;
+
+    @media (min-width: 860px){
+      content: none;
+    }
+  }
+
+  .portal__navigation{
+    right: 0;
+  }
+}
+
+.mobile-nav-toggle{
+  color: $teal;
+  cursor: pointer;
+  height: 16px;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  width: 20px;
+  z-index: $z_index-4--overlay;
+
+  &:before{
+    @include icon('streamline');
+    content: '\f14d';
+    display: inline-block;
+  }
+
+  &:hover{
+    color: $teal-hover;
+  }
+
+  @media (min-width: 860px){
+    display: none;
+  }
+}
+
+.mobile-nav-toggle--is-active{
+  background-image: none;
+  &:before{
+    content: '\f14b';
+    display: inline-block;
   }
 }

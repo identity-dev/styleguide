@@ -6,12 +6,15 @@
     </a>
   </div>
 
-  {{#eachRoot}}
-    <a href="section-{{referenceURI}}.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      {{header}}
-    </a>
-  {{/eachRoot}}
+  <div class="mobile-nav-toggle js-mobile-nav-toggle"></div>
+  <nav class="portal__navigation">
+    {{#eachRoot}}
+      <a href="section-{{referenceURI}}.html" class="portal__nav-item">
+        <i class="sl-gear"></i>
+        {{header}}
+      </a>
+    {{/eachRoot}}
+  </nav>
 </aside>
 
 <header class="portal__header">

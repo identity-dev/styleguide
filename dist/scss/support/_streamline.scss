@@ -57,6 +57,7 @@
 .sl-lock-renew:before,
 .sl-lowercase-i:before,
 .sl-magnify-glass:before,
+.sl-menu:before,
 .sl-one-circle:before,
 .sl-one-person:before,
 .sl-pen-paper:before,
@@ -68,6 +69,7 @@
 .sl-rectangle-smartphone:before,
 .sl-rectangles-rotating:before,
 .sl-refresh-arrow:before,
+.sl-satellite:before,
 .sl-shield-smartphone:before,
 .sl-three-circle:before,
 .sl-three-people:before,
@@ -125,6 +127,7 @@
 .sl-lock-renew:before { content: "\f145"; }
 .sl-lowercase-i:before { content: "\f120"; }
 .sl-magnify-glass:before { content: "\f113"; }
+.sl-menu:before { content: "\f14d"; }
 .sl-one-circle:before { content: "\f127"; }
 .sl-one-person:before { content: "\f124"; }
 .sl-pen-paper:before { content: "\f135"; }
@@ -136,6 +139,7 @@
 .sl-rectangle-smartphone:before { content: "\f136"; }
 .sl-rectangles-rotating:before { content: "\f137"; }
 .sl-refresh-arrow:before { content: "\f148"; }
+.sl-satellite:before { content: "\f14e"; }
 .sl-shield-smartphone:before { content: "\f138"; }
 .sl-three-circle:before { content: "\f12a"; }
 .sl-three-people:before { content: "\f125"; }
@@ -180,6 +184,7 @@ $font-streamline-lock-closed: "\f103";
 $font-streamline-lock-renew: "\f145";
 $font-streamline-lowercase-i: "\f120";
 $font-streamline-magnify-glass: "\f113";
+$font-streamline-menu: "\f14d";
 $font-streamline-one-circle: "\f127";
 $font-streamline-one-person: "\f124";
 $font-streamline-pen-paper: "\f135";
@@ -191,6 +196,7 @@ $font-streamline-receipt: "\f14c";
 $font-streamline-rectangle-smartphone: "\f136";
 $font-streamline-rectangles-rotating: "\f137";
 $font-streamline-refresh-arrow: "\f148";
+$font-streamline-satellite: "\f14e";
 $font-streamline-shield-smartphone: "\f138";
 $font-streamline-three-circle: "\f12a";
 $font-streamline-three-people: "\f125";

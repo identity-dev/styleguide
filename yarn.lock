@@ -1849,9 +1849,9 @@ iconv-lite@0.4.19:
   version "0.4.19"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
 
-identity-dev-streamline@^1.0.10:
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/identity-dev-streamline/-/identity-dev-streamline-1.0.10.tgz#84bba36b3f9f63de7fb976d2ad237715cc9d9f2b"
+identity-dev-streamline@^1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/identity-dev-streamline/-/identity-dev-streamline-1.0.11.tgz#242151ed6a15d46ee087e131dc6c68e3a6d5a3a7"
 
 ignore@^3.3.3:
   version "3.3.6"
@@ -2122,10 +2122,6 @@ jasmine-core@^2.8.0:
 jasmine-jquery@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/jasmine-jquery/-/jasmine-jquery-2.1.1.tgz#d4095e646944a26763235769ab018d9f30f0d47b"
-
-jquery@2.1.4:
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-2.1.4.tgz#228bde698a0c61431dc2630a6a154f15890d2317"
 
 jquery@>=1.10:
   version "3.2.1"

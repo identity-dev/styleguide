@@ -25,6 +25,10 @@
 [data-icon]:before,
 .sl-add-circle:before,
 .sl-arrow-console:before,
+.sl-arrow-down:before,
+.sl-arrow-left:before,
+.sl-arrow-right:before,
+.sl-arrow-up:before,
 .sl-back-id:before,
 .sl-bank-building:before,
 .sl-bar-graph:before,
@@ -95,6 +99,10 @@
 
 .sl-add-circle:before { content: "\f12c"; }
 .sl-arrow-console:before { content: "\f12d"; }
+.sl-arrow-down:before { content: "\f14f"; }
+.sl-arrow-left:before { content: "\f150"; }
+.sl-arrow-right:before { content: "\f151"; }
+.sl-arrow-up:before { content: "\f152"; }
 .sl-back-id:before { content: "\f12e"; }
 .sl-bank-building:before { content: "\f149"; }
 .sl-bar-graph:before { content: "\f10f"; }
@@ -152,6 +160,10 @@
 
 $font-streamline-add-circle: "\f12c";
 $font-streamline-arrow-console: "\f12d";
+$font-streamline-arrow-down: "\f14f";
+$font-streamline-arrow-left: "\f150";
+$font-streamline-arrow-right: "\f151";
+$font-streamline-arrow-up: "\f152";
 $font-streamline-back-id: "\f12e";
 $font-streamline-bank-building: "\f149";
 $font-streamline-bar-graph: "\f10f";

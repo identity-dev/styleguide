@@ -220,10 +220,12 @@ Styleguide 6.4.1
   position: absolute;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  height: 0;
   width: 200px;
   border: 1px solid $gray4;
   background-color: $white;
   opacity: 0;
+  overflow: hidden;
   z-index: $z_index-0--underground;
   @include type--small();
   // this is a one off per design request,
@@ -545,9 +547,11 @@ Styleguide 6.4.2
 }
 
 .popover--is_active{
-  z-index: $z_index-3--popover;
-  opacity: 1;
   @include transition-properties(z-index opacity);
+  height: auto;
+  opacity: 1;
+  overflow: visible;
+  z-index: $z_index-3--popover;
 }
 
 .popover--tip_gray:before{
@@ -567,6 +571,82 @@ Styleguide 6.4.2
 .popover--tip_gray.popover--right:before{
   border-right-color: $gray6;
   border-bottom-color: transparent;
+}
+
+
+/*
+
+Pop Menu
+
+A popover, primarily used in onboarding flows
+
+Markup:
+<div class="js-click-popover pop-menu {{modifier_class}}" data-id="js-pop-menu-kss{{modifier_class}}">
+  <div class="pop-menu__title">Verification Portal</div>
+  <div class="popover popover--right_below pop-menu__popover" id="js-pop-menu-kss{{modifier_class}}">
+    <a class="pop-menu__item" href="javascript:;">
+      Verification Portal
+    </a>
+    <a class="pop-menu__item" href="javascript:;">
+      Background Checks Portal
+    </a>
+  </div>
+</div>
+
+.pop-menu--portal         - Popover Menu for portal
+
+Styleguide 6.4.3
+
+*/
+
+.pop-menu{
+  display: inline-block;
+  position: relative;
+}
+
+.pop-menu--portal{
+
+}
+
+.pop-menu__title{
+  cursor: pointer;
+  padding-right: 13px;
+  position: relative;
+
+  &::after{
+    content: '';
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid $gray2;
+    height: 0;
+    margin-top: -3px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 0;
+  }
+}
+
+.pop-menu--portal .pop-menu__title{
+  @include type--semibold();
+}
+
+.pop-menu__popover{
+  margin-top: 0;
+  right: -13px;
+  top: 110%;
+}
+
+.pop-menu__item{
+  border-bottom: 1px solid $gray5;
+  display: block;
+  font-weight: semibold;
+  padding: 10px;
+  text-align: left;
+
+  &:last-child{
+    border-bottom: none;
+  }
 }
 
 /*

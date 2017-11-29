@@ -612,6 +612,7 @@ Styleguide 6.4.3
   cursor: pointer;
   padding-right: 13px;
   position: relative;
+  text-transform: uppercase;
 
   &::after{
     content: '';

@@ -30,7 +30,7 @@ body{
   right: 0;
   text-align: right;
   top: 0;
-  z-index: $z_index-1;
+  z-index: $z_index-2;
 
   @media (max-width: 767px){
     position: static;
@@ -94,7 +94,7 @@ Sidebar Styles
   padding: 0;
   position: fixed;
   top: 0;
-  z-index: $z_index-2;
+  z-index: $z_index-3;
 
   @media (max-width: 767px){
     border-bottom: 1px solid $gray5;

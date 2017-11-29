@@ -92,113 +92,116 @@
 </aside>
 
 <div class="portal__header">
-  <div class="js-click-popover pop-menu pop-menu--portal" data-id="js-pop-menu-kss">
-    <div class="pop-menu__title">Verification Portal</div>
-    <div class="popover popover--right_below pop-menu__popover" id="js-pop-menu-kss">
-      <a class="pop-menu__item" href="javascript:;">
-        Verification Portal
-      </a>
-      <a class="pop-menu__item" href="javascript:;">
-        Background Checks Portal
-      </a>
+  <div class="wrapper">
+    <div class="js-click-popover pop-menu pop-menu--portal" data-id="js-pop-menu-kss">
+      <div class="pop-menu__title">Verification Portal</div>
+      <div class="popover popover--right_below pop-menu__popover" id="js-pop-menu-kss">
+        <a class="pop-menu__item" href="javascript:;">
+          Verification Portal
+        </a>
+        <a class="pop-menu__item" href="javascript:;">
+          Background Checks Portal
+        </a>
+      </div>
     </div>
   </div>
 </div>
 
 <div class="portal__content">
   <div id="notifications"></div>
-  <div class="container">
+  <div class="container--large">
+    <div class="wrapper">
 
-        <article class="pattern">
-            <h2 id="6">Kit</h2>
-            <div class="subtitle pattern-description"><p>The tool kit for ui components</p>
+          <article class="pattern">
+              <h2 id="6">Kit</h2>
+              <div class="subtitle pattern-description"><p>The tool kit for ui components</p>
 </div>
-        </article>
-        <article class="pattern">
-            <h2 class="kss-title" id="6-1">
-              <span class="kss-ref badge pull-right">6-1</span> Close
-            </h2>
-            <div class="subtitle pattern-description"><p>A simple close icon positioned in the top right of the relative parent</p>
+          </article>
+          <article class="pattern">
+              <h2 class="kss-title" id="6-1">
+                <span class="kss-ref badge pull-right">6-1</span> Close
+              </h2>
+              <div class="subtitle pattern-description"><p>A simple close icon positioned in the top right of the relative parent</p>
 </div>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><div style="position: relative; height: 40px;">
+              <section class="example">
+                <div class="example-demo">
+                  <div class="kss-example"><div style="position: relative; height: 40px;">
   <span class="close [modifier class]"></span>
 </div></div>
-                  <hr />
-                  <h4 class="u-clearfix">White icon <span class="u-f-right"><code>.close--light</code></span></h4>
-                  <div class="kss-example"><div style="position: relative; height: 40px;">
+                    <hr />
+                    <h4 class="u-clearfix">White icon <span class="u-f-right"><code>.close--light</code></span></h4>
+                    <div class="kss-example"><div style="position: relative; height: 40px;">
   <span class="close close--light"></span>
 </div></div>
-                  <hr />
-                  <h4 class="u-clearfix">Gray icon <span class="u-f-right"><code>.close--gray</code></span></h4>
-                  <div class="kss-example"><div style="position: relative; height: 40px;">
+                    <hr />
+                    <h4 class="u-clearfix">Gray icon <span class="u-f-right"><code>.close--gray</code></span></h4>
+                    <div class="kss-example"><div style="position: relative; height: 40px;">
   <span class="close close--gray"></span>
 </div></div>
-              </div>
-              <div class="example-code">
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">&lt;div style=&quot;position: relative; height: 40px;&quot;&gt;
   &lt;span class=&quot;close [modifier class]&quot;&gt;&lt;/span&gt;
 &lt;/div&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-        <article class="pattern">
-            <h2 class="kss-title" id="6-3">
-              <span class="kss-ref badge pull-right">6-3</span> Modal
-            </h2>
-            <div class="subtitle pattern-description"><p>A simple, responsive modal. Traditionally used while nested below an overlay.
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+          <article class="pattern">
+              <h2 class="kss-title" id="6-3">
+                <span class="kss-ref badge pull-right">6-3</span> Modal
+              </h2>
+              <div class="subtitle pattern-description"><p>A simple, responsive modal. Traditionally used while nested below an overlay.
 Note: the first button will not work by nature of how KSS is used to generate a selector.
 It&#39;s only a problem with this documentation</p>
 </div>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><div class="overlay" id="js-modal-[modifier class]">
+              <section class="example">
+                <div class="example-demo">
+                  <div class="kss-example"><div class="overlay" id="js-modal-[modifier class]">
   <div class="modal [modifier class]">Modal is opened</div>
   <span class="close js-close-modal" data-id="js-modal-[modifier class]"></span>
 </div>
 <a href="javascript:;" class="btn js-show-modal" data-id="js-modal-[modifier class]">
 Demo Modal
 </a></div>
-                  <hr />
-                  <h4 class="u-clearfix">Activated modal <span class="u-f-right"><code>.modal--is_active</code></span></h4>
-                  <div class="kss-example"><div class="overlay" id="js-modal-modal--is_active">
+                    <hr />
+                    <h4 class="u-clearfix">Activated modal <span class="u-f-right"><code>.modal--is_active</code></span></h4>
+                    <div class="kss-example"><div class="overlay" id="js-modal-modal--is_active">
   <div class="modal modal--is_active">Modal is opened</div>
   <span class="close js-close-modal" data-id="js-modal-modal--is_active"></span>
 </div>
 <a href="javascript:;" class="btn js-show-modal" data-id="js-modal-modal--is_active">
 Demo Modal
 </a></div>
-                  <hr />
-                  <h4 class="u-clearfix">small width Modal <span class="u-f-right"><code>.modal--small</code></span></h4>
-                  <div class="kss-example"><div class="overlay" id="js-modal-modal--small">
+                    <hr />
+                    <h4 class="u-clearfix">small width Modal <span class="u-f-right"><code>.modal--small</code></span></h4>
+                    <div class="kss-example"><div class="overlay" id="js-modal-modal--small">
   <div class="modal modal--small">Modal is opened</div>
   <span class="close js-close-modal" data-id="js-modal-modal--small"></span>
 </div>
 <a href="javascript:;" class="btn js-show-modal" data-id="js-modal-modal--small">
 Demo Modal
 </a></div>
-                  <hr />
-                  <h4 class="u-clearfix">Large width Modal <span class="u-f-right"><code>.modal--large</code></span></h4>
-                  <div class="kss-example"><div class="overlay" id="js-modal-modal--large">
+                    <hr />
+                    <h4 class="u-clearfix">Large width Modal <span class="u-f-right"><code>.modal--large</code></span></h4>
+                    <div class="kss-example"><div class="overlay" id="js-modal-modal--large">
   <div class="modal modal--large">Modal is opened</div>
   <span class="close js-close-modal" data-id="js-modal-modal--large"></span>
 </div>
 <a href="javascript:;" class="btn js-show-modal" data-id="js-modal-modal--large">
 Demo Modal
 </a></div>
-                  <hr />
-                  <h4 class="u-clearfix">XLarge width Modal <span class="u-f-right"><code>.modal--xlarge</code></span></h4>
-                  <div class="kss-example"><div class="overlay" id="js-modal-modal--xlarge">
+                    <hr />
+                    <h4 class="u-clearfix">XLarge width Modal <span class="u-f-right"><code>.modal--xlarge</code></span></h4>
+                    <div class="kss-example"><div class="overlay" id="js-modal-modal--xlarge">
   <div class="modal modal--xlarge">Modal is opened</div>
   <span class="close js-close-modal" data-id="js-modal-modal--xlarge"></span>
 </div>
 <a href="javascript:;" class="btn js-show-modal" data-id="js-modal-modal--xlarge">
 Demo Modal
 </a></div>
-              </div>
-              <div class="example-code">
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">&lt;div class=&quot;overlay&quot; id=&quot;js-modal-[modifier class]&quot;&gt;
   &lt;div class=&quot;modal [modifier class]&quot;&gt;Modal is opened&lt;/div&gt;
   &lt;span class=&quot;close js-close-modal&quot; data-id=&quot;js-modal-[modifier class]&quot;&gt;&lt;/span&gt;
@@ -206,158 +209,158 @@ Demo Modal
 &lt;a href=&quot;javascript:;&quot; class=&quot;btn js-show-modal&quot; data-id=&quot;js-modal-[modifier class]&quot;&gt;
 Demo Modal
 &lt;/a&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-        <article class="pattern">
-            <h3 class="kss-title" id="6-4-1">
-              <span class="kss-ref badge pull-right">6-4-1</span> Popover Positions
-            </h3>
-            <div class="subtitle pattern-description"><p>Various positions for the popovers</p>
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+          <article class="pattern">
+              <h3 class="kss-title" id="6-4-1">
+                <span class="kss-ref badge pull-right">6-4-1</span> Popover Positions
+              </h3>
+              <div class="subtitle pattern-description"><p>Various positions for the popovers</p>
 </div>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-[modifier class]">
+              <section class="example">
+                <div class="example-demo">
+                  <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-[modifier class]">
   <div class="popover [modifier class]" id="js-hover-popover-[modifier class]">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div></div>
-                  <hr />
-                  <h4 class="u-clearfix">Popover aligned above the relative parent <span class="u-f-right"><code>.popover--below</code></span></h4>
-                  <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-popover--below">
+                    <hr />
+                    <h4 class="u-clearfix">Popover aligned above the relative parent <span class="u-f-right"><code>.popover--below</code></span></h4>
+                    <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-popover--below">
   <div class="popover popover--below" id="js-hover-popover-popover--below">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div></div>
-                  <hr />
-                  <h4 class="u-clearfix">Popover aligned to the left of the relative parent <span class="u-f-right"><code>.popover--left</code></span></h4>
-                  <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-popover--left">
+                    <hr />
+                    <h4 class="u-clearfix">Popover aligned to the left of the relative parent <span class="u-f-right"><code>.popover--left</code></span></h4>
+                    <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-popover--left">
   <div class="popover popover--left" id="js-hover-popover-popover--left">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div></div>
-                  <hr />
-                  <h4 class="u-clearfix">Popover aligned above the relative parent <span class="u-f-right"><code>.popover--above</code></span></h4>
-                  <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-popover--above">
+                    <hr />
+                    <h4 class="u-clearfix">Popover aligned above the relative parent <span class="u-f-right"><code>.popover--above</code></span></h4>
+                    <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-popover--above">
   <div class="popover popover--above" id="js-hover-popover-popover--above">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div></div>
-                  <hr />
-                  <h4 class="u-clearfix">Popover aligned to the right of the relative parent <span class="u-f-right"><code>.popover--right</code></span></h4>
-                  <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-popover--right">
+                    <hr />
+                    <h4 class="u-clearfix">Popover aligned to the right of the relative parent <span class="u-f-right"><code>.popover--right</code></span></h4>
+                    <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-popover--right">
   <div class="popover popover--right" id="js-hover-popover-popover--right">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div></div>
-                  <hr />
-                  <h4 class="u-clearfix">Popover aligned to the right and bottom of the relative parent <span class="u-f-right"><code>.popover--right_below</code></span></h4>
-                  <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-popover--right_below">
+                    <hr />
+                    <h4 class="u-clearfix">Popover aligned to the right and bottom of the relative parent <span class="u-f-right"><code>.popover--right_below</code></span></h4>
+                    <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-popover--right_below">
   <div class="popover popover--right_below" id="js-hover-popover-popover--right_below">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div></div>
-                  <hr />
-                  <h4 class="u-clearfix">Popover aligned to the left and bottom of the relative parent <span class="u-f-right"><code>.popover--left_below</code></span></h4>
-                  <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-popover--left_below">
+                    <hr />
+                    <h4 class="u-clearfix">Popover aligned to the left and bottom of the relative parent <span class="u-f-right"><code>.popover--left_below</code></span></h4>
+                    <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-popover--left_below">
   <div class="popover popover--left_below" id="js-hover-popover-popover--left_below">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div></div>
-                  <hr />
-                  <h4 class="u-clearfix">Popover aligned to the top based on box, not on the tip <span class="u-f-right"><code>.popover--align_top</code></span></h4>
-                  <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-popover--align_top">
+                    <hr />
+                    <h4 class="u-clearfix">Popover aligned to the top based on box, not on the tip <span class="u-f-right"><code>.popover--align_top</code></span></h4>
+                    <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-popover--align_top">
   <div class="popover popover--align_top" id="js-hover-popover-popover--align_top">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div></div>
-                  <hr />
-                  <h4 class="u-clearfix">Popover aligned to the right and bottom of the relative parent on mobile <span class="u-f-right"><code>.popover--right--mobile</code></span></h4>
-                  <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-popover--right--mobile">
+                    <hr />
+                    <h4 class="u-clearfix">Popover aligned to the right and bottom of the relative parent on mobile <span class="u-f-right"><code>.popover--right--mobile</code></span></h4>
+                    <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-popover--right--mobile">
   <div class="popover popover--right--mobile" id="js-hover-popover-popover--right--mobile">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div></div>
-                  <hr />
-                  <h4 class="u-clearfix">Popover aligned to the left and bottom of the relative parent on mobile <span class="u-f-right"><code>.popover--left--mobile</code></span></h4>
-                  <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-popover--left--mobile">
+                    <hr />
+                    <h4 class="u-clearfix">Popover aligned to the left and bottom of the relative parent on mobile <span class="u-f-right"><code>.popover--left--mobile</code></span></h4>
+                    <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-popover--left--mobile">
   <div class="popover popover--left--mobile" id="js-hover-popover-popover--left--mobile">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div></div>
-                  <hr />
-                  <h4 class="u-clearfix">Popover aligned to the center and bottom of the relative parent on mobile <span class="u-f-right"><code>.popover--center--mobile</code></span></h4>
-                  <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-popover--center--mobile">
+                    <hr />
+                    <h4 class="u-clearfix">Popover aligned to the center and bottom of the relative parent on mobile <span class="u-f-right"><code>.popover--center--mobile</code></span></h4>
+                    <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-popover--center--mobile">
   <div class="popover popover--center--mobile" id="js-hover-popover-popover--center--mobile">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div></div>
-              </div>
-              <div class="example-code">
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">&lt;div class=&quot;pulse js-click-popover&quot; data-id=&quot;js-hover-popover-[modifier class]&quot;&gt;
   &lt;div class=&quot;popover [modifier class]&quot; id=&quot;js-hover-popover-[modifier class]&quot;&gt;
     The quick brown fox jumped over the lazy dog, so quickly.
   &lt;/div&gt;
 &lt;/div&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-        <article class="pattern">
-            <h3 class="kss-title" id="6-4-2">
-              <span class="kss-ref badge pull-right">6-4-2</span> Popover styles
-            </h3>
-            <div class="subtitle pattern-description"><p>A popover, primarily used in onboarding flows</p>
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+          <article class="pattern">
+              <h3 class="kss-title" id="6-4-2">
+                <span class="kss-ref badge pull-right">6-4-2</span> Popover styles
+              </h3>
+              <div class="subtitle pattern-description"><p>A popover, primarily used in onboarding flows</p>
 </div>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-[modifier class]">
+              <section class="example">
+                <div class="example-demo">
+                  <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-[modifier class]">
   <div class="popover popover--below [modifier class]" id="js-hover-popover-[modifier class]">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div></div>
-                  <hr />
-                  <h4 class="u-clearfix">Popover display as a tooltip <span class="u-f-right"><code>.popover--highlight</code></span></h4>
-                  <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-popover--highlight">
+                    <hr />
+                    <h4 class="u-clearfix">Popover display as a tooltip <span class="u-f-right"><code>.popover--highlight</code></span></h4>
+                    <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-popover--highlight">
   <div class="popover popover--below popover--highlight" id="js-hover-popover-popover--highlight">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div></div>
-                  <hr />
-                  <h4 class="u-clearfix">Popover display as a tooltip <span class="u-f-right"><code>.popover--tooltip</code></span></h4>
-                  <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-popover--tooltip">
+                    <hr />
+                    <h4 class="u-clearfix">Popover display as a tooltip <span class="u-f-right"><code>.popover--tooltip</code></span></h4>
+                    <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-popover--tooltip">
   <div class="popover popover--below popover--tooltip" id="js-hover-popover-popover--tooltip">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div></div>
-                  <hr />
-                  <h4 class="u-clearfix">Popover tip is gray, useful with icon_header <span class="u-f-right"><code>.popover--tip_gray</code></span></h4>
-                  <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-popover--tip_gray">
+                    <hr />
+                    <h4 class="u-clearfix">Popover tip is gray, useful with icon_header <span class="u-f-right"><code>.popover--tip_gray</code></span></h4>
+                    <div class="kss-example"><div class="pulse js-click-popover" data-id="js-hover-popover-popover--tip_gray">
   <div class="popover popover--below popover--tip_gray" id="js-hover-popover-popover--tip_gray">
     The quick brown fox jumped over the lazy dog, so quickly.
   </div>
 </div></div>
-              </div>
-              <div class="example-code">
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">&lt;div class=&quot;pulse js-click-popover&quot; data-id=&quot;js-hover-popover-[modifier class]&quot;&gt;
   &lt;div class=&quot;popover popover--below [modifier class]&quot; id=&quot;js-hover-popover-[modifier class]&quot;&gt;
     The quick brown fox jumped over the lazy dog, so quickly.
   &lt;/div&gt;
 &lt;/div&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-        <article class="pattern">
-            <h3 class="kss-title" id="6-4-3">
-              <span class="kss-ref badge pull-right">6-4-3</span> Pop Menu
-            </h3>
-            <div class="subtitle pattern-description"><p>A popover, primarily used in onboarding flows</p>
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+          <article class="pattern">
+              <h3 class="kss-title" id="6-4-3">
+                <span class="kss-ref badge pull-right">6-4-3</span> Pop Menu
+              </h3>
+              <div class="subtitle pattern-description"><p>A popover, primarily used in onboarding flows</p>
 </div>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><div class="js-click-popover pop-menu [modifier class]" data-id="js-pop-menu-kss[modifier class]">
+              <section class="example">
+                <div class="example-demo">
+                  <div class="kss-example"><div class="js-click-popover pop-menu [modifier class]" data-id="js-pop-menu-kss[modifier class]">
   <div class="pop-menu__title">Verification Portal</div>
   <div class="popover popover--right_below pop-menu__popover" id="js-pop-menu-kss[modifier class]">
     <a class="pop-menu__item" href="javascript:;">
@@ -368,9 +371,9 @@ Demo Modal
     </a>
   </div>
 </div></div>
-                  <hr />
-                  <h4 class="u-clearfix">Popover Menu for portal <span class="u-f-right"><code>.pop-menu--portal</code></span></h4>
-                  <div class="kss-example"><div class="js-click-popover pop-menu pop-menu--portal" data-id="js-pop-menu-ksspop-menu--portal">
+                    <hr />
+                    <h4 class="u-clearfix">Popover Menu for portal <span class="u-f-right"><code>.pop-menu--portal</code></span></h4>
+                    <div class="kss-example"><div class="js-click-popover pop-menu pop-menu--portal" data-id="js-pop-menu-ksspop-menu--portal">
   <div class="pop-menu__title">Verification Portal</div>
   <div class="popover popover--right_below pop-menu__popover" id="js-pop-menu-ksspop-menu--portal">
     <a class="pop-menu__item" href="javascript:;">
@@ -381,8 +384,8 @@ Demo Modal
     </a>
   </div>
 </div></div>
-              </div>
-              <div class="example-code">
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">&lt;div class=&quot;js-click-popover pop-menu [modifier class]&quot; data-id=&quot;js-pop-menu-kss[modifier class]&quot;&gt;
   &lt;div class=&quot;pop-menu__title&quot;&gt;Verification Portal&lt;/div&gt;
   &lt;div class=&quot;popover popover--right_below pop-menu__popover&quot; id=&quot;js-pop-menu-kss[modifier class]&quot;&gt;
@@ -394,19 +397,19 @@ Demo Modal
     &lt;/a&gt;
   &lt;/div&gt;
 &lt;/div&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-        <article class="pattern">
-            <h2 class="kss-title" id="6-5">
-              <span class="kss-ref badge pull-right">6-5</span> Tabs
-            </h2>
-            <div class="subtitle pattern-description"><p>Simple tab navigation for showing/hiding content</p>
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+          <article class="pattern">
+              <h2 class="kss-title" id="6-5">
+                <span class="kss-ref badge pull-right">6-5</span> Tabs
+              </h2>
+              <div class="subtitle pattern-description"><p>Simple tab navigation for showing/hiding content</p>
 </div>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><div class="tabs" id="js-group-1">
+              <section class="example">
+                <div class="example-demo">
+                  <div class="kss-example"><div class="tabs" id="js-group-1">
   <div class="tabs-toggle js-toggle-tab tabs-toggle--is_active" data-id="tab-one">
     Tab One
   </div>
@@ -422,8 +425,8 @@ Demo Modal
     Tab Two
   </div>
 </div></div>
-              </div>
-              <div class="example-code">
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">&lt;div class=&quot;tabs&quot; id=&quot;js-group-1&quot;&gt;
   &lt;div class=&quot;tabs-toggle js-toggle-tab tabs-toggle--is_active&quot; data-id=&quot;tab-one&quot;&gt;
     Tab One
@@ -440,37 +443,37 @@ Demo Modal
     Tab Two
   &lt;/div&gt;
 &lt;/div&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-        <article class="pattern">
-            <h3 class="kss-title" id="6-5-1">
-              <span class="kss-ref badge pull-right">6-5-1</span> Switch
-            </h3>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><div class="tabs tabs--switch bg-gray4">
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+          <article class="pattern">
+              <h3 class="kss-title" id="6-5-1">
+                <span class="kss-ref badge pull-right">6-5-1</span> Switch
+              </h3>
+              <section class="example">
+                <div class="example-demo">
+                  <div class="kss-example"><div class="tabs tabs--switch bg-gray4">
   <div class="js-toggle-tab tabs-toggle tabs-toggle--is_active" data-id="false">Hide</div>
   <div class="js-toggle-tab tabs-toggle" data-id="true">Show</div>
 </div></div>
-              </div>
-              <div class="example-code">
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">&lt;div class=&quot;tabs tabs--switch bg-gray4&quot;&gt;
   &lt;div class=&quot;js-toggle-tab tabs-toggle tabs-toggle--is_active&quot; data-id=&quot;false&quot;&gt;Hide&lt;/div&gt;
   &lt;div class=&quot;js-toggle-tab tabs-toggle&quot; data-id=&quot;true&quot;&gt;Show&lt;/div&gt;
 &lt;/div&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-        <article class="pattern">
-            <h3 class="kss-title" id="6-5-2">
-              <span class="kss-ref badge pull-right">6-5-2</span> Folder tabs
-            </h3>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><div class="tabs tabs--folder tabs--folder_buttons" id="js-applications-tabs-id">
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+          <article class="pattern">
+              <h3 class="kss-title" id="6-5-2">
+                <span class="kss-ref badge pull-right">6-5-2</span> Folder tabs
+              </h3>
+              <section class="example">
+                <div class="example-demo">
+                  <div class="kss-example"><div class="tabs tabs--folder tabs--folder_buttons" id="js-applications-tabs-id">
   <div class="js-toggle-tab tabs-toggle--folder_buttons container--small type--small u-display-inline-block u-box u-ta-center js-usage-tab" data-id="js-usage-id">
     <i class="fa fa-bar-chart"></i><span class="u-hidden--mobile">&nbsp;Usage</span>
   </div>
@@ -486,8 +489,8 @@ Demo Modal
   <div class="tabs-content js-tabs-content js-edit" id="js-edit-id">edit content</div>
   <div class="tabs-content js-tabs-content js-test" id="js-test-id">test content</div>
 </div></div>
-              </div>
-              <div class="example-code">
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">&lt;div class=&quot;tabs tabs--folder tabs--folder_buttons&quot; id=&quot;js-applications-tabs-id&quot;&gt;
   &lt;div class=&quot;js-toggle-tab tabs-toggle--folder_buttons container--small type--small u-display-inline-block u-box u-ta-center js-usage-tab&quot; data-id=&quot;js-usage-id&quot;&gt;
     &lt;i class=&quot;fa fa-bar-chart&quot;&gt;&lt;/i&gt;&lt;span class=&quot;u-hidden--mobile&quot;&gt;&amp;nbsp;Usage&lt;/span&gt;
@@ -504,17 +507,17 @@ Demo Modal
   &lt;div class=&quot;tabs-content js-tabs-content js-edit&quot; id=&quot;js-edit-id&quot;&gt;edit content&lt;/div&gt;
   &lt;div class=&quot;tabs-content js-tabs-content js-test&quot; id=&quot;js-test-id&quot;&gt;test content&lt;/div&gt;
 &lt;/div&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-        <article class="pattern">
-            <h3 class="kss-title" id="6-5-3">
-              <span class="kss-ref badge pull-right">6-5-3</span> Folder tabs
-            </h3>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><div class="grid grid--gutter_small tabs tabs--folder" id="js-industry-tabs">
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+          <article class="pattern">
+              <h3 class="kss-title" id="6-5-3">
+                <span class="kss-ref badge pull-right">6-5-3</span> Folder tabs
+              </h3>
+              <section class="example">
+                <div class="example-demo">
+                  <div class="kss-example"><div class="grid grid--gutter_small tabs tabs--folder" id="js-industry-tabs">
   <div class="column-4 column--bottom">
     <div class="tabs-toggle--folder text-overflow-elipsis js-toggle-tab tabs-toggle--is_active" data-id="js-p2p">
       Peer to Peer
@@ -542,8 +545,8 @@ Demo Modal
     `Tenant Screening` content
   </div>
 </div></div>
-              </div>
-              <div class="example-code">
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">&lt;div class=&quot;grid grid--gutter_small tabs tabs--folder&quot; id=&quot;js-industry-tabs&quot;&gt;
   &lt;div class=&quot;column-4 column--bottom&quot;&gt;
     &lt;div class=&quot;tabs-toggle--folder text-overflow-elipsis js-toggle-tab tabs-toggle--is_active&quot; data-id=&quot;js-p2p&quot;&gt;
@@ -572,151 +575,129 @@ Demo Modal
     &#x60;Tenant Screening&#x60; content
   &lt;/div&gt;
 &lt;/div&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-        <article class="pattern">
-            <h3 class="kss-title" id="6-5-4">
-              <span class="kss-ref badge pull-right">6-5-4</span> Simple Folder Tab
-            </h3>
-            <div class="subtitle pattern-description"><p>Simplified Folder navigation</p>
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+          <article class="pattern">
+              <h3 class="kss-title" id="6-5-4">
+                <span class="kss-ref badge pull-right">6-5-4</span> Simple Folder Tab
+              </h3>
+              <div class="subtitle pattern-description"><p>Simplified Folder navigation</p>
 </div>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><div>
+              <section class="example">
+                <div class="example-demo">
+                  <div class="kss-example"><div>
   <a href="javascript:;" class="folder-tab [modifier class]">Oauth Verifications</a>
 </div></div>
-                  <hr />
-                  <h4 class="u-clearfix">Active Class <span class="u-f-right"><code>.folder-tab--is-active</code></span></h4>
-                  <div class="kss-example"><div>
+                    <hr />
+                    <h4 class="u-clearfix">Active Class <span class="u-f-right"><code>.folder-tab--is-active</code></span></h4>
+                    <div class="kss-example"><div>
   <a href="javascript:;" class="folder-tab folder-tab--is-active">Oauth Verifications</a>
 </div></div>
-              </div>
-              <div class="example-code">
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">&lt;div&gt;
   &lt;a href=&quot;javascript:;&quot; class=&quot;folder-tab [modifier class]&quot;&gt;Oauth Verifications&lt;/a&gt;
 &lt;/div&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-        <article class="pattern">
-            <h2 class="kss-title" id="6-6">
-              <span class="kss-ref badge pull-right">6-6</span> Accordion
-            </h2>
-            <div class="subtitle pattern-description"><p>Simple accordion for toggling content</p>
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+          <article class="pattern">
+              <h2 class="kss-title" id="6-6">
+                <span class="kss-ref badge pull-right">6-6</span> Accordion
+              </h2>
+              <div class="subtitle pattern-description"><p>Simple accordion for toggling content</p>
 </div>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><div class="accordion [modifier class]">
+              <section class="example">
+                <div class="example-demo">
+                  <div class="kss-example"><div class="accordion [modifier class]">
   Toggle Accordion 1
 </div></div>
-                  <hr />
-                  <h4 class="u-clearfix">Accordion active state <span class="u-f-right"><code>.accordion--is_active</code></span></h4>
-                  <div class="kss-example"><div class="accordion accordion--is_active">
+                    <hr />
+                    <h4 class="u-clearfix">Accordion active state <span class="u-f-right"><code>.accordion--is_active</code></span></h4>
+                    <div class="kss-example"><div class="accordion accordion--is_active">
   Toggle Accordion 1
 </div></div>
-                  <hr />
-                  <h4 class="u-clearfix">Accordion last in the series <span class="u-f-right"><code>.accordion--is_last</code></span></h4>
-                  <div class="kss-example"><div class="accordion accordion--is_last">
+                    <hr />
+                    <h4 class="u-clearfix">Accordion last in the series <span class="u-f-right"><code>.accordion--is_last</code></span></h4>
+                    <div class="kss-example"><div class="accordion accordion--is_last">
   Toggle Accordion 1
 </div></div>
-                  <hr />
-                  <h4 class="u-clearfix">Accordion with arrows <span class="u-f-right"><code>.accordion--with_arrow</code></span></h4>
-                  <div class="kss-example"><div class="accordion accordion--with_arrow">
+                    <hr />
+                    <h4 class="u-clearfix">Accordion with arrows <span class="u-f-right"><code>.accordion--with_arrow</code></span></h4>
+                    <div class="kss-example"><div class="accordion accordion--with_arrow">
   Toggle Accordion 1
 </div></div>
-                  <hr />
-                  <h4 class="u-clearfix">Accordion with gray icon <span class="u-f-right"><code>.accordion--gray</code></span></h4>
-                  <div class="kss-example"><div class="accordion accordion--gray">
+                    <hr />
+                    <h4 class="u-clearfix">Accordion with gray icon <span class="u-f-right"><code>.accordion--gray</code></span></h4>
+                    <div class="kss-example"><div class="accordion accordion--gray">
   Toggle Accordion 1
 </div></div>
-                  <hr />
-                  <h4 class="u-clearfix">Accordion with a pencil <span class="u-f-right"><code>.accordion--with_pencil</code></span></h4>
-                  <div class="kss-example"><div class="accordion accordion--with_pencil">
+                    <hr />
+                    <h4 class="u-clearfix">Accordion with a pencil <span class="u-f-right"><code>.accordion--with_pencil</code></span></h4>
+                    <div class="kss-example"><div class="accordion accordion--with_pencil">
   Toggle Accordion 1
 </div></div>
-                  <hr />
-                  <h4 class="u-clearfix">Accordion with a white border <span class="u-f-right"><code>.accordion--border-white</code></span></h4>
-                  <div class="kss-example"><div class="accordion accordion--border-white">
+                    <hr />
+                    <h4 class="u-clearfix">Accordion with a white border <span class="u-f-right"><code>.accordion--border-white</code></span></h4>
+                    <div class="kss-example"><div class="accordion accordion--border-white">
   Toggle Accordion 1
 </div></div>
-              </div>
-              <div class="example-code">
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">&lt;div class=&quot;accordion [modifier class]&quot;&gt;
   Toggle Accordion 1
 &lt;/div&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-        <article class="pattern">
-            <h2 class="kss-title" id="6-7">
-              <span class="kss-ref badge pull-right">6-7</span> Pagination Arrows
-            </h2>
-            <div class="subtitle pattern-description"><p>Back and Next arrows for pagination</p>
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+          <article class="pattern">
+              <h2 class="kss-title" id="6-7">
+                <span class="kss-ref badge pull-right">6-7</span> Pagination Arrows
+              </h2>
+              <div class="subtitle pattern-description"><p>Back and Next arrows for pagination</p>
 </div>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><div style="position: relative; height: 100px;">
+              <section class="example">
+                <div class="example-demo">
+                  <div class="kss-example"><div style="position: relative; height: 100px;">
   <div class="pagination--back icon_box"></div>
   <div class="pagination--next icon_box"></div>
 </div></div>
-              </div>
-              <div class="example-code">
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">&lt;div style=&quot;position: relative; height: 100px;&quot;&gt;
   &lt;div class=&quot;pagination--back icon_box&quot;&gt;&lt;/div&gt;
   &lt;div class=&quot;pagination--next icon_box&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-        <article class="pattern">
-            <h2 class="kss-title" id="6-8">
-              <span class="kss-ref badge pull-right">6-8</span> Pulse
-            </h2>
-            <div class="subtitle pattern-description"><p>Pulsating Dot</p>
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+          <article class="pattern">
+              <h2 class="kss-title" id="6-8">
+                <span class="kss-ref badge pull-right">6-8</span> Pulse
+              </h2>
+              <div class="subtitle pattern-description"><p>Pulsating Dot</p>
 </div>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><div class="pulse"></div></div>
-              </div>
-              <div class="example-code">
+              <section class="example">
+                <div class="example-demo">
+                  <div class="kss-example"><div class="pulse"></div></div>
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">&lt;div class=&quot;pulse&quot;&gt;&lt;/div&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-        <article class="pattern">
-            <h2 class="kss-title" id="6-9">
-              <span class="kss-ref badge pull-right">6-9</span> Menu
-            </h2>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><div class="dash-nav bg-white container--bordered_mobile u-ta-center--mobile">
-  <ul>
-    <li class="js-navigate-link type--teal u-box u-cursor-pointer u-visible u-ta-left--desktop u-ta-center--mobile applications active" data-nav="applications">
-      <i class="sl-gear"></i>
-      Applications
-    </li>
-    <li class="js-navigate-link type--teal u-box u-cursor-pointer u-visible u-ta-left--desktop u-ta-center--mobile roles" data-nav="roles">
-      <i class="sl-one-person"></i>
-      Users
-    </li>
-    <li class="js-navigate-link type--teal u-box u-cursor-pointer u-visible u-ta-left--desktop u-ta-center--mobile logs" data-nav="logs">
-      <i class="sl-form"></i>
-      Audit Trail
-    </li>
-    <li class="js-navigate-link type--teal u-box u-cursor-pointer u-visible u-ta-left--desktop u-ta-center--mobile billing" data-nav="billing">
-      <i class="sl-hand-card"></i>
-      Billing
-    </li>
-  </ul>
-</div></div>
-                  <hr />
-                  <h4 class="u-clearfix">dash nav with links <span class="u-f-right"><code>.dash-nav--links</code></span></h4>
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+          <article class="pattern">
+              <h2 class="kss-title" id="6-9">
+                <span class="kss-ref badge pull-right">6-9</span> Menu
+              </h2>
+              <section class="example">
+                <div class="example-demo">
                   <div class="kss-example"><div class="dash-nav bg-white container--bordered_mobile u-ta-center--mobile">
   <ul>
     <li class="js-navigate-link type--teal u-box u-cursor-pointer u-visible u-ta-left--desktop u-ta-center--mobile applications active" data-nav="applications">
@@ -737,8 +718,30 @@ Demo Modal
     </li>
   </ul>
 </div></div>
-              </div>
-              <div class="example-code">
+                    <hr />
+                    <h4 class="u-clearfix">dash nav with links <span class="u-f-right"><code>.dash-nav--links</code></span></h4>
+                    <div class="kss-example"><div class="dash-nav bg-white container--bordered_mobile u-ta-center--mobile">
+  <ul>
+    <li class="js-navigate-link type--teal u-box u-cursor-pointer u-visible u-ta-left--desktop u-ta-center--mobile applications active" data-nav="applications">
+      <i class="sl-gear"></i>
+      Applications
+    </li>
+    <li class="js-navigate-link type--teal u-box u-cursor-pointer u-visible u-ta-left--desktop u-ta-center--mobile roles" data-nav="roles">
+      <i class="sl-one-person"></i>
+      Users
+    </li>
+    <li class="js-navigate-link type--teal u-box u-cursor-pointer u-visible u-ta-left--desktop u-ta-center--mobile logs" data-nav="logs">
+      <i class="sl-form"></i>
+      Audit Trail
+    </li>
+    <li class="js-navigate-link type--teal u-box u-cursor-pointer u-visible u-ta-left--desktop u-ta-center--mobile billing" data-nav="billing">
+      <i class="sl-hand-card"></i>
+      Billing
+    </li>
+  </ul>
+</div></div>
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">&lt;div class=&quot;dash-nav bg-white container--bordered_mobile u-ta-center--mobile&quot;&gt;
   &lt;ul&gt;
     &lt;li class=&quot;js-navigate-link type--teal u-box u-cursor-pointer u-visible u-ta-left--desktop u-ta-center--mobile applications active&quot; data-nav=&quot;applications&quot;&gt;
@@ -759,10 +762,11 @@ Demo Modal
     &lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+    </div>
   </div>
 </div>
 

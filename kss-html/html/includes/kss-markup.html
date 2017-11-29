@@ -24,64 +24,68 @@
 </aside>
 
 <div class="portal__header">
-  <div class="js-click-popover pop-menu pop-menu--portal" data-id="js-pop-menu-kss{{modifier_class}}">
-    <div class="pop-menu__title">Verification Portal</div>
-    <div class="popover popover--right_below pop-menu__popover" id="js-pop-menu-kss{{modifier_class}}">
-      <a class="pop-menu__item" href="javascript:;">
-        Verification Portal
-      </a>
-      <a class="pop-menu__item" href="javascript:;">
-        Background Checks Portal
-      </a>
+  <div class="wrapper">
+    <div class="js-click-popover pop-menu pop-menu--portal" data-id="js-pop-menu-kss{{modifier_class}}">
+      <div class="pop-menu__title">Verification Portal</div>
+      <div class="popover popover--right_below pop-menu__popover" id="js-pop-menu-kss{{modifier_class}}">
+        <a class="pop-menu__item" href="javascript:;">
+          Verification Portal
+        </a>
+        <a class="pop-menu__item" href="javascript:;">
+          Background Checks Portal
+        </a>
+      </div>
     </div>
   </div>
 </div>
 
 <div class="portal__content">
   <div id="notifications"></div>
-  <div class="container">
-    {{#if homepage}}
-      {{{homepage}}}
-    {{else}}
+  <div class="container--large">
+    <div class="wrapper">
+      {{#if homepage}}
+        {{{homepage}}}
+      {{else}}
 
-      {{!
-        Find each section, in order.
-        If there's no markup or modifiers supplied, use a Markdown-only
-        layout instead.
+        {{!
+          Find each section, in order.
+          If there's no markup or modifiers supplied, use a Markdown-only
+          layout instead.
 
-        The "root" element comes first in this loop, and can be detected using
-        the "#whenDepth 1" block as seen below.
-      }}
-      {{#eachSection rootName}}
-        <article class="pattern">
-          {{#ifDepth 1}}
-            <h2 id="{{ referenceURI }}">{{ header }}</h2>
-          {{else}}
-            <h{{ depth }} class="kss-title" id="{{ referenceURI }}">
-              <span class="kss-ref badge pull-right">{{ referenceURI }}</span> {{ header }}
-            </h{{ depth }}>
-          {{/ifDepth}}
-          {{#if description}}
-            <div class="subtitle pattern-description">{{{description}}}</div>
-          {{/if}}
-          {{#if markup}}
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example">{{{markup}}}</div>
-                {{#eachModifier}}
-                  <hr />
-                  <h4 class="u-clearfix">{{{description}}} <span class="u-f-right"><code>{{name}}</code></span></h4>
+          The "root" element comes first in this loop, and can be detected using
+          the "#whenDepth 1" block as seen below.
+        }}
+        {{#eachSection rootName}}
+          <article class="pattern">
+            {{#ifDepth 1}}
+              <h2 id="{{ referenceURI }}">{{ header }}</h2>
+            {{else}}
+              <h{{ depth }} class="kss-title" id="{{ referenceURI }}">
+                <span class="kss-ref badge pull-right">{{ referenceURI }}</span> {{ header }}
+              </h{{ depth }}>
+            {{/ifDepth}}
+            {{#if description}}
+              <div class="subtitle pattern-description">{{{description}}}</div>
+            {{/if}}
+            {{#if markup}}
+              <section class="example">
+                <div class="example-demo">
                   <div class="kss-example">{{{markup}}}</div>
-                {{/eachModifier}}
-              </div>
-              <div class="example-code">
+                  {{#eachModifier}}
+                    <hr />
+                    <h4 class="u-clearfix">{{{description}}} <span class="u-f-right"><code>{{name}}</code></span></h4>
+                    <div class="kss-example">{{{markup}}}</div>
+                  {{/eachModifier}}
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">{{markup}}</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-          {{/if}}
-        </article>
-      {{/eachSection}}
-    {{/if}}
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+            {{/if}}
+          </article>
+        {{/eachSection}}
+      {{/if}}
+    </div>
   </div>
 </div>

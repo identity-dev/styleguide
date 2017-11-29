@@ -56,7 +56,7 @@ body{
 }
 
 .portal__content{
-  margin: 20px 10px;
+  margin: 0 0 20px;
 
   @media (min-width: 768px){
     margin: 45px 0 0 $nav-width+1;
@@ -70,7 +70,7 @@ Sidebar Styles
 */
 
 .portal__logo{
-  max-width: 29px;
+  max-width: 36px;
   padding: 10px 20px;
 
   @media (min-width: 768px){
@@ -123,7 +123,7 @@ Sidebar Styles
 }
 
 .portal__nav-item{
-  @include type--small()
+  @include type--small();
   border-top: 1px solid $gray5;
   display: block;
   line-height: 30px;
@@ -135,7 +135,7 @@ Sidebar Styles
   }
 
   i:before{
-    @include type--base()
+    @include type--base();
     color: $teal;
     margin-right: 14px;
     line-height: 30px;
@@ -167,6 +167,10 @@ Sidebar Styles
     background-color: $teal;
     color: $white;
     cursor: default;
+
+    i:before{
+      color: $white;
+    }
   }
 }
 
@@ -211,6 +215,7 @@ Mobile Styles
 }
 
 .mobile-nav-toggle{
+  @include transition-properties('right');
   color: $teal;
   cursor: pointer;
   height: 16px;
@@ -235,8 +240,17 @@ Mobile Styles
   }
 }
 
+.mobile-nav-toggle--fixed{
+  position: fixed;
+}
+
+.mobile-nav-toggle--fixed.mobile-nav-toggle--is-active{
+  right: $nav-width+20px;
+}
+
 .mobile-nav-toggle--is-active{
   background-image: none;
+
   &:before{
     content: '\f151';
     display: inline-block;

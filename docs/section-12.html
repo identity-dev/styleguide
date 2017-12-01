@@ -20,88 +20,110 @@
 
     
 
+<div class="mobile-nav-toggle js-mobile-nav-toggle"></div>
 
 <aside class="portal__sidebar">
   <div class="portal__logo">
     <a href="/styleguide/">
-      <img src="public/img/logo.svg" />
+      <img src="public/img/logo.svg" class="u-hidden--mobile" />
+      <img src="public/img/logomark.svg" class="u-hidden--desktop" />
     </a>
   </div>
 
-    <a href="section-1.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Typography
-    </a>
-    <a href="section-2.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Buttons
-    </a>
-    <a href="section-3.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Form Elements
-    </a>
-    <a href="section-4.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Icons
-    </a>
-    <a href="section-5.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Notifications
-    </a>
-    <a href="section-6.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Kit
-    </a>
-    <a href="section-7.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Type
-    </a>
-    <a href="section-8.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Containers
-    </a>
-    <a href="section-9.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Grid
-    </a>
-    <a href="section-11.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Formatter
-    </a>
-    <a href="section-12.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Pager
-    </a>
-    <a href="section-13.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Tables
-    </a>
-    <a href="section-14.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Verification
-    </a>
+  <nav class="portal__navigation">
+    <div class="portal__nav-group">
+      <div class="portal__nav-header">
+        Styleguide
+      </div>
+        <a href="section-1.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Typography
+        </a>
+        <a href="section-2.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Buttons
+        </a>
+        <a href="section-3.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Form Elements
+        </a>
+        <a href="section-4.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Icons
+        </a>
+        <a href="section-5.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Notifications
+        </a>
+        <a href="section-6.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Kit
+        </a>
+        <a href="section-7.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Type
+        </a>
+        <a href="section-8.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Containers
+        </a>
+        <a href="section-9.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Grid
+        </a>
+        <a href="section-11.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Formatter
+        </a>
+        <a href="section-12.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Pager
+        </a>
+        <a href="section-13.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Tables
+        </a>
+        <a href="section-14.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Verification
+        </a>
+    </div>
+  </nav>
 </aside>
 
-<header class="portal__header">
-
-</header>
+<div class="portal__header">
+  <div class="wrapper">
+    <div class="js-click-popover pop-menu pop-menu--portal" data-id="js-pop-menu-kss">
+      <div class="pop-menu__title">Verification Portal</div>
+      <div class="popover popover--right_below pop-menu__popover" id="js-pop-menu-kss">
+        <a class="pop-menu__item" href="javascript:;">
+          Verification Portal
+        </a>
+        <a class="pop-menu__item" href="javascript:;">
+          Background Checks Portal
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="portal__content">
   <div id="notifications"></div>
-  <div class="container">
+  <div class="container--large">
+    <div class="wrapper">
 
-        <article class="pattern">
-            <h2 id="12">Pager</h2>
-            <div class="subtitle pattern-description"><p>Pagination for variable amounts of paging</p>
+          <article class="pattern">
+              <h2 id="12">Pager</h2>
+              <div class="subtitle pattern-description"><p>Pagination for variable amounts of paging</p>
 </div>
-        </article>
-        <article class="pattern">
-            <h2 class="kss-title" id="12-1">
-              <span class="kss-ref badge pull-right">12-1</span> Plain old paging
-            </h2>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><div class="pager_4 pager-4--is_active">
+          </article>
+          <article class="pattern">
+              <h2 class="kss-title" id="12-1">
+                <span class="kss-ref badge pull-right">12-1</span> Plain old paging
+              </h2>
+              <section class="example">
+                <div class="example-demo">
+                  <div class="kss-example"><div class="pager_4 pager-4--is_active">
   <div class="pager-child"></div>
 </div>
 <div class="pager_2 pager-1--is_active">
@@ -110,8 +132,8 @@
 <div class="pager_3 pager-2--is_active">
   <div class="pager-child"></div>
 </div></div>
-              </div>
-              <div class="example-code">
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">&lt;div class=&quot;pager_4 pager-4--is_active&quot;&gt;
   &lt;div class=&quot;pager-child&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
@@ -121,10 +143,11 @@
 &lt;div class=&quot;pager_3 pager-2--is_active&quot;&gt;
   &lt;div class=&quot;pager-child&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+    </div>
   </div>
 </div>
 

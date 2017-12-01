@@ -20,81 +20,103 @@
 
     
 
+<div class="mobile-nav-toggle js-mobile-nav-toggle"></div>
 
 <aside class="portal__sidebar">
   <div class="portal__logo">
     <a href="/styleguide/">
-      <img src="public/img/logo.svg" />
+      <img src="public/img/logo.svg" class="u-hidden--mobile" />
+      <img src="public/img/logomark.svg" class="u-hidden--desktop" />
     </a>
   </div>
 
-    <a href="section-1.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Typography
-    </a>
-    <a href="section-2.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Buttons
-    </a>
-    <a href="section-3.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Form Elements
-    </a>
-    <a href="section-4.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Icons
-    </a>
-    <a href="section-5.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Notifications
-    </a>
-    <a href="section-6.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Kit
-    </a>
-    <a href="section-7.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Type
-    </a>
-    <a href="section-8.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Containers
-    </a>
-    <a href="section-9.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Grid
-    </a>
-    <a href="section-11.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Formatter
-    </a>
-    <a href="section-12.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Pager
-    </a>
-    <a href="section-13.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Tables
-    </a>
-    <a href="section-14.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Verification
-    </a>
+  <nav class="portal__navigation">
+    <div class="portal__nav-group">
+      <div class="portal__nav-header">
+        Styleguide
+      </div>
+        <a href="section-1.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Typography
+        </a>
+        <a href="section-2.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Buttons
+        </a>
+        <a href="section-3.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Form Elements
+        </a>
+        <a href="section-4.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Icons
+        </a>
+        <a href="section-5.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Notifications
+        </a>
+        <a href="section-6.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Kit
+        </a>
+        <a href="section-7.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Type
+        </a>
+        <a href="section-8.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Containers
+        </a>
+        <a href="section-9.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Grid
+        </a>
+        <a href="section-11.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Formatter
+        </a>
+        <a href="section-12.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Pager
+        </a>
+        <a href="section-13.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Tables
+        </a>
+        <a href="section-14.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Verification
+        </a>
+    </div>
+  </nav>
 </aside>
 
-<header class="portal__header">
-
-</header>
+<div class="portal__header">
+  <div class="wrapper">
+    <div class="js-click-popover pop-menu pop-menu--portal" data-id="js-pop-menu-kss">
+      <div class="pop-menu__title">Verification Portal</div>
+      <div class="popover popover--right_below pop-menu__popover" id="js-pop-menu-kss">
+        <a class="pop-menu__item" href="javascript:;">
+          Verification Portal
+        </a>
+        <a class="pop-menu__item" href="javascript:;">
+          Background Checks Portal
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="portal__content">
   <div id="notifications"></div>
-  <div class="container">
+  <div class="container--large">
+    <div class="wrapper">
 
-        <article class="pattern">
-            <h2 id="1">Typography</h2>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><h1>Headline Level 1</h1>
+          <article class="pattern">
+              <h2 id="1">Typography</h2>
+              <section class="example">
+                <div class="example-demo">
+                  <div class="kss-example"><h1>Headline Level 1</h1>
 <h2 class="headline_secondary">Headline Level 2 - Secondary</h2>
 <h2>Headline Level 2</h2>
 <h3 class="headline_secondary">Headline Level 3 - Secondary</h3>
@@ -105,8 +127,8 @@
 <h6>Headline Level 6</h6>
 <p class="subtitle">Subtitle</p>
 <p>General Copy</p></div>
-              </div>
-              <div class="example-code">
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">&lt;h1&gt;Headline Level 1&lt;/h1&gt;
 &lt;h2 class=&quot;headline_secondary&quot;&gt;Headline Level 2 - Secondary&lt;/h2&gt;
 &lt;h2&gt;Headline Level 2&lt;/h2&gt;
@@ -118,166 +140,167 @@
 &lt;h6&gt;Headline Level 6&lt;/h6&gt;
 &lt;p class=&quot;subtitle&quot;&gt;Subtitle&lt;/p&gt;
 &lt;p&gt;General Copy&lt;/p&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-        <article class="pattern">
-            <h2 class="kss-title" id="1-1">
-              <span class="kss-ref badge pull-right">1-1</span> Link
-            </h2>
-            <div class="subtitle pattern-description"><p>Modifiers to basic links</p>
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+          <article class="pattern">
+              <h2 class="kss-title" id="1-1">
+                <span class="kss-ref badge pull-right">1-1</span> Link
+              </h2>
+              <div class="subtitle pattern-description"><p>Modifiers to basic links</p>
 </div>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><a href="#" class="[modifier class]">Link</a></div>
-                  <hr />
-                  <h4 class="u-clearfix">Link that displays as text <span class="u-f-right"><code>.link--text</code></span></h4>
-                  <div class="kss-example"><a href="#" class="link--text">Link</a></div>
-                  <hr />
-                  <h4 class="u-clearfix">Link that is gray3 <span class="u-f-right"><code>.link--gray2</code></span></h4>
-                  <div class="kss-example"><a href="#" class="link--gray2">Link</a></div>
-                  <hr />
-                  <h4 class="u-clearfix">Link that is gray3 <span class="u-f-right"><code>.link--gray3</code></span></h4>
-                  <div class="kss-example"><a href="#" class="link--gray3">Link</a></div>
-                  <hr />
-                  <h4 class="u-clearfix">Link that is white <span class="u-f-right"><code>.link--white</code></span></h4>
-                  <div class="kss-example"><a href="#" class="link--white">Link</a></div>
-                  <hr />
-                  <h4 class="u-clearfix">Link with a text decorations <span class="u-f-right"><code>.link--underline</code></span></h4>
-                  <div class="kss-example"><a href="#" class="link--underline">Link</a></div>
-              </div>
-              <div class="example-code">
+              <section class="example">
+                <div class="example-demo">
+                  <div class="kss-example"><a href="#" class="[modifier class]">Link</a></div>
+                    <hr />
+                    <h4 class="u-clearfix">Link that displays as text <span class="u-f-right"><code>.link--text</code></span></h4>
+                    <div class="kss-example"><a href="#" class="link--text">Link</a></div>
+                    <hr />
+                    <h4 class="u-clearfix">Link that is gray3 <span class="u-f-right"><code>.link--gray2</code></span></h4>
+                    <div class="kss-example"><a href="#" class="link--gray2">Link</a></div>
+                    <hr />
+                    <h4 class="u-clearfix">Link that is gray3 <span class="u-f-right"><code>.link--gray3</code></span></h4>
+                    <div class="kss-example"><a href="#" class="link--gray3">Link</a></div>
+                    <hr />
+                    <h4 class="u-clearfix">Link that is white <span class="u-f-right"><code>.link--white</code></span></h4>
+                    <div class="kss-example"><a href="#" class="link--white">Link</a></div>
+                    <hr />
+                    <h4 class="u-clearfix">Link with a text decorations <span class="u-f-right"><code>.link--underline</code></span></h4>
+                    <div class="kss-example"><a href="#" class="link--underline">Link</a></div>
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">&lt;a href=&quot;#&quot; class=&quot;[modifier class]&quot;&gt;Link&lt;/a&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-        <article class="pattern">
-            <h2 class="kss-title" id="1-2">
-              <span class="kss-ref badge pull-right">1-2</span> Type
-            </h2>
-            <div class="subtitle pattern-description"><p>Typographic settings</p>
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+          <article class="pattern">
+              <h2 class="kss-title" id="1-2">
+                <span class="kss-ref badge pull-right">1-2</span> Type
+              </h2>
+              <div class="subtitle pattern-description"><p>Typographic settings</p>
 </div>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><h3 class="type [modifier class]">
+              <section class="example">
+                <div class="example-demo">
+                  <div class="kss-example"><h3 class="type [modifier class]">
   Check out this type!
 </h3></div>
-                  <hr />
-                  <h4 class="u-clearfix">no bottom margin <span class="u-f-right"><code>.type--tight</code></span></h4>
-                  <div class="kss-example"><h3 class="type type--tight">
+                    <hr />
+                    <h4 class="u-clearfix">no bottom margin <span class="u-f-right"><code>.type--tight</code></span></h4>
+                    <div class="kss-example"><h3 class="type type--tight">
   Check out this type!
 </h3></div>
-                  <hr />
-                  <h4 class="u-clearfix">Changes the type to be white <span class="u-f-right"><code>.type--white</code></span></h4>
-                  <div class="kss-example"><h3 class="type type--white">
+                    <hr />
+                    <h4 class="u-clearfix">Changes the type to be white <span class="u-f-right"><code>.type--white</code></span></h4>
+                    <div class="kss-example"><h3 class="type type--white">
   Check out this type!
 </h3></div>
-                  <hr />
-                  <h4 class="u-clearfix">Changes the type to be gray1 <span class="u-f-right"><code>.type--gray1</code></span></h4>
-                  <div class="kss-example"><h3 class="type type--gray1">
+                    <hr />
+                    <h4 class="u-clearfix">Changes the type to be gray1 <span class="u-f-right"><code>.type--gray1</code></span></h4>
+                    <div class="kss-example"><h3 class="type type--gray1">
   Check out this type!
 </h3></div>
-                  <hr />
-                  <h4 class="u-clearfix">Changes the type to be gray2 <span class="u-f-right"><code>.type--gray2</code></span></h4>
-                  <div class="kss-example"><h3 class="type type--gray2">
+                    <hr />
+                    <h4 class="u-clearfix">Changes the type to be gray2 <span class="u-f-right"><code>.type--gray2</code></span></h4>
+                    <div class="kss-example"><h3 class="type type--gray2">
   Check out this type!
 </h3></div>
-                  <hr />
-                  <h4 class="u-clearfix">Changes the type to be gray3 <span class="u-f-right"><code>.type--gray3</code></span></h4>
-                  <div class="kss-example"><h3 class="type type--gray3">
+                    <hr />
+                    <h4 class="u-clearfix">Changes the type to be gray3 <span class="u-f-right"><code>.type--gray3</code></span></h4>
+                    <div class="kss-example"><h3 class="type type--gray3">
   Check out this type!
 </h3></div>
-                  <hr />
-                  <h4 class="u-clearfix">Changes the type to be gray4 <span class="u-f-right"><code>.type--gray4</code></span></h4>
-                  <div class="kss-example"><h3 class="type type--gray4">
+                    <hr />
+                    <h4 class="u-clearfix">Changes the type to be gray4 <span class="u-f-right"><code>.type--gray4</code></span></h4>
+                    <div class="kss-example"><h3 class="type type--gray4">
   Check out this type!
 </h3></div>
-                  <hr />
-                  <h4 class="u-clearfix">Changes the type to be teal <span class="u-f-right"><code>.type--teal</code></span></h4>
-                  <div class="kss-example"><h3 class="type type--teal">
+                    <hr />
+                    <h4 class="u-clearfix">Changes the type to be teal <span class="u-f-right"><code>.type--teal</code></span></h4>
+                    <div class="kss-example"><h3 class="type type--teal">
   Check out this type!
 </h3></div>
-                  <hr />
-                  <h4 class="u-clearfix">Changes the type to be teal-dark <span class="u-f-right"><code>.type--teal-dark</code></span></h4>
-                  <div class="kss-example"><h3 class="type type--teal-dark">
+                    <hr />
+                    <h4 class="u-clearfix">Changes the type to be teal-dark <span class="u-f-right"><code>.type--teal-dark</code></span></h4>
+                    <div class="kss-example"><h3 class="type type--teal-dark">
   Check out this type!
 </h3></div>
-                  <hr />
-                  <h4 class="u-clearfix">Changes the type to be green <span class="u-f-right"><code>.type--green</code></span></h4>
-                  <div class="kss-example"><h3 class="type type--green">
+                    <hr />
+                    <h4 class="u-clearfix">Changes the type to be green <span class="u-f-right"><code>.type--green</code></span></h4>
+                    <div class="kss-example"><h3 class="type type--green">
   Check out this type!
 </h3></div>
-                  <hr />
-                  <h4 class="u-clearfix">Changes the type to be red <span class="u-f-right"><code>.type--red</code></span></h4>
-                  <div class="kss-example"><h3 class="type type--red">
+                    <hr />
+                    <h4 class="u-clearfix">Changes the type to be red <span class="u-f-right"><code>.type--red</code></span></h4>
+                    <div class="kss-example"><h3 class="type type--red">
   Check out this type!
 </h3></div>
-                  <hr />
-                  <h4 class="u-clearfix">Changes the type to be yellow <span class="u-f-right"><code>.type--yellow</code></span></h4>
-                  <div class="kss-example"><h3 class="type type--yellow">
+                    <hr />
+                    <h4 class="u-clearfix">Changes the type to be yellow <span class="u-f-right"><code>.type--yellow</code></span></h4>
+                    <div class="kss-example"><h3 class="type type--yellow">
   Check out this type!
 </h3></div>
-                  <hr />
-                  <h4 class="u-clearfix">Smaller than the default font size <span class="u-f-right"><code>.type--xsmall</code></span></h4>
-                  <div class="kss-example"><h3 class="type type--xsmall">
+                    <hr />
+                    <h4 class="u-clearfix">Smaller than the default font size <span class="u-f-right"><code>.type--xsmall</code></span></h4>
+                    <div class="kss-example"><h3 class="type type--xsmall">
   Check out this type!
 </h3></div>
-                  <hr />
-                  <h4 class="u-clearfix">Smaller than the default font size <span class="u-f-right"><code>.type--small</code></span></h4>
-                  <div class="kss-example"><h3 class="type type--small">
+                    <hr />
+                    <h4 class="u-clearfix">Smaller than the default font size <span class="u-f-right"><code>.type--small</code></span></h4>
+                    <div class="kss-example"><h3 class="type type--small">
   Check out this type!
 </h3></div>
-                  <hr />
-                  <h4 class="u-clearfix">Exactly the default font size <span class="u-f-right"><code>.type--normal</code></span></h4>
-                  <div class="kss-example"><h3 class="type type--normal">
+                    <hr />
+                    <h4 class="u-clearfix">Exactly the default font size <span class="u-f-right"><code>.type--normal</code></span></h4>
+                    <div class="kss-example"><h3 class="type type--normal">
   Check out this type!
 </h3></div>
-                  <hr />
-                  <h4 class="u-clearfix">Larger than the default font size <span class="u-f-right"><code>.type--large</code></span></h4>
-                  <div class="kss-example"><h3 class="type type--large">
+                    <hr />
+                    <h4 class="u-clearfix">Larger than the default font size <span class="u-f-right"><code>.type--large</code></span></h4>
+                    <div class="kss-example"><h3 class="type type--large">
   Check out this type!
 </h3></div>
-                  <hr />
-                  <h4 class="u-clearfix">Changes the type to be 100 weight <span class="u-f-right"><code>.type--light</code></span></h4>
-                  <div class="kss-example"><h3 class="type type--light">
+                    <hr />
+                    <h4 class="u-clearfix">Changes the type to be 100 weight <span class="u-f-right"><code>.type--light</code></span></h4>
+                    <div class="kss-example"><h3 class="type type--light">
   Check out this type!
 </h3></div>
-                  <hr />
-                  <h4 class="u-clearfix">Changes the type to be 400 weight <span class="u-f-right"><code>.type--normal</code></span></h4>
-                  <div class="kss-example"><h3 class="type type--normal">
+                    <hr />
+                    <h4 class="u-clearfix">Changes the type to be 400 weight <span class="u-f-right"><code>.type--normal</code></span></h4>
+                    <div class="kss-example"><h3 class="type type--normal">
   Check out this type!
 </h3></div>
-                  <hr />
-                  <h4 class="u-clearfix">Changes the type to be 500 weight <span class="u-f-right"><code>.type--semibold</code></span></h4>
-                  <div class="kss-example"><h3 class="type type--semibold">
+                    <hr />
+                    <h4 class="u-clearfix">Changes the type to be 500 weight <span class="u-f-right"><code>.type--semibold</code></span></h4>
+                    <div class="kss-example"><h3 class="type type--semibold">
   Check out this type!
 </h3></div>
-                  <hr />
-                  <h4 class="u-clearfix">Changes the type to be 500 weight <span class="u-f-right"><code>.type--primary</code></span></h4>
-                  <div class="kss-example"><h3 class="type type--primary">
+                    <hr />
+                    <h4 class="u-clearfix">Changes the type to be 500 weight <span class="u-f-right"><code>.type--primary</code></span></h4>
+                    <div class="kss-example"><h3 class="type type--primary">
   Check out this type!
 </h3></div>
-                  <hr />
-                  <h4 class="u-clearfix">Changes the type to be 500 weight <span class="u-f-right"><code>.type--secondary</code></span></h4>
-                  <div class="kss-example"><h3 class="type type--secondary">
+                    <hr />
+                    <h4 class="u-clearfix">Changes the type to be 500 weight <span class="u-f-right"><code>.type--secondary</code></span></h4>
+                    <div class="kss-example"><h3 class="type type--secondary">
   Check out this type!
 </h3></div>
-                  <hr />
-                  <h4 class="u-clearfix">Changes the type to be 500 weight <span class="u-f-right"><code>.type--mono</code></span></h4>
-                  <div class="kss-example"><h3 class="type type--mono">
+                    <hr />
+                    <h4 class="u-clearfix">Changes the type to be 500 weight <span class="u-f-right"><code>.type--mono</code></span></h4>
+                    <div class="kss-example"><h3 class="type type--mono">
   Check out this type!
 </h3></div>
-              </div>
-              <div class="example-code">
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">&lt;h3 class=&quot;type [modifier class]&quot;&gt;
   Check out this type!
 &lt;/h3&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+    </div>
   </div>
 </div>
 

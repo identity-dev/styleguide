@@ -1,32 +1,67 @@
+$nav-width: 230px;
+
 /*
 
 Layout Styles
 
 */
 
+body{
+  @include transition-properties();
+  right: 0;
+}
+
 .portal{
   background-color: $gray8;
+
+  @media (max-width: 768px){
+    padding-top: 50px;
+  }
 }
 
 .portal__header{
-  background-color: $gray4;
+  background-color: $gray6;
+  border-bottom: 1px solid $gray5;
   height: 25px;
-  left: 0;
+  left: $nav-width;
   line-height: 25px;
-  padding: 10px 20px;
+  padding: 10px 40px;
   position: fixed;
   right: 0;
+  text-align: right;
   top: 0;
-  z-index: $z_index-1;
+  z-index: $z_index-2;
+
+  @media (max-width: 767px){
+    padding: 10px;
+    position: static;
+  }
 }
 
 .portal__navigation{
-  position: relative;
+  @include transition-properties();
+  background-color: $white;
+  bottom: 0;
+  box-sizing: border-box;
+  overflow-y: auto;
+  padding: 20px 0;
+  position: fixed;
+  right: -1*$nav-width;
+  top: 0;
+  width: $nav-width;
+
+  @media (min-width: 768px){
+    padding: 0;
+    position: static;
+  }
 }
 
 .portal__content{
+  margin: 0 0 20px;
 
-  margin: 45px 0 0 231px;
+  @media (min-width: 768px){
+    margin: 45px 0 0 $nav-width+1;
+  }
 }
 
 /*
@@ -36,10 +71,18 @@ Sidebar Styles
 */
 
 .portal__logo{
-  margin: 0 auto;
-  max-width: 170px;
-  padding: 35px 10px;
-  text-align: center;
+  max-width: 36px;
+  padding: 10px 20px;
+
+  @media (min-width: 768px){
+    max-width: 170px;
+  }
+
+  @media (min-width: 768px){
+    margin: 0 auto;
+    padding: 35px 10px;
+    text-align: center;
+  }
 
   a{
     position: static;
@@ -50,17 +93,17 @@ Sidebar Styles
   background-color: $white;
   left: 0;
   padding: 0;
+  position: fixed;
   top: 0;
-  z-index: $z_index-2;
+  z-index: $z_index-3;
 
   @media (max-width: 767px){
-    position: relative;
+    border-bottom: 1px solid $gray5;
     right: 0;
   }
 
   @media (min-width: 768px){
-    width: 230px;
-    position: fixed;
+    width: $nav-width;
     padding-bottom: 40px;
     bottom: 0;
     border-right: 1px solid $gray5;
@@ -69,16 +112,34 @@ Sidebar Styles
   }
 }
 
+.portal__nav-group{
+  margin-bottom: 30px;
+}
+
+.portal__nav-header{
+  color: $gray2;
+  font-weight: 500;
+  padding: 0 20px 10px;
+  text-transform: uppercase;
+}
+
 .portal__nav-item{
-  border-top: 1px solid $gray4;
+  @include type--small();
+  border-top: 1px solid $gray5;
   display: block;
-  line-height: 40px;
+  line-height: 30px;
   padding: 10px 10px 10px 20px;
   text-transform: uppercase;
 
+  &:last-child{
+    border-bottom: 1px solid $gray5;
+  }
+
   i:before{
+    @include type--base();
     color: $teal;
     margin-right: 14px;
+    line-height: 30px;
   }
 
   &:link,
@@ -96,10 +157,6 @@ Sidebar Styles
       color: $white;
     }
   }
-
-  &:last-child{
-    border-bottom: 1px solid $gray4;
-  }
 }
 
 .portal__nav-item--is_active{
@@ -111,5 +168,92 @@ Sidebar Styles
     background-color: $teal;
     color: $white;
     cursor: default;
+
+    i:before{
+      color: $white;
+    }
+  }
+}
+
+/*
+
+Mobile Styles
+
+*/
+
+.mobile-nav-active{
+  right: $nav-width;
+  overflow-y: hidden;
+
+  @media (min-width: 768px) {
+    right: 0;
+  }
+
+  &:before{
+    background-color: rgba(49, 49, 50, .85);
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: $z_index-4--overlay;
+
+    @media (min-width: 768px){
+      content: none;
+    }
+  }
+
+  .portal__navigation{
+    right: 0;
+  }
+
+  .portal__sidebar{
+    @media (max-width: 767px){
+      right: $nav-width;
+    }
+  }
+}
+
+.mobile-nav-toggle{
+  @include transition-properties('right');
+  color: $teal;
+  cursor: pointer;
+  height: 16px;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  width: 20px;
+  z-index: $z_index-4--overlay;
+
+  &:before{
+    @include icon('streamline');
+    content: '\f14d';
+    display: inline-block;
+  }
+
+  &:hover{
+    color: $teal-hover;
+  }
+
+  @media (min-width: 768px){
+    display: none;
+  }
+}
+
+.mobile-nav-toggle--fixed{
+  position: fixed;
+}
+
+.mobile-nav-toggle--fixed.mobile-nav-toggle--is-active{
+  right: $nav-width+20px;
+}
+
+.mobile-nav-toggle--is-active{
+  background-image: none;
+
+  &:before{
+    content: '\f151';
+    display: inline-block;
   }
 }

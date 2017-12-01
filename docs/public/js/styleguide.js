@@ -1627,6 +1627,72 @@
 }));
 
 window.Identity = window.Identity || {};
+window.Identity.datePicker = window.Identity.datePicker || {};
+
+(function(){
+
+  window.Identity.datePicker.set = function(start, end){
+    $('.textfield--date-picker input').val(start.format('MM/DD/YYYY') + ' - ' + end.format('MM/DD/YYYY'))
+  }
+
+  window.Identity.datePicker.init = function(){
+    $('.textfield--date-picker input').daterangepicker({
+        startDate: moment().subtract(29, 'days'),
+        endDate: moment(),
+        autoUpdateInput: false,
+        buttonClasses: "btn btn--small btn--inline",
+        cancelClass: "btn--secondary",
+        ranges: {
+           'Today': [moment(), moment()],
+           'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+           'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+           'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+           'This Month': [moment().startOf('month'), moment().endOf('month')],
+           'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+      }, window.Identity.datePicker.set)
+    }
+
+  $(function(){
+    window.Identity.datePicker.init()
+  })
+})()
+
+window.Identity = window.Identity || {};
+window.Identity.forms = window.Identity.forms || {};
+
+(function(){
+  window.Identity.forms.toggleShowPassword = function(){
+
+    var togglePasswordShow = function(show) {
+      if (show) {
+        $('.js-password_toggle').trigger('password:show');
+      } else {
+        $('.js-password_toggle').trigger('password:hide');
+      }
+    };
+
+    $(document).on('click', '.widget-toggle_password', function() {
+      $(this).toggleClass('showing');
+      //trigger the appropriate event
+      togglePasswordShow($(this).hasClass('showing'));
+    });
+
+    //Listeners for showing and hiding passwords
+    $(document).on('password:show', '.js-password_toggle', function() {
+      $(this).attr('type', 'text');
+    });
+
+    $(document).on('password:hide', '.js-password_toggle', function() {
+      $(this).attr('type', 'password');
+    });
+
+    // null function to avoid duplicates
+    window.Identity.forms.toggleShowPassword = function(){}
+  };
+})()
+
+window.Identity = window.Identity || {};
 
 (function(){
   /*
@@ -1831,37 +1897,18 @@ window.Identity = window.Identity || {};
 })()
 
 window.Identity = window.Identity || {};
-window.Identity.forms = window.Identity.forms || {};
 
 (function(){
-  window.Identity.forms.toggleShowPassword = function(){
-
-    var togglePasswordShow = function(show) {
-      if (show) {
-        $('.js-password_toggle').trigger('password:show');
-      } else {
-        $('.js-password_toggle').trigger('password:hide');
-      }
-    };
-
-    $(document).on('click', '.widget-toggle_password', function() {
-      $(this).toggleClass('showing');
-      //trigger the appropriate event
-      togglePasswordShow($(this).hasClass('showing'));
+  window.Identity.initNavigation = function(){
+    $(document).on('click', '.js-mobile-nav-toggle', function(e){
+      $(this).toggleClass('mobile-nav-toggle--is-active')
+      $('body').toggleClass('mobile-nav-active');
     });
+  }
 
-    //Listeners for showing and hiding passwords
-    $(document).on('password:show', '.js-password_toggle', function() {
-      $(this).attr('type', 'text');
-    });
-
-    $(document).on('password:hide', '.js-password_toggle', function() {
-      $(this).attr('type', 'password');
-    });
-
-    // null function to avoid duplicates
-    window.Identity.forms.toggleShowPassword = function(){}
-  };
+  $(function(){
+    window.Identity.initNavigation()
+  }) // $(func)
 })()
 
 window.Identity = window.Identity || {};
@@ -1973,37 +2020,5 @@ window.Identity = window.Identity || {};
 
   $(function(){
     window.Identity.initNotification()
-  })
-})()
-
-window.Identity = window.Identity || {};
-window.Identity.datePicker = window.Identity.datePicker || {};
-
-(function(){
-
-  window.Identity.datePicker.set = function(start, end){
-    $('.textfield--date-picker input').val(start.format('MM/DD/YYYY') + ' - ' + end.format('MM/DD/YYYY'))
-  }
-
-  window.Identity.datePicker.init = function(){
-    $('.textfield--date-picker input').daterangepicker({
-        startDate: moment().subtract(29, 'days'),
-        endDate: moment(),
-        autoUpdateInput: false,
-        buttonClasses: "btn btn--small btn--inline",
-        cancelClass: "btn--secondary",
-        ranges: {
-           'Today': [moment(), moment()],
-           'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-           'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-           'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-           'This Month': [moment().startOf('month'), moment().endOf('month')],
-           'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-        }
-      }, window.Identity.datePicker.set)
-    }
-
-  $(function(){
-    window.Identity.datePicker.init()
   })
 })()

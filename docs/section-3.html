@@ -20,81 +20,103 @@
 
     
 
+<div class="mobile-nav-toggle js-mobile-nav-toggle"></div>
 
 <aside class="portal__sidebar">
   <div class="portal__logo">
     <a href="/styleguide/">
-      <img src="public/img/logo.svg" />
+      <img src="public/img/logo.svg" class="u-hidden--mobile" />
+      <img src="public/img/logomark.svg" class="u-hidden--desktop" />
     </a>
   </div>
 
-    <a href="section-1.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Typography
-    </a>
-    <a href="section-2.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Buttons
-    </a>
-    <a href="section-3.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Form Elements
-    </a>
-    <a href="section-4.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Icons
-    </a>
-    <a href="section-5.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Notifications
-    </a>
-    <a href="section-6.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Kit
-    </a>
-    <a href="section-7.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Type
-    </a>
-    <a href="section-8.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Containers
-    </a>
-    <a href="section-9.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Grid
-    </a>
-    <a href="section-11.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Formatter
-    </a>
-    <a href="section-12.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Pager
-    </a>
-    <a href="section-13.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Tables
-    </a>
-    <a href="section-14.html" class="portal__nav-item">
-      <i class="sl-gear"></i>
-      Verification
-    </a>
+  <nav class="portal__navigation">
+    <div class="portal__nav-group">
+      <div class="portal__nav-header">
+        Styleguide
+      </div>
+        <a href="section-1.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Typography
+        </a>
+        <a href="section-2.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Buttons
+        </a>
+        <a href="section-3.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Form Elements
+        </a>
+        <a href="section-4.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Icons
+        </a>
+        <a href="section-5.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Notifications
+        </a>
+        <a href="section-6.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Kit
+        </a>
+        <a href="section-7.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Type
+        </a>
+        <a href="section-8.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Containers
+        </a>
+        <a href="section-9.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Grid
+        </a>
+        <a href="section-11.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Formatter
+        </a>
+        <a href="section-12.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Pager
+        </a>
+        <a href="section-13.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Tables
+        </a>
+        <a href="section-14.html" class="portal__nav-item">
+          <i class="sl-gear"></i>
+          Verification
+        </a>
+    </div>
+  </nav>
 </aside>
 
-<header class="portal__header">
-
-</header>
+<div class="portal__header">
+  <div class="wrapper">
+    <div class="js-click-popover pop-menu pop-menu--portal" data-id="js-pop-menu-kss">
+      <div class="pop-menu__title">Verification Portal</div>
+      <div class="popover popover--right_below pop-menu__popover" id="js-pop-menu-kss">
+        <a class="pop-menu__item" href="javascript:;">
+          Verification Portal
+        </a>
+        <a class="pop-menu__item" href="javascript:;">
+          Background Checks Portal
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="portal__content">
   <div id="notifications"></div>
-  <div class="container">
+  <div class="container--large">
+    <div class="wrapper">
 
-        <article class="pattern">
-            <h2 id="3">Form Elements</h2>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><form class="form_pretty form_secure" style="margin-top: 20px;">
+          <article class="pattern">
+              <h2 id="3">Form Elements</h2>
+              <section class="example">
+                <div class="example-demo">
+                  <div class="kss-example"><form class="form_pretty form_secure" style="margin-top: 20px;">
   <label class="textfield">
     <input type="text" />
     <span class="textfield-label">First Name*</span>
@@ -113,8 +135,8 @@
   </label>
   <input type="submit" />
 </form></div>
-              </div>
-              <div class="example-code">
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">&lt;form class=&quot;form_pretty form_secure&quot; style=&quot;margin-top: 20px;&quot;&gt;
   &lt;label class=&quot;textfield&quot;&gt;
     &lt;input type=&quot;text&quot; /&gt;
@@ -134,17 +156,17 @@
   &lt;/label&gt;
   &lt;input type=&quot;submit&quot; /&gt;
 &lt;/form&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-        <article class="pattern">
-            <h3 class="kss-title" id="3-1-1">
-              <span class="kss-ref badge pull-right">3-1-1</span> Radio
-            </h3>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><label class="radio [modifier class]">
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+          <article class="pattern">
+              <h3 class="kss-title" id="3-1-1">
+                <span class="kss-ref badge pull-right">3-1-1</span> Radio
+              </h3>
+              <section class="example">
+                <div class="example-demo">
+                  <div class="kss-example"><label class="radio [modifier class]">
   <input type="radio" name="change1" checked/>
   <span class="radio-label">Radio</span>
 </label>
@@ -152,9 +174,9 @@
   <input type="radio" name="change1" />
   <span class="radio-label">Radio</span>
 </label></div>
-                  <hr />
-                  <h4 class="u-clearfix">Radio buttons displayed as blocks, for grouping <span class="u-f-right"><code>.radio--block</code></span></h4>
-                  <div class="kss-example"><label class="radio radio--block">
+                    <hr />
+                    <h4 class="u-clearfix">Radio buttons displayed as blocks, for grouping <span class="u-f-right"><code>.radio--block</code></span></h4>
+                    <div class="kss-example"><label class="radio radio--block">
   <input type="radio" name="change1" checked/>
   <span class="radio-label">Radio</span>
 </label>
@@ -162,8 +184,8 @@
   <input type="radio" name="change1" />
   <span class="radio-label">Radio</span>
 </label></div>
-              </div>
-              <div class="example-code">
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">&lt;label class=&quot;radio [modifier class]&quot;&gt;
   &lt;input type=&quot;radio&quot; name=&quot;change1&quot; checked/&gt;
   &lt;span class=&quot;radio-label&quot;&gt;Radio&lt;/span&gt;
@@ -172,43 +194,43 @@
   &lt;input type=&quot;radio&quot; name=&quot;change1&quot; /&gt;
   &lt;span class=&quot;radio-label&quot;&gt;Radio&lt;/span&gt;
 &lt;/label&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-        <article class="pattern">
-            <h3 class="kss-title" id="3-1-2">
-              <span class="kss-ref badge pull-right">3-1-2</span> Checkbox
-            </h3>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><label class="checkbox [modifier class]">
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+          <article class="pattern">
+              <h3 class="kss-title" id="3-1-2">
+                <span class="kss-ref badge pull-right">3-1-2</span> Checkbox
+              </h3>
+              <section class="example">
+                <div class="example-demo">
+                  <div class="kss-example"><label class="checkbox [modifier class]">
   <input type="checkbox" />
   <span class="checkbox-label">Checkbox</span>
 </label></div>
-                  <hr />
-                  <h4 class="u-clearfix">Inline Checkbox <span class="u-f-right"><code>.checkbox--inline</code></span></h4>
-                  <div class="kss-example"><label class="checkbox checkbox--inline">
+                    <hr />
+                    <h4 class="u-clearfix">Inline Checkbox <span class="u-f-right"><code>.checkbox--inline</code></span></h4>
+                    <div class="kss-example"><label class="checkbox checkbox--inline">
   <input type="checkbox" />
   <span class="checkbox-label">Checkbox</span>
 </label></div>
-              </div>
-              <div class="example-code">
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">&lt;label class=&quot;checkbox [modifier class]&quot;&gt;
   &lt;input type=&quot;checkbox&quot; /&gt;
   &lt;span class=&quot;checkbox-label&quot;&gt;Checkbox&lt;/span&gt;
 &lt;/label&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-        <article class="pattern">
-            <h3 class="kss-title" id="3-2-1">
-              <span class="kss-ref badge pull-right">3-2-1</span> Input and text areas
-            </h3>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><form>
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+          <article class="pattern">
+              <h3 class="kss-title" id="3-2-1">
+                <span class="kss-ref badge pull-right">3-2-1</span> Input and text areas
+              </h3>
+              <section class="example">
+                <div class="example-demo">
+                  <div class="kss-example"><form>
 <label class="textfield [modifier class]">
   <input type="text" />
   <span class="textfield-label">First Name*</span>
@@ -219,9 +241,9 @@
   <span class="textfield-label">Message*</span>
 </label>
 </form></div>
-                  <hr />
-                  <h4 class="u-clearfix">Textfield with border for displaying on backgrounds other than white. <span class="u-f-right"><code>.textfield--label_bordered</code></span></h4>
-                  <div class="kss-example"><form>
+                    <hr />
+                    <h4 class="u-clearfix">Textfield with border for displaying on backgrounds other than white. <span class="u-f-right"><code>.textfield--label_bordered</code></span></h4>
+                    <div class="kss-example"><form>
 <label class="textfield textfield--label_bordered">
   <input type="text" />
   <span class="textfield-label">First Name*</span>
@@ -232,9 +254,9 @@
   <span class="textfield-label">Message*</span>
 </label>
 </form></div>
-                  <hr />
-                  <h4 class="u-clearfix">Text field with small padding- can be used in conjunction with btn--small <span class="u-f-right"><code>.textfield--small</code></span></h4>
-                  <div class="kss-example"><form>
+                    <hr />
+                    <h4 class="u-clearfix">Text field with small padding- can be used in conjunction with btn--small <span class="u-f-right"><code>.textfield--small</code></span></h4>
+                    <div class="kss-example"><form>
 <label class="textfield textfield--small">
   <input type="text" />
   <span class="textfield-label">First Name*</span>
@@ -245,9 +267,9 @@
   <span class="textfield-label">Message*</span>
 </label>
 </form></div>
-                  <hr />
-                  <h4 class="u-clearfix">Text field with xsmall padding- can be used in conjunction with btn--xsmall <span class="u-f-right"><code>.textfield--xsmall</code></span></h4>
-                  <div class="kss-example"><form>
+                    <hr />
+                    <h4 class="u-clearfix">Text field with xsmall padding- can be used in conjunction with btn--xsmall <span class="u-f-right"><code>.textfield--xsmall</code></span></h4>
+                    <div class="kss-example"><form>
 <label class="textfield textfield--xsmall">
   <input type="text" />
   <span class="textfield-label">First Name*</span>
@@ -258,9 +280,9 @@
   <span class="textfield-label">Message*</span>
 </label>
 </form></div>
-                  <hr />
-                  <h4 class="u-clearfix">Textfield with a datepicker wombo combo <span class="u-f-right"><code>.textfield--date-picker</code></span></h4>
-                  <div class="kss-example"><form>
+                    <hr />
+                    <h4 class="u-clearfix">Textfield with a datepicker wombo combo <span class="u-f-right"><code>.textfield--date-picker</code></span></h4>
+                    <div class="kss-example"><form>
 <label class="textfield textfield--date-picker">
   <input type="text" />
   <span class="textfield-label">First Name*</span>
@@ -271,8 +293,8 @@
   <span class="textfield-label">Message*</span>
 </label>
 </form></div>
-              </div>
-              <div class="example-code">
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">&lt;form&gt;
 &lt;label class=&quot;textfield [modifier class]&quot;&gt;
   &lt;input type=&quot;text&quot; /&gt;
@@ -284,17 +306,17 @@
   &lt;span class=&quot;textfield-label&quot;&gt;Message*&lt;/span&gt;
 &lt;/label&gt;
 &lt;/form&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-        <article class="pattern">
-            <h2 class="kss-title" id="3-3">
-              <span class="kss-ref badge pull-right">3-3</span> Select the width of the selectmenu depends on the width of the original select element
-            </h2>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><form>
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+          <article class="pattern">
+              <h2 class="kss-title" id="3-3">
+                <span class="kss-ref badge pull-right">3-3</span> Select the width of the selectmenu depends on the width of the original select element
+              </h2>
+              <section class="example">
+                <div class="example-demo">
+                  <div class="kss-example"><form>
   <label class="dropdown [modifier class]">
     <select name="speed" id="speed">
       <option disabled="disabled" selected="selected">Select</option>
@@ -314,9 +336,9 @@
     </select>
   </label>
 </form></div>
-                  <hr />
-                  <h4 class="u-clearfix">dropdown with small padding-- can be used in conjunction with .btn--small <span class="u-f-right"><code>.dropdown--small</code></span></h4>
-                  <div class="kss-example"><form>
+                    <hr />
+                    <h4 class="u-clearfix">dropdown with small padding-- can be used in conjunction with .btn--small <span class="u-f-right"><code>.dropdown--small</code></span></h4>
+                    <div class="kss-example"><form>
   <label class="dropdown dropdown--small">
     <select name="speed" id="speed">
       <option disabled="disabled" selected="selected">Select</option>
@@ -336,9 +358,9 @@
     </select>
   </label>
 </form></div>
-                  <hr />
-                  <h4 class="u-clearfix">dropdown with xsmall padding-- can be used in conjunction with .btn--xsmall <span class="u-f-right"><code>.dropdown--xsmall</code></span></h4>
-                  <div class="kss-example"><form>
+                    <hr />
+                    <h4 class="u-clearfix">dropdown with xsmall padding-- can be used in conjunction with .btn--xsmall <span class="u-f-right"><code>.dropdown--xsmall</code></span></h4>
+                    <div class="kss-example"><form>
   <label class="dropdown dropdown--xsmall">
     <select name="speed" id="speed">
       <option disabled="disabled" selected="selected">Select</option>
@@ -358,9 +380,9 @@
     </select>
   </label>
 </form></div>
-                  <hr />
-                  <h4 class="u-clearfix">dropdown with error <span class="u-f-right"><code>.error</code></span></h4>
-                  <div class="kss-example"><form>
+                    <hr />
+                    <h4 class="u-clearfix">dropdown with error <span class="u-f-right"><code>.error</code></span></h4>
+                    <div class="kss-example"><form>
   <label class="dropdown error">
     <select name="speed" id="speed">
       <option disabled="disabled" selected="selected">Select</option>
@@ -380,8 +402,8 @@
     </select>
   </label>
 </form></div>
-              </div>
-              <div class="example-code">
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">&lt;form&gt;
   &lt;label class=&quot;dropdown [modifier class]&quot;&gt;
     &lt;select name=&quot;speed&quot; id=&quot;speed&quot;&gt;
@@ -402,45 +424,45 @@
     &lt;/select&gt;
   &lt;/label&gt;
 &lt;/form&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-        <article class="pattern">
-            <h2 class="kss-title" id="3-4">
-              <span class="kss-ref badge pull-right">3-4</span> Validations
-            </h2>
-            <div class="subtitle pattern-description"><p>Validation popovers</p>
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+          <article class="pattern">
+              <h2 class="kss-title" id="3-4">
+                <span class="kss-ref badge pull-right">3-4</span> Validations
+              </h2>
+              <div class="subtitle pattern-description"><p>Validation popovers</p>
 </div>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><label class="textfield">
+              <section class="example">
+                <div class="example-demo">
+                  <div class="kss-example"><label class="textfield">
   <input type="text" />
   <div class="textfield-label">Validaton</div>
   <div class="validation [modifier class]">
     <div class="validation-label">This is required</div>
   </div>
 </label></div>
-                  <hr />
-                  <h4 class="u-clearfix">Error form element icon <span class="u-f-right"><code>.validation--error</code></span></h4>
-                  <div class="kss-example"><label class="textfield">
+                    <hr />
+                    <h4 class="u-clearfix">Error form element icon <span class="u-f-right"><code>.validation--error</code></span></h4>
+                    <div class="kss-example"><label class="textfield">
   <input type="text" />
   <div class="textfield-label">Validaton</div>
   <div class="validation validation--error">
     <div class="validation-label">This is required</div>
   </div>
 </label></div>
-                  <hr />
-                  <h4 class="u-clearfix">Valid form element icon <span class="u-f-right"><code>.validation--success</code></span></h4>
-                  <div class="kss-example"><label class="textfield">
+                    <hr />
+                    <h4 class="u-clearfix">Valid form element icon <span class="u-f-right"><code>.validation--success</code></span></h4>
+                    <div class="kss-example"><label class="textfield">
   <input type="text" />
   <div class="textfield-label">Validaton</div>
   <div class="validation validation--success">
     <div class="validation-label">This is required</div>
   </div>
 </label></div>
-              </div>
-              <div class="example-code">
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">&lt;label class=&quot;textfield&quot;&gt;
   &lt;input type=&quot;text&quot; /&gt;
   &lt;div class=&quot;textfield-label&quot;&gt;Validaton&lt;/div&gt;
@@ -448,54 +470,54 @@
     &lt;div class=&quot;validation-label&quot;&gt;This is required&lt;/div&gt;
   &lt;/div&gt;
 &lt;/label&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-        <article class="pattern">
-            <h3 class="kss-title" id="3-4-1">
-              <span class="kss-ref badge pull-right">3-4-1</span> Validation Positions
-            </h3>
-            <div class="subtitle pattern-description"><p>Positioning of validations</p>
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+          <article class="pattern">
+              <h3 class="kss-title" id="3-4-1">
+                <span class="kss-ref badge pull-right">3-4-1</span> Validation Positions
+              </h3>
+              <div class="subtitle pattern-description"><p>Positioning of validations</p>
 </div>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><label class="textfield">
+              <section class="example">
+                <div class="example-demo">
+                  <div class="kss-example"><label class="textfield">
   <input type="text" />
   <div class="textfield-label">Validaton</div>
   <div class="validation validation--error [modifier class]">
     <div class="validation-label">This is required</div>
   </div>
 </label></div>
-                  <hr />
-                  <h4 class="u-clearfix">Hide validation icon <span class="u-f-right"><code>.validation_hidden</code></span></h4>
-                  <div class="kss-example"><label class="textfield">
+                    <hr />
+                    <h4 class="u-clearfix">Hide validation icon <span class="u-f-right"><code>.validation_hidden</code></span></h4>
+                    <div class="kss-example"><label class="textfield">
   <input type="text" />
   <div class="textfield-label">Validaton</div>
   <div class="validation validation--error validation_hidden">
     <div class="validation-label">This is required</div>
   </div>
 </label></div>
-                  <hr />
-                  <h4 class="u-clearfix">Validation label to the right <span class="u-f-right"><code>.validation_right</code></span></h4>
-                  <div class="kss-example"><label class="textfield">
+                    <hr />
+                    <h4 class="u-clearfix">Validation label to the right <span class="u-f-right"><code>.validation_right</code></span></h4>
+                    <div class="kss-example"><label class="textfield">
   <input type="text" />
   <div class="textfield-label">Validaton</div>
   <div class="validation validation--error validation_right">
     <div class="validation-label">This is required</div>
   </div>
 </label></div>
-                  <hr />
-                  <h4 class="u-clearfix">Validation label to the left <span class="u-f-right"><code>.validation_left</code></span></h4>
-                  <div class="kss-example"><label class="textfield">
+                    <hr />
+                    <h4 class="u-clearfix">Validation label to the left <span class="u-f-right"><code>.validation_left</code></span></h4>
+                    <div class="kss-example"><label class="textfield">
   <input type="text" />
   <div class="textfield-label">Validaton</div>
   <div class="validation validation--error validation_left">
     <div class="validation-label">This is required</div>
   </div>
 </label></div>
-              </div>
-              <div class="example-code">
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">&lt;label class=&quot;textfield&quot;&gt;
   &lt;input type=&quot;text&quot; /&gt;
   &lt;div class=&quot;textfield-label&quot;&gt;Validaton&lt;/div&gt;
@@ -503,62 +525,62 @@
     &lt;div class=&quot;validation-label&quot;&gt;This is required&lt;/div&gt;
   &lt;/div&gt;
 &lt;/label&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-        <article class="pattern">
-            <h3 class="kss-title" id="3-4-2">
-              <span class="kss-ref badge pull-right">3-4-2</span> Error Class
-            </h3>
-            <div class="subtitle pattern-description"><p>Styling inputs that have errors</p>
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+          <article class="pattern">
+              <h3 class="kss-title" id="3-4-2">
+                <span class="kss-ref badge pull-right">3-4-2</span> Error Class
+              </h3>
+              <div class="subtitle pattern-description"><p>Styling inputs that have errors</p>
 </div>
-        </article>
-        <article class="pattern">
-            <h3 class="kss-title" id="3-4-3">
-              <span class="kss-ref badge pull-right">3-4-3</span> Show/Hide Password Widget
-            </h3>
-            <div class="subtitle pattern-description"><p>A tiny widget to show or hide passwords. The <code>.widget-toggle_password</code>
+          </article>
+          <article class="pattern">
+              <h3 class="kss-title" id="3-4-3">
+                <span class="kss-ref badge pull-right">3-4-3</span> Show/Hide Password Widget
+              </h3>
+              <div class="subtitle pattern-description"><p>A tiny widget to show or hide passwords. The <code>.widget-toggle_password</code>
 will trigger <code>password:show</code> or <code>password:hide</code>, and
 <code>.js-password_toggle</code> on any password field listens to these events
 to show/hide passwords. Simply call <code>Identity.toggleShowPassword()</code>
 on any page to make this widget available.</p>
 </div>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><label class="textfield textfield--label_bordered">
+              <section class="example">
+                <div class="example-demo">
+                  <div class="kss-example"><label class="textfield textfield--label_bordered">
   <input type="password" autocomplete="off" id="password" class="js-password_toggle" />
   <span class="textfield-label">Password</span>
 </label>
 <span class="widget-toggle_password" data-hidden="Reveal Yourself!" data-showing="Hide Me!"></span></div>
-              </div>
-              <div class="example-code">
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">&lt;label class=&quot;textfield textfield--label_bordered&quot;&gt;
   &lt;input type=&quot;password&quot; autocomplete=&quot;off&quot; id=&quot;password&quot; class=&quot;js-password_toggle&quot; /&gt;
   &lt;span class=&quot;textfield-label&quot;&gt;Password&lt;/span&gt;
 &lt;/label&gt;
 &lt;span class=&quot;widget-toggle_password&quot; data-hidden=&quot;Reveal Yourself!&quot; data-showing=&quot;Hide Me!&quot;&gt;&lt;/span&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
-        <article class="pattern">
-            <h3 class="kss-title" id="3-4-4">
-              <span class="kss-ref badge pull-right">3-4-4</span> Widget input and button
-            </h3>
-            <div class="subtitle pattern-description"><p>A textfield and a button</p>
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+          <article class="pattern">
+              <h3 class="kss-title" id="3-4-4">
+                <span class="kss-ref badge pull-right">3-4-4</span> Widget input and button
+              </h3>
+              <div class="subtitle pattern-description"><p>A textfield and a button</p>
 </div>
-            <section class="example">
-              <div class="example-demo">
-                <div class="kss-example"><div class="widget-input_and_button">
+              <section class="example">
+                <div class="example-demo">
+                  <div class="kss-example"><div class="widget-input_and_button">
   <label class="textfield">
     <input type="text" />
     <div class="textfield-label">Your Email</div>
   </label>
   <span class="btn">Verify</span>
 </div></div>
-              </div>
-              <div class="example-code">
+                </div>
+                <div class="example-code">
 <pre class="prettyprint no-copy">&lt;div class=&quot;widget-input_and_button&quot;&gt;
   &lt;label class=&quot;textfield&quot;&gt;
     &lt;input type=&quot;text&quot; /&gt;
@@ -566,10 +588,11 @@ on any page to make this widget available.</p>
   &lt;/label&gt;
   &lt;span class=&quot;btn&quot;&gt;Verify&lt;/span&gt;
 &lt;/div&gt;</pre>
-              </div>
-              <div class="example-toggle"></div>
-            </section>
-        </article>
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+    </div>
   </div>
 </div>
 

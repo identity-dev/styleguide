@@ -151,10 +151,7 @@ gulp.task('fonts', function(){
 gulp.task('js', function(){
   return gulp.src([
       config.packages +'/daterangepicker/daterangepicker.js',
-      './src/js/kit.js',
-      './src/js/forms.js',
-      './src/js/notifications.js',
-      './src/js/daterangepicker.js'
+      './src/js/**/*.js'
     ])
     .pipe(concat('styleguide.js'))
     .pipe(gulp.dest('./dist/js'));

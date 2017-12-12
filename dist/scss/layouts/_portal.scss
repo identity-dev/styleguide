@@ -33,8 +33,11 @@ body{
   z-index: $z_index-5;
 
   @media (max-width: 767px){
+    left: auto;
     padding: 10px 20px;
-    position: static;
+    position: relative;
+    right: auto;
+    top: auto;
   }
 }
 
@@ -95,7 +98,7 @@ Sidebar Styles
   padding: 0;
   position: fixed;
   top: 0;
-  z-index: $z_index-5;
+  z-index: $z_index-6;
 
   @media (max-width: 767px){
     border-bottom: 1px solid $gray5;

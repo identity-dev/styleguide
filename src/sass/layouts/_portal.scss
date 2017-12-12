@@ -30,7 +30,7 @@ body{
   right: 0;
   text-align: right;
   top: 0;
-  z-index: $z_index-5;
+  z-index: $z_index-4+5;
 
   @media (max-width: 767px){
     left: auto;
@@ -98,7 +98,7 @@ Sidebar Styles
   padding: 0;
   position: fixed;
   top: 0;
-  z-index: $z_index-6;
+  z-index: $z_index-4+10;
 
   @media (max-width: 767px){
     border-bottom: 1px solid $gray5;
@@ -200,7 +200,7 @@ Mobile Styles
     position: absolute;
     right: 0;
     top: 0;
-    z-index: $z_index-4--overlay;
+    z-index: $z_index-4+20;
 
     @media (min-width: 768px){
       content: none;
@@ -227,7 +227,7 @@ Mobile Styles
   right: 20px;
   top: 15px;
   width: 20px;
-  z-index: $z_index-4--overlay;
+  z-index: $z_index-4+30;
 
   &:before{
     @include icon('streamline');

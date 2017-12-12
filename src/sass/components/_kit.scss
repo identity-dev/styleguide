@@ -632,6 +632,17 @@ Styleguide 6.4.3
   @include type--semibold();
 }
 
+.pop-menu__subtitle{
+  @include type--semibold();
+  border-top: 1px solid $gray5;
+  padding: 10px 10px 5px;
+  text-align: left;
+}
+
+.pop-menu__group:first-child .pop-menu__subtitle{
+  border-top: none;
+}
+
 .pop-menu__popover{
   margin-top: 0;
   right: -13px;
@@ -639,7 +650,7 @@ Styleguide 6.4.3
 }
 
 .pop-menu__item{
-  border-bottom: 1px solid $gray5;
+  border-bottom: 1px solid $gray7;
   display: block;
   font-weight: semibold;
   padding: 10px;

@@ -1631,8 +1631,9 @@ window.Identity.datePicker = window.Identity.datePicker || {};
 
 (function(){
 
-  window.Identity.datePicker.set = function(start, end){
+  window.Identity.datePicker.set = function(start, end, label, params){
     $('.textfield--date-picker input').val(start.format('MM/DD/YYYY') + ' - ' + end.format('MM/DD/YYYY'))
+    $('.textfield--date-picker input').trigger("changed.daterangepicker", $('.textfield--date-picker input'));
   }
 
   window.Identity.datePicker.init = function(){

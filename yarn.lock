@@ -1849,9 +1849,9 @@ iconv-lite@0.4.19:
   version "0.4.19"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
 
-identity-dev-streamline@^1.0.12:
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/identity-dev-streamline/-/identity-dev-streamline-1.0.12.tgz#f8b8699199c56dd925ef5851ba9a3642166220d5"
+identity-dev-streamline@1.0.13:
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/identity-dev-streamline/-/identity-dev-streamline-1.0.13.tgz#0f9382c2cc42852dbce7067c9ea9ad49fd46dd0d"
 
 ignore@^3.3.3:
   version "3.3.6"

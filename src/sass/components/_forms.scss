@@ -533,6 +533,10 @@ Styleguide 3.3
     outline: none;
     border-color: $teal;
   }
+
+  &::-ms-expand {
+    display: none;
+  }
 }
 
 .dropdown--small select{

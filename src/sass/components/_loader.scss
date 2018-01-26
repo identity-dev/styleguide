@@ -5,60 +5,132 @@ Loader
 Loader and variations
 
 Markup:
-<a href="#" class="btn btn- simple_loader {{modifier_class}}">Button</a>
+<a href="#" class="btn loader {{modifier_class}}">Button</a>
 
 .loader--center          - Loader without button label
+.loader--large           - Loader large
+.loader--small           - Loader small
+.loader--xsmall          - Loader xsmall
 .loader--gray            - Loader gray
+.btn--large              - Large size
+.btn--small              - Small button with loader
+.btn--xsmall             - XSmall button with loader
+
 
 Styleguide 15.0
 
 */
 
-.simple_loader {
-  position:relative;
-}
+@mixin loader-small {
+  padding-right: 30px;
 
-.simple_loader:after {
-  border: 2px solid transparent;
-  border-radius: 50%;
-  border-top: 2px solid white;
-  border-right: 2px solid white;
+  &.loader--center {
+    padding-right: 15px;
+  }
 
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  right: 10px;
-  margin: auto;
-
-  width: 10px;
-  height: 10px;
-  content: "";
-  display: inline-block;
-  animation: spin 1s linear infinite;
-  margin-left: 20px;
-}
-
-.simple_loader.loader--center {
-  color: transparent;
   &:after {
-    left: 0px;
-    right: 0px;
-    margin: auto;
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
+    width: 8px;
+    height: 8px;
   }
 }
 
-.simple_loader.loader--gray:after {
-  border-top-color: $gray5;
-  border-right-color: $gray5;
+@mixin loader-xsmall {
+  &:after {
+    width: 8px;
+    height: 8px;
+    border-width: 1px;
+  }
 }
 
-/* Safari */
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+@mixin loader-large {
+  &:after {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.loader.btn,
+.loader[type=button],
+.loader[type=submit],
+button.loader {
+  pointer-events: none;
+  position:relative;
+  &:after {
+    border: 2px solid transparent;
+    border-radius: 50%;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 10px;
+    margin: auto;
+
+    width: 10px;
+    height: 10px;
+    content: "";
+    display: inline-block;
+    animation: spin 1s linear infinite;
+    margin-left: 20px;
+  }
+
+  &.loader--center {
+    color: transparent;
+    &:after {
+      left: 0px;
+      right: 0px;
+      margin: auto;
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+    }
+  }
+
+  &.loader--small {
+    @include loader-small();
+  }
+
+  &.loader--xsmall {
+    @include loader-xsmall();
+  }
+
+  &.loader--large {
+    @include loader-large();
+  }
+
+  &.btn--small {
+    padding-right: 30px;
+
+    &.loader--center {
+      padding-right: 15px;
+    }
+
+    @include loader-small();
+
+  }
+
+  &.btn--xsmall {
+    padding-right: 30px;
+
+    &.loader--center {
+      padding-right: 10px;
+    }
+
+    @include loader-xsmall();
+  }
+
+  &.loader--gray:after {
+    border-top-color: $gray5;
+    border-right-color: $gray5;
+  }
+
+  &.btn--large {
+    &:after {
+      width: 12px;
+      height: 12px;
+    }
+  }
 }
 
 @keyframes spin {

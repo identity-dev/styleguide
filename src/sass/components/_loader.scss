@@ -1,0 +1,119 @@
+/*
+
+Loader
+
+Loader and variations
+
+Markup:
+<a href="#" class="btn loader {{modifier_class}}">Button</a>
+
+.loader--center          - Loader without button label
+.loader--large           - Loader large
+.loader--small           - Loader small
+.loader--xsmall          - Loader xsmall
+.loader--gray            - Loader gray
+.btn--large              - Large size
+.btn--small              - Small button with loader
+.btn--xsmall             - XSmall button with loader
+
+
+Styleguide 15.0
+
+*/
+
+@mixin loader-small {
+  &:after {
+    width: 8px;
+    height: 8px;
+    top: 1px;
+  }
+}
+
+@mixin loader-xsmall {
+  &:after {
+    width: 8px;
+    height: 8px;
+    border-width: 1px;
+    top: 1px;
+  }
+}
+
+@mixin loader-large {
+  &:after {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.loader.btn,
+.loader[type=button],
+.loader[type=submit],
+button.loader {
+  pointer-events: none;
+  position:relative;
+  &:after {
+    border: 2px solid transparent;
+    border-radius: 50%;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+
+    margin-left: 10px;
+    position: relative;
+    top: 2px;
+    width: 10px;
+    height: 10px;
+    content: "";
+    display: inline-block;
+    animation: spin 1s cubic-bezier(0.35, 0.55, 0.85, 0.95) infinite;
+  }
+
+  &.loader--center {
+    color: transparent;
+    &:after {
+      left: 0px;
+      right: 0px;
+      margin: auto;
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+    }
+  }
+
+  &.loader--small {
+    @include loader-small();
+  }
+
+  &.loader--xsmall {
+    @include loader-xsmall();
+  }
+
+  &.loader--large {
+    @include loader-large();
+  }
+
+  &.btn--small {
+    @include loader-small();
+
+  }
+
+  &.btn--xsmall {
+    @include loader-xsmall();
+  }
+
+  &.loader--gray:after {
+    border-top-color: $gray5;
+    border-right-color: $gray5;
+  }
+
+  &.btn--large {
+    &:after {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

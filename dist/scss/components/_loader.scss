@@ -61,18 +61,13 @@ button.loader {
     border-top: 2px solid white;
     border-right: 2px solid white;
 
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    right: 10px;
-    margin: auto;
+    margin-left: 10px;
 
     width: 10px;
     height: 10px;
     content: "";
     display: inline-block;
-    animation: spin 1s linear infinite;
-    margin-left: 20px;
+    animation: spin 1s cubic-bezier(0.35, 0.55, 0.85, 0.95) infinite;
   }
 
   &.loader--center {
@@ -100,23 +95,11 @@ button.loader {
   }
 
   &.btn--small {
-    padding-right: 30px;
-
-    &.loader--center {
-      padding-right: 15px;
-    }
-
     @include loader-small();
 
   }
 
   &.btn--xsmall {
-    padding-right: 30px;
-
-    &.loader--center {
-      padding-right: 10px;
-    }
-
     @include loader-xsmall();
   }
 

@@ -22,15 +22,10 @@ Styleguide 15.0
 */
 
 @mixin loader-small {
-  padding-right: 30px;
-
-  &.loader--center {
-    padding-right: 15px;
-  }
-
   &:after {
     width: 8px;
     height: 8px;
+    top: 1px;
   }
 }
 
@@ -39,6 +34,7 @@ Styleguide 15.0
     width: 8px;
     height: 8px;
     border-width: 1px;
+    top: 1px;
   }
 }
 
@@ -62,7 +58,8 @@ button.loader {
     border-right: 2px solid white;
 
     margin-left: 10px;
-
+    position: relative;
+    top: 2px;
     width: 10px;
     height: 10px;
     content: "";

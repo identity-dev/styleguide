@@ -117,3 +117,33 @@ button.loader {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+
+/*
+
+Loader
+
+Simple Loader
+
+Markup:
+<div class="simple-loader"></div>
+
+Styleguide 15.1
+
+*/
+
+.simple-loader {
+  text-align: center;
+
+  &:after {
+    border: 3px solid transparent;
+    border-radius: 50%;
+    border-top: 3px solid $gray5;
+    border-right: 3px solid $gray5;
+    width: 20px;
+    height: 20px;
+    content: "";
+    display: inline-block;
+    animation: spin 1s cubic-bezier(0.35, 0.55, 0.85, 0.95) infinite;
+  }
+}

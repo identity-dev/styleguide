@@ -2,6 +2,35 @@
 
 Loader
 
+Stand alone Loader
+
+Markup:
+<div class="loader"></div>
+
+Styleguide 15.0
+
+*/
+
+.loader {
+  text-align: center;
+
+  &:after {
+    border: 3px solid transparent;
+    border-radius: 50%;
+    border-top: 3px solid $gray5;
+    border-right: 3px solid $gray5;
+    width: 20px;
+    height: 20px;
+    content: "";
+    display: inline-block;
+    animation: spin 1s cubic-bezier(0.35, 0.55, 0.85, 0.95) infinite;
+  }
+}
+
+/*
+
+Loader on button
+
 Loader and variations
 
 Markup:
@@ -17,7 +46,7 @@ Markup:
 .btn--xsmall             - XSmall button with loader
 
 
-Styleguide 15.0
+Styleguide 15.1
 
 */
 

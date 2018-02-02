@@ -6,7 +6,7 @@
   ],
   "description": "Identity.com Styleguide.",
   "homepage": "https://identity-dev.github.io/styleguide/",
-  "version": "2.0.28",
+  "version": "2.0.29",
   "repository": {
     "type": "git",
     "url": "git://github.com/identity-dev/styleguide.git"

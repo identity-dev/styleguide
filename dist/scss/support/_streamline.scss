@@ -4,11 +4,11 @@
 
 @font-face {
   font-family: "streamline";
-  src: url("#{$font-path}/streamline_eeb629ce946293d3f0ffecb986b39070.eot");
-  src: url("#{$font-path}/streamline_eeb629ce946293d3f0ffecb986b39070.eot?#iefix") format("embedded-opentype"),
-       url("#{$font-path}/streamline_eeb629ce946293d3f0ffecb986b39070.woff") format("woff"),
-       url("#{$font-path}/streamline_eeb629ce946293d3f0ffecb986b39070.ttf") format("truetype"),
-       url("#{$font-path}/streamline_eeb629ce946293d3f0ffecb986b39070.svg#streamline") format("svg");
+  src: url("#{$font-path}/streamline_5f5f1f2886af9e95e41e3f61cf995a30.eot");
+  src: url("#{$font-path}/streamline_5f5f1f2886af9e95e41e3f61cf995a30.eot?#iefix") format("embedded-opentype"),
+       url("#{$font-path}/streamline_5f5f1f2886af9e95e41e3f61cf995a30.woff") format("woff"),
+       url("#{$font-path}/streamline_5f5f1f2886af9e95e41e3f61cf995a30.ttf") format("truetype"),
+       url("#{$font-path}/streamline_5f5f1f2886af9e95e41e3f61cf995a30.svg#streamline") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -16,7 +16,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: "streamline";
-    src: url("#{$font-path}/streamline_eeb629ce946293d3f0ffecb986b39070.svg#streamline") format("svg");
+    src: url("#{$font-path}/streamline_5f5f1f2886af9e95e41e3f61cf995a30.svg#streamline") format("svg");
   }
 }
 
@@ -46,14 +46,18 @@
 .sl-circle-network:before,
 .sl-circle-smartphone:before,
 .sl-dial:before,
+.sl-download:before,
 .sl-envelope:before,
 .sl-exclamation-circle:before,
 .sl-exclamation-mark:before,
 .sl-eye-dash:before,
 .sl-eye-opened:before,
+.sl-files:before,
+.sl-folder:before,
 .sl-form:before,
 .sl-front-id:before,
 .sl-gear:before,
+.sl-graph:before,
 .sl-hand-card:before,
 .sl-house:before,
 .sl-i-circle:before,
@@ -66,8 +70,10 @@
 .sl-one-person:before,
 .sl-pen-paper:before,
 .sl-pencil:before,
+.sl-people:before,
 .sl-phone-handle:before,
 .sl-play-button:before,
+.sl-power:before,
 .sl-question-circle:before,
 .sl-receipt:before,
 .sl-rectangle-smartphone:before,
@@ -78,6 +84,7 @@
 .sl-three-circle:before,
 .sl-three-people:before,
 .sl-trashcan:before,
+.sl-truck:before,
 .sl-two-circle:before,
 .sl-two-smartphone:before,
 .sl-up-arrow:before,
@@ -120,14 +127,18 @@
 .sl-circle-network:before { content: "\f112"; }
 .sl-circle-smartphone:before { content: "\f140"; }
 .sl-dial:before { content: "\f111"; }
+.sl-download:before { content: "\f154"; }
 .sl-envelope:before { content: "\f10c"; }
 .sl-exclamation-circle:before { content: "\f142"; }
 .sl-exclamation-mark:before { content: "\f126"; }
 .sl-eye-dash:before { content: "\f132"; }
 .sl-eye-opened:before { content: "\f10d"; }
+.sl-files:before { content: "\f155"; }
+.sl-folder:before { content: "\f156"; }
 .sl-form:before { content: "\f133"; }
 .sl-front-id:before { content: "\f13b"; }
 .sl-gear:before { content: "\f123"; }
+.sl-graph:before { content: "\f157"; }
 .sl-hand-card:before { content: "\f134"; }
 .sl-house:before { content: "\f114"; }
 .sl-i-circle:before { content: "\f144"; }
@@ -140,8 +151,10 @@
 .sl-one-person:before { content: "\f124"; }
 .sl-pen-paper:before { content: "\f135"; }
 .sl-pencil:before { content: "\f109"; }
+.sl-people:before { content: "\f158"; }
 .sl-phone-handle:before { content: "\f11e"; }
 .sl-play-button:before { content: "\f146"; }
+.sl-power:before { content: "\f159"; }
 .sl-question-circle:before { content: "\f129"; }
 .sl-receipt:before { content: "\f14c"; }
 .sl-rectangle-smartphone:before { content: "\f136"; }
@@ -152,6 +165,7 @@
 .sl-three-circle:before { content: "\f12a"; }
 .sl-three-people:before { content: "\f125"; }
 .sl-trashcan:before { content: "\f100"; }
+.sl-truck:before { content: "\f15a"; }
 .sl-two-circle:before { content: "\f12b"; }
 .sl-two-smartphone:before { content: "\f139"; }
 .sl-up-arrow:before { content: "\f147"; }
@@ -181,14 +195,18 @@ $font-streamline-check-square: "\f130";
 $font-streamline-circle-network: "\f112";
 $font-streamline-circle-smartphone: "\f140";
 $font-streamline-dial: "\f111";
+$font-streamline-download: "\f154";
 $font-streamline-envelope: "\f10c";
 $font-streamline-exclamation-circle: "\f142";
 $font-streamline-exclamation-mark: "\f126";
 $font-streamline-eye-dash: "\f132";
 $font-streamline-eye-opened: "\f10d";
+$font-streamline-files: "\f155";
+$font-streamline-folder: "\f156";
 $font-streamline-form: "\f133";
 $font-streamline-front-id: "\f13b";
 $font-streamline-gear: "\f123";
+$font-streamline-graph: "\f157";
 $font-streamline-hand-card: "\f134";
 $font-streamline-house: "\f114";
 $font-streamline-i-circle: "\f144";
@@ -201,8 +219,10 @@ $font-streamline-one-circle: "\f127";
 $font-streamline-one-person: "\f124";
 $font-streamline-pen-paper: "\f135";
 $font-streamline-pencil: "\f109";
+$font-streamline-people: "\f158";
 $font-streamline-phone-handle: "\f11e";
 $font-streamline-play-button: "\f146";
+$font-streamline-power: "\f159";
 $font-streamline-question-circle: "\f129";
 $font-streamline-receipt: "\f14c";
 $font-streamline-rectangle-smartphone: "\f136";
@@ -213,6 +233,7 @@ $font-streamline-shield-smartphone: "\f138";
 $font-streamline-three-circle: "\f12a";
 $font-streamline-three-people: "\f125";
 $font-streamline-trashcan: "\f100";
+$font-streamline-truck: "\f15a";
 $font-streamline-two-circle: "\f12b";
 $font-streamline-two-smartphone: "\f139";
 $font-streamline-up-arrow: "\f147";

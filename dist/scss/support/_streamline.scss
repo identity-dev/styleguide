@@ -4,11 +4,11 @@
 
 @font-face {
   font-family: "streamline";
-  src: url("#{$font-path}/streamline_5f5f1f2886af9e95e41e3f61cf995a30.eot");
-  src: url("#{$font-path}/streamline_5f5f1f2886af9e95e41e3f61cf995a30.eot?#iefix") format("embedded-opentype"),
-       url("#{$font-path}/streamline_5f5f1f2886af9e95e41e3f61cf995a30.woff") format("woff"),
-       url("#{$font-path}/streamline_5f5f1f2886af9e95e41e3f61cf995a30.ttf") format("truetype"),
-       url("#{$font-path}/streamline_5f5f1f2886af9e95e41e3f61cf995a30.svg#streamline") format("svg");
+  src: url("#{$font-path}/streamline_27caf870f276baacc05ba8be725447ac.eot");
+  src: url("#{$font-path}/streamline_27caf870f276baacc05ba8be725447ac.eot?#iefix") format("embedded-opentype"),
+       url("#{$font-path}/streamline_27caf870f276baacc05ba8be725447ac.woff") format("woff"),
+       url("#{$font-path}/streamline_27caf870f276baacc05ba8be725447ac.ttf") format("truetype"),
+       url("#{$font-path}/streamline_27caf870f276baacc05ba8be725447ac.svg#streamline") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -16,7 +16,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: "streamline";
-    src: url("#{$font-path}/streamline_5f5f1f2886af9e95e41e3f61cf995a30.svg#streamline") format("svg");
+    src: url("#{$font-path}/streamline_27caf870f276baacc05ba8be725447ac.svg#streamline") format("svg");
   }
 }
 
@@ -33,6 +33,7 @@
 .sl-bank-building:before,
 .sl-bar-graph:before,
 .sl-birthday-cake:before,
+.sl-book:before,
 .sl-calendar:before,
 .sl-camera:before,
 .sl-caret-down:before,
@@ -74,6 +75,7 @@
 .sl-phone-handle:before,
 .sl-play-button:before,
 .sl-power:before,
+.sl-printer:before,
 .sl-question-circle:before,
 .sl-receipt:before,
 .sl-rectangle-smartphone:before,
@@ -88,6 +90,7 @@
 .sl-two-circle:before,
 .sl-two-smartphone:before,
 .sl-up-arrow:before,
+.sl-upload-folder:before,
 .sl-x:before,
 .sl-x-circle:before {
   display: inline-block;
@@ -114,6 +117,7 @@
 .sl-bank-building:before { content: "\f149"; }
 .sl-bar-graph:before { content: "\f10f"; }
 .sl-birthday-cake:before { content: "\f11c"; }
+.sl-book:before { content: "\f15b"; }
 .sl-calendar:before { content: "\f141"; }
 .sl-camera:before { content: "\f101"; }
 .sl-caret-down:before { content: "\f13d"; }
@@ -155,6 +159,7 @@
 .sl-phone-handle:before { content: "\f11e"; }
 .sl-play-button:before { content: "\f146"; }
 .sl-power:before { content: "\f159"; }
+.sl-printer:before { content: "\f15c"; }
 .sl-question-circle:before { content: "\f129"; }
 .sl-receipt:before { content: "\f14c"; }
 .sl-rectangle-smartphone:before { content: "\f136"; }
@@ -169,6 +174,7 @@
 .sl-two-circle:before { content: "\f12b"; }
 .sl-two-smartphone:before { content: "\f139"; }
 .sl-up-arrow:before { content: "\f147"; }
+.sl-upload-folder:before { content: "\f15d"; }
 .sl-x:before { content: "\f13c"; }
 .sl-x-circle:before { content: "\f13a"; }
 
@@ -182,6 +188,7 @@ $font-streamline-back-id: "\f12e";
 $font-streamline-bank-building: "\f149";
 $font-streamline-bar-graph: "\f10f";
 $font-streamline-birthday-cake: "\f11c";
+$font-streamline-book: "\f15b";
 $font-streamline-calendar: "\f141";
 $font-streamline-camera: "\f101";
 $font-streamline-caret-down: "\f13d";
@@ -223,6 +230,7 @@ $font-streamline-people: "\f158";
 $font-streamline-phone-handle: "\f11e";
 $font-streamline-play-button: "\f146";
 $font-streamline-power: "\f159";
+$font-streamline-printer: "\f15c";
 $font-streamline-question-circle: "\f129";
 $font-streamline-receipt: "\f14c";
 $font-streamline-rectangle-smartphone: "\f136";
@@ -237,5 +245,6 @@ $font-streamline-truck: "\f15a";
 $font-streamline-two-circle: "\f12b";
 $font-streamline-two-smartphone: "\f139";
 $font-streamline-up-arrow: "\f147";
+$font-streamline-upload-folder: "\f15d";
 $font-streamline-x: "\f13c";
 $font-streamline-x-circle: "\f13a";

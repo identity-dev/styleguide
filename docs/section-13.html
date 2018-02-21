@@ -123,7 +123,7 @@
           </article>
           <article class="pattern">
               <h2 class="kss-title" id="13-1">
-                <span class="kss-ref badge pull-right">13-1</span> Plain old paging
+                <span class="kss-ref badge pull-right">13-1</span> Standard Tables
               </h2>
               <section class="example">
                 <div class="example-demo">
@@ -219,6 +219,126 @@
   &lt;tr&gt;
     &lt;td&gt;redirect_uri&lt;/td&gt;
     &lt;td&gt;URL to redirect back to see below&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</pre>
+                </div>
+                <div class="example-toggle"></div>
+              </section>
+          </article>
+          <article class="pattern">
+              <h2 class="kss-title" id="13-2">
+                <span class="kss-ref badge pull-right">13-2</span> Expandable Tables
+              </h2>
+              <div class="subtitle pattern-description"><p>These assume there will be a hidden row, every other row. To open them, just add the class &quot;row--expanded&quot; to them.</p>
+</div>
+              <section class="example">
+                <div class="example-demo">
+                  <div class="kss-example"><table class="table--expandable">
+  <tr>
+    <th>User ID</th>
+    <th>First Name</th>
+    <th>Middle Name</th>
+    <th>Last Name</th>
+    <th>Status</th>
+  </tr>
+  <tr>
+    <td>1234</td>
+    <td>Foo</td>
+    <td>Bar</td>
+    <td>Baz</td>
+    <td>Pending</td>
+  </tr>
+  <tr>
+    <td colspan="5">
+    </td>
+  </tr>
+  <tr>
+    <td>1234</td>
+    <td>Boo</td>
+    <td>Far</td>
+    <td>Faz</td>
+    <td>Accepted</td>
+  </tr>
+  <tr>
+    <td colspan="5">
+    </td>
+  </tr>
+  <tr>
+    <td>1234</td>
+    <td>Foo</td>
+    <td>Bar</td>
+    <td>Baz</td>
+    <td>Pending</td>
+  </tr>
+  <tr>
+    <td colspan="5">
+    </td>
+  </tr>
+  <tr>
+    <td>1234</td>
+    <td>Boo</td>
+    <td>Far</td>
+    <td>Faz</td>
+    <td>Accepted</td>
+  </tr>
+  <tr>
+    <td colspan="5">
+    </td>
+  </tr>
+</table></div>
+                </div>
+                <div class="example-code">
+<pre class="prettyprint no-copy">&lt;table class=&quot;table--expandable&quot;&gt;
+  &lt;tr&gt;
+    &lt;th&gt;User ID&lt;/th&gt;
+    &lt;th&gt;First Name&lt;/th&gt;
+    &lt;th&gt;Middle Name&lt;/th&gt;
+    &lt;th&gt;Last Name&lt;/th&gt;
+    &lt;th&gt;Status&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;1234&lt;/td&gt;
+    &lt;td&gt;Foo&lt;/td&gt;
+    &lt;td&gt;Bar&lt;/td&gt;
+    &lt;td&gt;Baz&lt;/td&gt;
+    &lt;td&gt;Pending&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td colspan=&quot;5&quot;&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;1234&lt;/td&gt;
+    &lt;td&gt;Boo&lt;/td&gt;
+    &lt;td&gt;Far&lt;/td&gt;
+    &lt;td&gt;Faz&lt;/td&gt;
+    &lt;td&gt;Accepted&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td colspan=&quot;5&quot;&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;1234&lt;/td&gt;
+    &lt;td&gt;Foo&lt;/td&gt;
+    &lt;td&gt;Bar&lt;/td&gt;
+    &lt;td&gt;Baz&lt;/td&gt;
+    &lt;td&gt;Pending&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td colspan=&quot;5&quot;&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;1234&lt;/td&gt;
+    &lt;td&gt;Boo&lt;/td&gt;
+    &lt;td&gt;Far&lt;/td&gt;
+    &lt;td&gt;Faz&lt;/td&gt;
+    &lt;td&gt;Accepted&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td colspan=&quot;5&quot;&gt;
+    &lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;</pre>
                 </div>

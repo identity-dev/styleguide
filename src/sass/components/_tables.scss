@@ -10,7 +10,7 @@ Styleguide 13.0
 
 /*
 
-Plain old paging
+Standard Tables
 
 Markup:
 <table class="{{modifier_class}}">
@@ -58,4 +58,105 @@ Styleguide 13.1
 
 .table--striped tr:first-child{
   background-color: $white;
+}
+
+
+/*
+
+Expandable Tables
+
+These assume there will be a hidden row, every other row. To open them, just add the class "row--expanded" to them.
+
+Markup:
+<table class="table--expandable">
+  <tr>
+    <th>User ID</th>
+    <th>First Name</th>
+    <th>Middle Name</th>
+    <th>Last Name</th>
+    <th>Status</th>
+  </tr>
+  <tr>
+    <td>1234</td>
+    <td>Foo</td>
+    <td>Bar</td>
+    <td>Baz</td>
+    <td>Pending</td>
+  </tr>
+  <tr>
+    <td colspan="5">
+    </td>
+  </tr>
+  <tr>
+    <td>1234</td>
+    <td>Boo</td>
+    <td>Far</td>
+    <td>Faz</td>
+    <td>Accepted</td>
+  </tr>
+  <tr>
+    <td colspan="5">
+    </td>
+  </tr>
+  <tr>
+    <td>1234</td>
+    <td>Foo</td>
+    <td>Bar</td>
+    <td>Baz</td>
+    <td>Pending</td>
+  </tr>
+  <tr>
+    <td colspan="5">
+    </td>
+  </tr>
+  <tr>
+    <td>1234</td>
+    <td>Boo</td>
+    <td>Far</td>
+    <td>Faz</td>
+    <td>Accepted</td>
+  </tr>
+  <tr>
+    <td colspan="5">
+    </td>
+  </tr>
+</table>
+
+Styleguide 13.2
+
+*/
+
+.table--expandable{
+  tr{
+    background-color: $gray8;
+
+    &:hover td{
+      box-shadow: 0 1px 0 $gray6, 0 -1px 0 $gray6, 0 2px 0 $gray7, 0 -2px 0 $gray7;
+      cursor: pointer;
+    }
+
+    &:nth-child(2n+3){
+      background-color: $gray5;
+      td{
+        @include transition-properties(padding height);
+        height: 0;
+        padding: 0;
+      }
+    }
+
+    &:nth-child(4n){
+      background-color: $white;
+    }
+  }
+}
+
+.row--expanded{
+  box-shadow: none;
+
+  td{
+    border-top: 4px $gray2 solid;
+    cursor: default !important;
+    height: auto !important;
+    padding: 8px 10px !important;
+  }
 }
